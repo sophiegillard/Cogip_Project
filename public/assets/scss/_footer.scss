@@ -105,6 +105,9 @@
         padding: 30px;
         width: 60%;
       }
+      &__link:hover {
+        background-color: $Yellow;
+      }
     }
     &__copyright {
       &__text {
