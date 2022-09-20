@@ -1,0 +1,123 @@
+.footer {
+  hr {
+    border: 2px $Yellow solid;
+    width: 80%;
+    margin-bottom: 90px;
+  }
+  &__main {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    &__logo {
+      &__text {
+        text-align: center;
+        align-items: center;
+
+        text-transform: uppercase;
+        font-family: $typoText;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 56px;
+
+        border: 5px $Yellow solid;
+        width: 165px;
+
+        color: #434138;
+      }
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "address address"
+        "phone fax"
+        "media media"
+        ;
+      article {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        img {
+            margin: 20px;
+        }
+        p {
+          font-family: $typoTitle;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+
+          align-self: center;
+
+          color: #737373;
+        }
+      }
+      &__address {
+        grid-area: address;
+    }
+      &__phone{
+        grid-area: phone;
+        margin-right: 100px;
+    }
+      &__fax {
+        grid-area: fax;
+    }
+      &__media {
+        grid-area: media;
+        display: flex;
+        &__title {
+          font-family: $typoTitle;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          
+          align-self: center;
+          padding-bottom: 8px;
+
+          color: #737373;
+
+          mix-blend-mode: normal;
+        }
+        &__img {padding: 15px;}
+      }
+    }
+  }
+  &__foot {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    &__nav {
+      &__link {
+        text-decoration: none;
+        font-family: $typoTitle;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+
+        text-transform: uppercase;
+
+        color: #737373;
+
+        padding: 30px;
+        width: 60%;
+      }
+    }
+    &__copyright {
+      &__text {
+        font-family: $typoTitle;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+
+        color: #737373;
+
+        mix-blend-mode: normal;
+      }
+    }
+  }
+}
