@@ -1,46 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
-
-html,body{
-    height: 100vh;
-    font-family: 'Raleway', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@500;900&display=swap");
+.header {
+  background-color: #F9DE4E;
+  width: 100%;
 }
-
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    line-height: 3em;
+.header__navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 120px 0 120px;
 }
-
-.container{
-    max-width: 1200px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.header__navBar__logo {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
 }
-
-.illustration{
-    width: 30%;
-    align-items: center;
+.header__navBar__nav__link {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  color: black;
+  padding: 15px;
 }
-
-h1{
-    font-size: 3rem;
-    font-weight: 700;
-    color: #333;
+.header__navBar__nav__link:hover {
+  border: 1px solid #000000;
 }
-
-ul{
-    display: flex;
+.header__navBar__button button {
+  border: 0;
+  background: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
 }
-
-ul > li, ul > li > a{
-    padding: 0 0.5em 0 0.5em;
-    text-decoration: none;
-    color:#3668ad;
-    font-weight: bold;
+.header__navBar__button__signUp {
+  background: #ffffff;
+  border: 1px white solid;
+  border-radius: 10px;
+  padding: 7px;
+}
+.header__horizon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__horizon__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 79px;
+  color: #000000;
+  padding-left: 136px;
+}
+.header__horizon__image {
+  width: 780px;
+}
+.header img {
+  display: block;
+  margin: 0 auto;
 }
