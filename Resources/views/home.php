@@ -12,7 +12,7 @@
 
 <?php 
 //require 'vendor/autoload.php';
-require '../../Resources/elements/header.php';
+require '../elements/header.php';
 ?>
 
     <main>
@@ -22,7 +22,7 @@ require '../../Resources/elements/header.php';
 
     </main>
 
-<?php require '../../Resources/elements/footer.php' ?>
+<?php require '../elements/footer.php' ?>
 
 </body>
 </html>
