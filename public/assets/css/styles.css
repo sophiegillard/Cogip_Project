@@ -159,6 +159,9 @@
   padding: 30px;
   width: 60%;
 }
+.footer__foot__nav__link:hover {
+  background-color: #F9DE4E;
+}
 .footer__foot__copyright__text {
   font-family: "Inter", sans-serif;
   font-style: normal;
