@@ -21,10 +21,10 @@
       <div class="header__navBar">
         <p class="header__navBar__logo">cogip</p>
         <nav class="header__navBar__nav">
-          <a class="header__navBar__nav__link" href="">Home</a>
+          <a class="header__navBar__nav__link" href="/">Home</a>
           <a class="header__navBar__nav__link" href="/invoices">Invoices</a>
           <a class="header__navBar__nav__link" href="/companies">Companies</a>
-          <a class="header__navBar__nav__link" href="/contact">Contact</a>
+          <a class="header__navBar__nav__link" href="/contacts">Contact</a>
         </nav>
         <div class="header__navBar__button">
           <button class="header__navBar__button__signUp" id="signUp">Sign up</button>
