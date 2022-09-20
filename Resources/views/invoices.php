@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="assets/modulesJS/table/createTable.js" defer></script>
+
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
-
-    <script src="tableHeader.js" defer></script>
 
     <title>Cogip - table</title>
 </head>
@@ -50,69 +51,4 @@
 
 </body>
 
-<script>
-/**
- * 
- * @param {DOM} position 
- * @param {array} tableHeaders 
- */
-
-const invoiceTitles = ['number', 'dates', 'Company', 'Created', 'test']
-
-
-const createTableHeaderInvoice = (position, tableHeaders) =>{
-    const tableDiv = document.getElementById(position);
-
-    const headerDiv = document.createElement('div');
-    headerDiv.classList.add('flex-table');
-    headerDiv.classList.add('header');
-    tableDiv.appendChild(headerDiv);
-
-   // let arrayLength = tableHeaders.length;
-    tableHeaders.forEach(element => {
-        let flexTableHeader = document.createElement('div');
-        flexTableHeader.classList.add('flex-row');
-        headerDiv.append(flexTableHeader);
-        flexTableHeader.innerHTML = element;
-    });
-    let arrayLength = tableHeaders.length;
-    let rows= document.querySelectorAll('.flex-row');
-    rows.forEach(element => {
-        element.style.width = 'calc(100% / 5)';
-    });
-
-}
-const contentTable = [
-    ['F20220915', '15/09/2022', 'Jouet Jean-Michel', '25/09/2020'],
-    ['F20220900', '10/09/2022', 'Dunder Mifflin', '25/09/2020']
-]
-
- const createTableContentInvoice = (position, tableHeaders) =>{
-     const tableDiv = document.getElementById(position);
- 
-     const rowGroup = document.createElement('div');
-     rowGroup.classList.add('flex-table');
-     rowGroup.classList.add('row');
-     tableDiv.appendChild(rowGroup);
- 
-    // let arrayLength = tableHeaders.length;
-     contentTable.forEach(element => {
-        const array = element;
-        console.log(element)
-        element.forEach(elements => {
-        let flexTableHeader = document.createElement('div');
-         flexTableHeader.classList.add('flex-row');
-         rowGroup.append(flexTableHeader);
-         flexTableHeader.innerHTML = elements;
-        });
-
-         
-     });
- 
- }
- 
-
-createTableHeaderInvoice('tableInvoice', invoiceTitles);
-createTableContentInvoice('tableInvoice', invoiceTitles);
-
-    </script>
+</html>

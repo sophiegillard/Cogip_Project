@@ -4,9 +4,7 @@
  * @param {array} tableHeaders 
  */
 
-const invoiceTitles = ['Invoice number', 'Due dates', 'Company', 'Created at']
-
-const createTableHeader4 = (position, tableHeaders) =>{
+export const createTableHeader4 = (position, tableHeaders) =>{
     //Get the position of the main container
     const tableDiv = document.getElementById(position);
 
@@ -27,11 +25,10 @@ const createTableHeader4 = (position, tableHeaders) =>{
     let rows= document.querySelectorAll('.flex-row');
     rows.forEach(element => {
         element.style.width = 'calc(100% / 4)';
-        element.style.color = 'red';
     });
 }
 
-const createTableHeader5 = (position, tableHeaders) =>{
+export const createTableHeader5 = (position, tableHeaders) =>{
     //Get the position of the main container
     const tableDiv = document.getElementById(position);
 
@@ -52,8 +49,6 @@ const createTableHeader5 = (position, tableHeaders) =>{
     let rows= document.querySelectorAll('.flex-row');
     rows.forEach(element => {
         element.style.width = 'calc(100% / 5)';
-        element.style.color = 'red';
     });
 }
 
-createTableHeaderInvoice('tableInvoice', invoiceTitles);
