@@ -4,13 +4,13 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 
-class HomeController extends Controller
+class InvoicesController extends Controller
 {
     /*
     * return view
     */
     public function index()
     {
-        return $this->view('home',["name" => "Cogip"]);
+        return $this->view('invoices',["name" => "Cogip"]);
     }
 }
