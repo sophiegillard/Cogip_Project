@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 .header {
   background-color: #F9DE4E;
   width: 100%;
@@ -65,4 +65,108 @@
 .header img {
   display: block;
   margin: 0 auto;
+}
+
+.footer hr {
+  border: 2px #F9DE4E solid;
+  width: 80%;
+  margin-bottom: 90px;
+}
+.footer__main {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.footer__main__logo__text {
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  border: 5px #F9DE4E solid;
+  width: 165px;
+  color: #434138;
+}
+.footer__main__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "address address" "phone fax" "media media";
+}
+.footer__main__info article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer__main__info article img {
+  margin: 20px;
+}
+.footer__main__info article p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  align-self: center;
+  color: #737373;
+}
+.footer__main__info__address {
+  grid-area: address;
+}
+.footer__main__info__phone {
+  grid-area: phone;
+  margin-right: 100px;
+}
+.footer__main__info__fax {
+  grid-area: fax;
+}
+.footer__main__info__media {
+  grid-area: media;
+  display: flex;
+}
+.footer__main__info__media__title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  align-self: center;
+  padding-bottom: 8px;
+  color: #737373;
+  mix-blend-mode: normal;
+}
+.footer__main__info__media__img {
+  padding: 15px;
+}
+.footer__foot {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.footer__foot__nav__link {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #737373;
+  padding: 30px;
+  width: 60%;
+}
+.footer__foot__nav__link:hover {
+  background-color: #F9DE4E;
+}
+.footer__foot__copyright__text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #737373;
+  mix-blend-mode: normal;
 }
