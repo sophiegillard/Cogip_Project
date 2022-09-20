@@ -2,6 +2,7 @@
 .header {
   background-color: #F9DE4E;
   width: 100%;
+  padding-top: 5%;
 }
 .header__navBar {
   display: flex;
@@ -38,7 +39,7 @@
   font-size: 20px;
   line-height: 23px;
 }
-.header__navBar__button__signUp {
+.header__navBar__button #signUp {
   background: #ffffff;
   border: 1px white solid;
   border-radius: 10px;

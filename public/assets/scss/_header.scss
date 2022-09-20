@@ -1,6 +1,7 @@
 .header {
   background-color: $Yellow;
   width: 100%;
+  padding-top: 5%;
   &__navBar {
     display: flex;
     align-items: center;
@@ -39,7 +40,7 @@
         font-size: 20px;
         line-height: 23px;
       }
-      &__signUp {
+      #signUp {
         background: #ffffff;
         border: 1px white solid;
         border-radius: 10px;
