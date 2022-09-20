@@ -4,13 +4,13 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 
-class HomeController extends Controller
+class ContactsController extends Controller
 {
     /*
     * return view
     */
     public function index()
     {
-        return $this->view('home',["name" => "Cogip"]);
+        return $this->view('contacts',["name" => "Cogip"]);
     }
 }
