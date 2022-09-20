@@ -14,6 +14,13 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <script 
+      type="module" 
+      src="assets/modulesJS/table/createTable.js" 
+      defer>
+    </script>
+
     <title>Cogip - Welcome</title>
   </head>
   <body>
