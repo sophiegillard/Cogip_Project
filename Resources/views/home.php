@@ -10,19 +10,17 @@
 </head>
 <body> 
 
-<?php 
-//require 'vendor/autoload.php';
-require '../elements/header.php';
+<?php
+require 'elements/header.php';
 ?>
 
     <main>
 
-    <h1>test</h1>
-    <?php //dump($_SERVER) ?>
+    <h1>Home</h1>
 
     </main>
 
-<?php require '../elements/footer.php' ?>
+<?php require 'elements/footer.php' ?>
 
 </body>
 </html>
