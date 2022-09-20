@@ -1,0 +1,74 @@
+.header {
+  background-color: $Yellow;
+  width: 100%;
+  padding-top: 5%;
+  &__navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px 0 120px;
+    &__logo {
+      font-family: $typoText;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+    }
+    &__nav {
+      &__link {
+        text-decoration: none;
+        font-family: $typoText;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23px;
+        color: black;
+
+        padding: 15px;
+      }
+      &__link:hover {
+        border: 1px solid #000000;
+      }
+    }
+    &__button {
+      button {
+        border: 0;
+        background: none;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23px;
+      }
+      #signUp {
+        background: #ffffff;
+        border: 1px white solid;
+        border-radius: 10px;
+        padding: 7px;
+      }
+    }
+  }
+  &__horizon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 79px;
+
+      color: #000000;
+
+      padding-left: 136px;
+    }
+    &__image {
+      width: 780px;
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
