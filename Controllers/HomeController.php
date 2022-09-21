@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\home;
 
 class HomeController extends Controller
 {
@@ -11,6 +12,17 @@ class HomeController extends Controller
     */
     public function index()
     {
-        return $this->view('home',["name" => "Cogip"]);
+        $home = new home();
+        $invoices = $home->getInvoices();
+        $companies = $home->getCompanies();
+        $contacts = $home->getContacts();
+        $data = [
+            "name" => "Cogip",
+            'invoices' => $invoices,
+            'companies' => $companies,
+            'contacts' => $contacts
+        ];
+        return $this->view('home', $data);
     }
+
 }
