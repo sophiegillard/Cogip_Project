@@ -1,22 +1,27 @@
 <?php
 
-$config = include 'config.php';
+namespace App\Database;
 
-$db = null;
-function getInstance(){
+use PDO;
+use PDOException;
 
-    try {
-        $config = include 'config.php';
-        $db = new PDO("mysql:host={$config['host']};dbname={$config['dbname']};charset=utf8", $config['username'], $config['password']);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (Exception $e) {
-        echo $e->getMessage();
+class dbConnection
+{
+
+    public function connexion()
+    {
+        $host = 'localhost';
+        $dbname = 'cogip';
+        $username = 'root';
+        $password = '';
+
+        try {
+            $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            die();
+        }
+        return $db;
     }
-    return $db;
 }
-/**
- *Get db connection with this
- */
-//$config = include '../Database/dbConnection.php';
-//$db = getInstance();
-//var_dump($db);
