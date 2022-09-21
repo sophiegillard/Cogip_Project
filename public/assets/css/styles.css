@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 .header {
   background-color: #F9DE4E;
   padding-top: 5%;
@@ -304,6 +305,95 @@
   mix-blend-mode: normal;
 }
 
+div {
+  box-sizing: border-box;
+}
+
+.table__container {
+  display: block;
+  width: 100%;
+  max-width: 1193px;
+  color: black;
+  font-family: Roboto;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.table__header {
+  background: #F9DE4E;
+  font-weight: bolder;
+}
+
+.flex__table {
+  display: flex;
+  flex-flow: row wrap;
+  transition: 0.5s;
+}
+.flex__table.table__content:nth-child(odd) {
+  background: #F5F5F5;
+}
+
+.table__content {
+  font-weight: light;
+}
+.table__content:hover {
+  cursor: pointer;
+  transition: 500ms;
+  font-weight: bolder;
+}
+
+.flex__row {
+  width: 20%;
+  padding: 0.8em 1rem;
+}
+
+/*@media all and (max-width: 767px) {
+  .flex-row {
+    width: calc(100% / 3); //1px = border right
+
+    &.first {
+      width: 100%;
+    }
+  }
+
+  .column {
+    width: 100%;
+  }
+}*/
+/*@media all and (max-width: 430px) {
+
+  .flex-table {
+    .flex-row {
+      border-bottom: 0;
+    }
+
+  }
+
+  .header {
+    font-weight: 600;
+    .flex-row {
+      border-bottom: solid 1px;
+    }
+  }
+
+  .flex-row {
+    width: 100%; //1px = border right
+
+    &.first {
+      width: 100%;
+    }
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .flex-cell {
+    width: 100%; //1px = border right
+  }
+}
+*/
 .tables {
   margin: 5rem;
 }
