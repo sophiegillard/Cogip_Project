@@ -7,7 +7,6 @@ use App\Controllers\ContactsController;
 use App\Controllers\InvoicesController;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
-use App\Controllers\testController;
 use http\Params;
 
 $router = new Router();
