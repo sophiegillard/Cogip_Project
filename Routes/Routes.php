@@ -8,6 +8,9 @@ use App\Controllers\InvoicesController;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use http\Params;
+use App\Controllers\ShowCompaniesController;
+use App\Controllers\ShowContactController;
+
 
 $router = new Router();
 
@@ -25,6 +28,14 @@ $router->get('/companies', function(){
 
 $router->get('/invoices', function(){
     (new InvoicesController)->index();
+});
+
+$router->get('/showCompanies', function(){
+    (new ShowCompaniesController)->index();
+});
+
+$router->get('/showContact', function(){
+    (new ShowContactController)->index();
 });
 
 $router->run();
