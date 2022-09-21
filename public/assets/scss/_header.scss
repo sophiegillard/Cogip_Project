@@ -1,20 +1,35 @@
 .header {
   background-color: $Yellow;
-  width: 100%;
+  width: 80%;
   padding-top: 5%;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
   &__navBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 120px 0 120px;
+    padding: 0 12% 0 12%;
+    @media screen and (max-width: 1024px) {
+      padding: 0 0 0 5%;
+    }
     &__logo {
       font-family: $typoText;
       font-style: normal;
       font-weight: 900;
       font-size: 48px;
       line-height: 56px;
+      text-transform: uppercase;
+      @media screen and (max-width: 768px) {
+        font-size: 40px;
+      }
     }
     &__nav {
+      width: 60%;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       &__link {
         text-decoration: none;
         font-family: $typoText;
@@ -25,12 +40,22 @@
         color: black;
 
         padding: 15px;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.5vw;
+        }
       }
       &__link:hover {
         border: 1px solid #000000;
       }
     }
     &__button {
+      width: 18%;
+      @media screen and (max-width: 1024px) {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          padding-right: 5%;
+      }
       button {
         border: 0;
         background: none;
@@ -39,12 +64,29 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 23px;
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
       }
       #signUp {
         background: #ffffff;
         border: 1px white solid;
         border-radius: 10px;
         padding: 7px;
+        @media screen and (max-width: 768px) {
+          display: none;
+          padding: 0;
+        }
+      }
+      #login {
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      #menu {
+        @media screen and (min-width: 768px) {
+          display: none;
+        }
       }
     }
   }
@@ -70,5 +112,10 @@
   img {
     display: block;
     margin: 0 auto;
+    margin-top: 50px;
+    width: 92%;
   }
+  .idle {
+    display: none;
+   }
 }

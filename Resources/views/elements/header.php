@@ -14,6 +14,13 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <script 
+      type="module" 
+      src="assets/modulesJS/table/createTable.js" 
+      defer>
+    </script>
+
     <title>Cogip - Welcome</title>
   </head>
   <body>
@@ -29,11 +36,13 @@
         <div class="header__navBar__button">
           <button class="header__navBar__button__signUp" id="signUp">Sign up</button>
           <button class="header__navBar__button__login" id="login">Login</button>
+          <img class="header__navBar__button__menu" id="menu" src="assets/img/icons/menu.svg" alt="">
         </div>
+        
       </div>
-      <div class="header__horizon">
-    <h1 class="header__horizon__title">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
-    <img class="header__horizon__image" src="assets/img/1.illustration_home_header.png" alt="">
-    </div>
+      <div class="header__horizon idle">
+        <h1 class="header__horizon__title">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
+        <img class="header__horizon__image" src="assets/img/1.illustration_home_header.png" alt="">
+      </div>
       <img src="assets/img/Rectangle 10.png" alt="" />
     </header>
