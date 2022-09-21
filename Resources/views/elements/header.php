@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="header__horizon">
-    <h1 class="header__horizon__title">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h1>
+    <h1 class="header__horizon__title">MANAGE YOUR CUSTOMERS AND INVOICES EASILY</h1>
     <img class="header__horizon__image" src="assets/img/1.illustration_home_header.png" alt="">
     </div>
       <img src="assets/img/Rectangle 10.png" alt="" />

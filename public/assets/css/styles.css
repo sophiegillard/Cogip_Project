@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 .header {
   background-color: #F9DE4E;
   width: 100%;
@@ -176,10 +177,9 @@ div {
   box-sizing: border-box;
 }
 
-.table-container {
+.table__container {
   display: block;
-  margin: 2em auto;
-  width: 80%;
+  width: 100%;
   max-width: 1193px;
   color: black;
   font-family: Roboto;
@@ -188,34 +188,32 @@ div {
   text-align: left;
 }
 
-.flex-table {
+.table__header {
+  background: #F9DE4E;
+  font-weight: bolder;
+}
+
+.flex__table {
   display: flex;
   flex-flow: row wrap;
   transition: 0.5s;
 }
-.flex-table.row {
-  font-weight: light;
-}
-.flex-table:first-of-type .flex-row {
-  background: #F9DE4E;
-}
-.flex-table.row:nth-child(odd) .flex-row {
+.flex__table.table__content:nth-child(odd) {
   background: #F5F5F5;
 }
-.flex-table:hover {
-  background: #fdf4c4;
+
+.table__content {
+  font-weight: light;
+}
+.table__content:hover {
   cursor: pointer;
   transition: 500ms;
+  font-weight: bolder;
 }
 
-.flex-row {
-  width: 25%;
+.flex__row {
+  width: 20%;
   padding: 0.8em 1rem;
-}
-
-.flex-cell {
-  width: 33.3333333333%;
-  padding: 0.5em 0.5em;
 }
 
 /*@media all and (max-width: 767px) {
@@ -264,5 +262,50 @@ div {
   }
 }
 */
+.tables {
+  margin: 5rem;
+}
+
+.article__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 73px;
+  margin: 3rem 0 2rem;
+}
+
+.illustration {
+  padding: 2rem 0 4rem 0;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-template-rows: 1fr;
+}
+.illustration__text {
+  padding-left: 5rem;
+  padding-top: 2rem;
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 82px;
+  text-transform: uppercase;
+}
+.illustration__image {
+  justify-content: flex-end;
+}
+.illustration__image__background {
+  background-color: #F9DE4E;
+  clip-path: polygon(10% 9%, 100% 54%, 100% 100%, 0% 100%);
+  width: 100%;
+  height: 280px;
+  position: absolute;
+  z-index: 1;
+}
+.illustration__image__source {
+  width: 20rem;
+  position: absolute;
+  z-index: 1;
+  right: 8rem;
+}
 
 /*# sourceMappingURL=styles.css.map */
