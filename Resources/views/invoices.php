@@ -6,8 +6,7 @@
 
     <h2>table</h2>
 
-<div class="table-container" id="tableInvoice" role="table" aria-label="Destinations">
-</div>
+<div class="table-container" id="tableInvoice" role="table" aria-label="invoices"></div>
     </main>
 
 <?php require 'elements/footer.php' ?>
