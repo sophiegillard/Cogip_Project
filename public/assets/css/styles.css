@@ -513,17 +513,17 @@ div {
   color: #000000;
 }
 
-.showCompanies__main {
+.showContact__main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
-  .showCompanies__main {
+  .showContact__main {
     justify-content: space-around;
   }
 }
-.showCompanies__main__info {
+.showContact__main__info {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -532,28 +532,28 @@ div {
   color: #000000;
 }
 @media screen and (min-width: 768px) {
-  .showCompanies__main__info {
+  .showContact__main__info {
     font-size: 25px;
   }
 }
-.showCompanies__main__info__title {
+.showContact__main__info__title {
   font-family: "Inter", sans-serif;
   font-weight: 900;
   font-size: 32px;
   line-height: 73px;
 }
 @media screen and (min-width: 1024px) {
-  .showCompanies__main__info__title {
+  .showContact__main__info__title {
     font-size: 60px;
   }
 }
-.showCompanies__main__img {
+.showContact__main__img {
   border-radius: 50%;
   width: 255px;
   margin-top: 30px;
 }
 @media screen and (min-width: 768px) {
-  .showCompanies__main__img {
+  .showContact__main__img {
     margin-top: 0px;
   }
 }
