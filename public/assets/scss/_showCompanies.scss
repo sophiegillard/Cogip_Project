@@ -1,24 +1,29 @@
 .showCompanies__main {
     margin-top: 41px;
     padding: 10px;
+    text-align: center;
+    @media screen and (min-width: 728px) {
+        margin-left: 120px;
+        text-align: left;
+      }
   &__info {
     font-family: $typoText;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 29px;
 
     color: #000000;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 430px) {
         font-size: 25px;
       }
     &__title {
       font-family: $typoTitle;
       font-weight: 900;
-      font-size: 32px;
+      font-size: 42px;
       line-height: 73px;
       text-transform: uppercase;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 430px) {
         font-size: 60px;
       }
     }
@@ -34,22 +39,25 @@
   &__hr {
     border: 1px solid #cdcdcd;
     width: 95%;
+    margin-top: 74px;
+    margin-bottom: 46px;
   }
   &__contact {
     &__title {
       font-family: $typoTitle;
       font-style: normal;
       font-weight: 900;
-      font-size: 32px;
+      font-size: 42px;
       line-height: 73px;
 
       color: #000000;
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 430px) {
         font-size: 60px;
       }
     }
     &__people {
       display: flex;
+      justify-content: space-around;
       
       &__card {
         display: flex;

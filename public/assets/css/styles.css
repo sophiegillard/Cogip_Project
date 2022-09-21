@@ -444,16 +444,23 @@ div {
 .showCompanies__main {
   margin-top: 41px;
   padding: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 728px) {
+  .showCompanies__main {
+    margin-left: 120px;
+    text-align: left;
+  }
 }
 .showCompanies__main__info {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 29px;
   color: #000000;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 430px) {
   .showCompanies__main__info {
     font-size: 25px;
   }
@@ -461,11 +468,11 @@ div {
 .showCompanies__main__info__title {
   font-family: "Inter", sans-serif;
   font-weight: 900;
-  font-size: 32px;
+  font-size: 42px;
   line-height: 73px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 430px) {
   .showCompanies__main__info__title {
     font-size: 60px;
   }
@@ -473,22 +480,25 @@ div {
 .showCompanies__main__hr {
   border: 1px solid #cdcdcd;
   width: 95%;
+  margin-top: 74px;
+  margin-bottom: 46px;
 }
 .showCompanies__main__contact__title {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 32px;
+  font-size: 42px;
   line-height: 73px;
   color: #000000;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 430px) {
   .showCompanies__main__contact__title {
     font-size: 60px;
   }
 }
 .showCompanies__main__contact__people {
   display: flex;
+  justify-content: space-around;
 }
 .showCompanies__main__contact__people__card {
   display: flex;
