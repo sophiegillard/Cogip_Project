@@ -8,6 +8,7 @@
             <div class="table__container" id="tableLastInvoices" role="table" aria-label="Last invoices"></div>
         </article>
 
+
         <article class="article__container contacts">
             <h2 class="article__title"> Last contacts </h2>
             <div class="table__container" id="tableLastContacts" role="table" aria-label="Last contacts"></div>

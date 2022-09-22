@@ -1,0 +1,22 @@
+@import 'variables';
+
+.article__title{
+  background-image: linear-gradient(to bottom, transparent 50%, $Yellow 50%);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: 20% 1.2em;
+  background-position: 10% 96%;
+}
+
+
+.article__searchbar{
+        height: 53px;
+        width: 245px;
+        left: 1084px;
+        top: 403px;
+        border-radius: 10px;
+
+        font-size: 1rem;
+    
+        
+    }
