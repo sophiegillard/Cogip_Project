@@ -1,0 +1,23 @@
+{% block header %}
+    <header class="header">
+        <div class="header__navBar">
+            <p class="header__navBar__logo">cogip</p>
+            <nav class="header__navBar__nav">
+                <a class="header__navBar__nav__link" href="/">Home</a>
+                <a class="header__navBar__nav__link" href="/invoices">Invoices</a>
+                <a class="header__navBar__nav__link" href="/companies">Companies</a>
+                <a class="header__navBar__nav__link" href="/contacts">Contact</a>
+            </nav>
+            <div class="header__navBar__button">
+                <button class="header__navBar__button__signUp" id="signUp">Sign up</button>
+                <button class="header__navBar__button__login" id="login">Login</button>
+                <img class="header__navBar__button__menu" id="menu" src="assets/img/icons/menu.svg" alt="">
+            </div>
+        </div>
+        {% block horizon %}
+
+        {% endblock %}
+        <img src="assets/img/Rectangle 10.png" alt="" />
+
+    </header>
+{% endblock %}

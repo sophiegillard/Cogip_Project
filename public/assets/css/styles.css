@@ -7,6 +7,9 @@
   width: 80%;
   padding-top: 5%;
   margin: 0 auto;
+  /*.idle {
+    display: none;
+   }*/
 }
 @media screen and (max-width: 768px) {
   .header {
@@ -132,9 +135,6 @@
   margin: 0 auto;
   margin-top: 50px;
   width: 92%;
-}
-.header .idle {
-  display: none;
 }
 
 @media screen and (max-width: 525px) {

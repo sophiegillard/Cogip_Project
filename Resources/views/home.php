@@ -1,4 +1,3 @@
-<?php require 'elements/header.php'; ?>
 
 <main class=home>
 
