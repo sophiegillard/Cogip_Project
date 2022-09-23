@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\invoices;
 
 class InvoicesController extends Controller
 {
@@ -11,6 +12,12 @@ class InvoicesController extends Controller
     */
     public function index()
     {
-        return $this->view('invoices',["name" => "Cogip"]);
+        $invoices = new invoices();
+        $invoice = $invoices->getAllInvoices();
+        $data = [
+            'title' => "Companies",
+            'invoices' => $invoice
+        ];
+        return $this->view('invoices',$data);
     }
 }
