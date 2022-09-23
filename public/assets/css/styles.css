@@ -593,13 +593,15 @@ div {
 }
 
 .article__searchbar {
+  display: flex;
+  align-content: end;
   height: 53px;
-  width: 245px;
-  left: 1084px;
+  width: 20rem;
   top: 403px;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-left: auto;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
