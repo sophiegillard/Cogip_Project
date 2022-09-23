@@ -1,0 +1,45 @@
+.showContact__main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+        justify-content: space-around;
+      }
+  &__info {
+    font-family: $typoText;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+
+    color: #000000;
+    @media screen and (min-width: 768px) {
+        font-size: 25px;
+      }
+    &__title {
+      font-family: $typoTitle;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 73px;
+      @media screen and (min-width: 1024px) {
+        font-size: 60px;
+      }
+    }
+    // &__contact {
+    // }
+    // &__phone {
+    // }
+    // &__mail {
+    // }
+    // &__company {
+    // }
+  }
+  &__img {
+    border-radius: 50%;
+    width: 255px;
+    margin-top: 30px;
+    @media screen and (min-width: 768px) {
+        margin-top: 0px;
+      }
+  }
+}
