@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %} Cogip - Contact {% endblock %}
+
+
+
+
+
+{% block body %}
+    <main>
+
+        <section class='tables'>
+            <article class="article__container invoices">
+
+                <h2 class="article__title"> All contacts </h2>
+
+                <input class="article__searchbar" type="text" placeholder="Search company..">
+
+                <div class="table__container" id="tableCompanies" role="table" aria-label="companies">
+                    <div class="flex__table table__header">
+                        <div class="flex__row row__content" style="width: calc(20%);">Name</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Phone</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Mail</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Company</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Created at</div>
+                    </div>
+
+                    {% for elem in contacts %}
+                        <div class="flex__table table__content">
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.phone }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.email }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.company}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </article>
+
+    </main>
+
+{% endblock %}

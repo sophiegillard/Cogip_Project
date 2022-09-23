@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 .header {
   background-color: #F9DE4E;
   padding-top: 5%;
@@ -565,6 +566,29 @@ div {
   .showContact__main__img {
     margin-top: 0px;
   }
+}
+
+.article__title {
+  background-image: linear-gradient(to bottom, transparent 50%, #F9DE4E 50%);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: 20% 1.2em;
+  background-position: 10% 96%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 73px;
+  margin: 3rem 0 2rem;
+}
+
+.article__searchbar {
+  height: 53px;
+  width: 245px;
+  left: 1084px;
+  top: 403px;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
