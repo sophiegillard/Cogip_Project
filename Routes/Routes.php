@@ -10,6 +10,7 @@ use App\Controllers\HomeController;
 use http\Params;
 use App\Controllers\ShowCompaniesController;
 use App\Controllers\ShowContactController;
+use App\Controllers\DashboardController;
 
 
 $router = new Router();
@@ -38,5 +39,8 @@ $router->get('/showContact', function(){
     (new ShowContactController)->index();
 });
 
+$router->get('/dashboard', function(){
+    (new DashboardController)->index();
+});
 
 $router->run();
