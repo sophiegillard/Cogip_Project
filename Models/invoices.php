@@ -10,7 +10,7 @@ class invoices
     function getAllInvoices(): bool|array
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('SELECT invoices.id,ref,invoices.created_at,companies.name FROM invoices INNER JOIN companies ON invoices.id_company = companies.id LIMIT 10');
+        $query = $db->prepare('SELECT invoices.id,ref,due_date,invoices.created_at,companies.name FROM invoices INNER JOIN companies ON invoices.id_company = companies.id LIMIT 10');
         $query->execute();
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);

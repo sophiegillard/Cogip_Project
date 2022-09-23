@@ -10,7 +10,7 @@ class home
     function getInvoices(): bool|array
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('SELECT invoices.id,ref,invoices.created_at,companies.name AS company FROM invoices INNER JOIN companies ON invoices.id_company = companies.id ORDER BY invoices.created_at DESC LIMIT 5');
+        $query = $db->prepare('SELECT invoices.id,ref,due_date,invoices.created_at,companies.name AS company FROM invoices INNER JOIN companies ON invoices.id_company = companies.id ORDER BY invoices.created_at DESC LIMIT 5');
         $query->execute();
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);
