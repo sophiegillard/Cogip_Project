@@ -22,6 +22,9 @@ class HomeController extends Controller
             "companies" => $companies,
             "contacts" => $contacts
         ];
+        echo '<pre>';
+        var_dump($data['contacts']);
+        echo '</pre>';
         return $this->view('home', $data);
     }
 
