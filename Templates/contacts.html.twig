@@ -2,10 +2,6 @@
 
 {% block titlePage %} Cogip - Contact {% endblock %}
 
-
-
-
-
 {% block body %}
     <main>
 
@@ -29,7 +25,7 @@
                         <div class="flex__table table__content">
                             <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.name}}</div>
                             <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.phone }}</div>
-                            <div class="flex__row row__content" style="width: calc(30%);">{{ elem.email }}</div>
+                            <div class="flex__row row__content" style="width: calc(30%);"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.company}}</div>
                             <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.created_at }}</div>
                         </div>
