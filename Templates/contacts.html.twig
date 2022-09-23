@@ -14,11 +14,15 @@
 
                 <div class="table__container" id="tableContacts" role="table" aria-label="contacts">
                     <div class="flex__table table__header">
-                        <div class="flex__row row__content" style="width: calc(17.5%);">Name</div>
+                        <div class="flex__row row__content arrow" style="width: calc(17.5%);">Name
+                            <img class="arrow__down" id="arrowCreatedAtInContact" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
                         <div class="flex__row row__content" style="width: calc(17.5%);">Phone</div>
                         <div class="flex__row row__content" style="width: calc(30%);">Mail</div>
                         <div class="flex__row row__content" style="width: calc(17.5%);">Company</div>
-                        <div class="flex__row row__content" style="width: calc(17.5%);">Created at</div>
+                        <div class="flex__row row__content arrow" style="width: calc(17.5%);">Created at
+                            <img class="arrow__down" id="arrowCreatedAtInContact" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
                     </div>
 
                     {% for elem in contact %}

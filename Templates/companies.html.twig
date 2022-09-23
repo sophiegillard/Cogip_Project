@@ -18,11 +18,15 @@
 
                 <div class="table__container" id="tableCompanies" role="table" aria-label="companies">
                     <div class="flex__table table__header">
-                        <div class="flex__row row__content">Name</div>
+                        <div class="flex__row row__content arrow">Name
+                            <img class="arrow__down" id="arrowNameInCompanies" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
                         <div class="flex__row row__content">TVA</div>
                         <div class="flex__row row__content">Country</div>
                         <div class="flex__row row__content">Type</div>
-                        <div class="flex__row row__content">Created at</div>
+                        <div class="flex__row row__content arrow">Created at
+                            <img class="arrow__down" id="arrowCreatedAtInCompanies" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
                     </div>
                     {% for elem in companies %}
                         <div class="flex__table table__content">

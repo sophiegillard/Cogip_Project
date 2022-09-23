@@ -330,6 +330,7 @@ div {
 .table__header {
   background: #F9DE4E;
   font-weight: bolder;
+  align-items: center;
 }
 
 .flex__table {
@@ -353,6 +354,18 @@ div {
 .flex__row {
   width: 20%;
   padding: 0.8em 1rem;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.arrow .arrow__down {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
 }
 
 /*@media all and (max-width: 767px) {
