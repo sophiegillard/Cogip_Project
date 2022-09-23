@@ -18,20 +18,20 @@
 
                 <div class="table__container" id="tableContacts" role="table" aria-label="contacts">
                     <div class="flex__table table__header">
-                        <div class="flex__row row__content" style="width: calc(20%);">Name</div>
-                        <div class="flex__row row__content" style="width: calc(20%);">Phone</div>
-                        <div class="flex__row row__content" style="width: calc(20%);">Mail</div>
-                        <div class="flex__row row__content" style="width: calc(20%);">Company</div>
-                        <div class="flex__row row__content" style="width: calc(20%);">Created at</div>
+                        <div class="flex__row row__content" style="width: calc(17.5%);">Name</div>
+                        <div class="flex__row row__content" style="width: calc(17.5%);">Phone</div>
+                        <div class="flex__row row__content" style="width: calc(30%);">Mail</div>
+                        <div class="flex__row row__content" style="width: calc(17.5%);">Company</div>
+                        <div class="flex__row row__content" style="width: calc(17.5%);">Created at</div>
                     </div>
 
                     {% for elem in contact %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name}}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.phone }}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.email }}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.company}}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.name}}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.phone }}</div>
+                            <div class="flex__row row__content" style="width: calc(30%);">{{ elem.email }}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.company}}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.created_at }}</div>
                         </div>
                     {% endfor %}
                 </div>

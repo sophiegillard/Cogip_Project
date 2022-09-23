@@ -7,6 +7,10 @@ div {
   box-sizing: border-box;
 }
 
+.tables{
+  padding: 0 15rem 0 15rem;
+}
+
 .table__container {
   display: block;
   width: 100%;
@@ -17,6 +21,9 @@ div {
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
+  font-size: 1.6rem;
+
+  min-width: 100%;
 
 }
 
