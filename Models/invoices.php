@@ -7,7 +7,7 @@ use PDO;
 
 class invoices
 {
-    function getInvoices(): bool|array
+    function getAllInvoices(): bool|array
     {
         $db = (new dbConnection())->connexion();
         $query = $db->prepare('SELECT invoices.id,ref,invoices.created_at,companies.name FROM invoices INNER JOIN companies ON invoices.id_company = companies.id LIMIT 10');
