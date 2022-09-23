@@ -27,8 +27,8 @@
                     {% for elem in invoices %}
                     <div class="flex__table table__content">
                         <div class="flex__row row__content" style="width: calc(25%);">{{ elem.ref }}</div>
-                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.updated_at }}</div>
-                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.name }}</div>
+                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.due_date }}</div>
+                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.company }}</div>
                         <div class="flex__row row__content" style="width: calc(25%);">{{ elem.created_at }}</div>
                     </div>
                     {% endfor %}
@@ -52,19 +52,11 @@
                     <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name}}</div>
                     <div class="flex__row row__content" style="width: calc(20%);">{{ elem.phone }}</div>
                     <div class="flex__row row__content" style="width: calc(20%);">{{ elem.email }}</div>
-                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name}}</div>
+                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.company}}</div>
                     <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
                 </div>
                 {% endfor %}
 
-
-                <div class=""flex__table table__content>
-                    <div class="flex__row row__content" style="width: calc(20%);"> </div>
-                    <div class="flex__row row__content" style="width: calc(20%);"></div>
-                    <div class="flex__row row__content" style="width: calc(20%);"></div>
-                    <div class="flex__row row__content" style="width: calc(20%);"></div>
-                    <div class="flex__row row__content" style="width: calc(20%);"></div>
-                </div>
             </article>
 
             <article class="article__container companies">
@@ -77,15 +69,18 @@
                     <div class="flex__row row__content">Type</div>
                     <div class="flex__row row__content">Created at</div>
                 </div>
-                <div class=""flex__table table__content>
-                    <div class="flex__row row__content"> </div>
-                    <div class="flex__row row__content"></div>
-                    <div class="flex__row row__content"></div>
-                    <div class="flex__row row__content"></div>
-                    <div class="flex__row row__content"></div>
-                </div>
+                {% for elem in companies %}
+                    <div class="flex__table table__content">
+                        <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name}}</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                    </div>
+                {% endfor %}
             </article>
         </section>
+    </main>
 
         <section class='illustration'>
             <p class="illustration__text"> work better in your company </p>
@@ -95,6 +90,6 @@
             </div>
         </section>
 
-    </main>
+
 
 {% endblock %}
