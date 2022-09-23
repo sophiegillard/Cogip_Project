@@ -28,7 +28,7 @@
                     <div class="flex__table table__content">
                         <div class="flex__row row__content" style="width: calc(25%);">{{ elem.ref }}</div>
                         <div class="flex__row row__content" style="width: calc(25%);">{{ elem.due_date }}</div>
-                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.company }}</div>
+                        <div class="flex__row row__content" style="width: calc(25%);"><a href="/showCompanies">{{ elem.company }}</a></div>
                         <div class="flex__row row__content" style="width: calc(25%);">{{ elem.created_at }}</div>
                     </div>
                     {% endfor %}
@@ -49,10 +49,10 @@
 
                     {% for elem in contacts %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.name}}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showContact">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.phone }}</div>
                             <div class="flex__row row__content" style="width: calc(30%);"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.company}}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showCompanies">{{ elem.company }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.created_at }}</div>
                         </div>
                     {% endfor %}
@@ -63,15 +63,15 @@
                 <h2 class="article__title__home"> Last companies </h2>
                 <div class="table__container" id="tableLastCompanies" role="table" aria-label="Last companies">
                     <div class="flex__table table__header">
-                        <div class="flex__row row__content">Name</div>
-                        <div class="flex__row row__content">TVA</div>
-                        <div class="flex__row row__content">Country</div>
-                        <div class="flex__row row__content">Type</div>
-                        <div class="flex__row row__content">Created at</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Name</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">TVA</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Country</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Type</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Created at</div>
                     </div>
                     {% for elem in companies %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showContact">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
