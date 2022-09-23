@@ -18,15 +18,15 @@
 
                 <div class="table__container" id="tableCompanies" role="table" aria-label="companies">
                     <div class="flex__table table__header">
-                        <div class="flex__row row__content">Name</div>
-                        <div class="flex__row row__content">TVA</div>
-                        <div class="flex__row row__content">Country</div>
-                        <div class="flex__row row__content">Type</div>
-                        <div class="flex__row row__content">Created at</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Name</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">TVA</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Country</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Type</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Created at</div>
                     </div>
                     {% for elem in companies %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showContact">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>

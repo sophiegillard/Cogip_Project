@@ -23,10 +23,10 @@
 
                     {% for elem in contact %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.name}}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showContact">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.phone }}</div>
                             <div class="flex__row row__content" style="width: calc(30%);"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.company}}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showCompanies">{{ elem.company }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.created_at }}</div>
                         </div>
                     {% endfor %}
