@@ -18,6 +18,7 @@ class ContactsController extends Controller
             'title' => "Contacts",
             'contact' => $contact
         ];
+
         return $this->view('contacts', $data);
     }
 }
