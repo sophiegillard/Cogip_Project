@@ -18,6 +18,9 @@ class CompaniesController extends Controller
             'title' => "Companies",
             'companies' => $companies
         ];
+
         return $this->view('companies',$data);
+
+
     }
 }

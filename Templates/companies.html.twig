@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %} Cogip - Companies {% endblock %}
+
+
+
+
+
+{% block body %}
+    <main>
+
+        <section class='tables'>
+            <article class="article__container invoices">
+
+                <h2 class="article__title"> All companies </h2>
+
+                <input class="article__searchbar" type="text" placeholder="Search company..">
+
+                <div class="table__container" id="tableCompanies" role="table" aria-label="companies">
+                    <div class="flex__table table__header">
+                        <div class="flex__row row__content">Name</div>
+                        <div class="flex__row row__content">TVA</div>
+                        <div class="flex__row row__content">Country</div>
+                        <div class="flex__row row__content">Type</div>
+                        <div class="flex__row row__content">Created at</div>
+                    </div>
+                    {% for elem in companies %}
+                        <div class="flex__table table__content">
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </article>
+
+    </main>
+
+{% endblock %}

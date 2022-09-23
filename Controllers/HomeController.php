@@ -22,6 +22,7 @@ class HomeController extends Controller
             "companies" => $companies,
             "contacts" => $contacts
         ];
+
         return $this->view('home', $data);
     }
 
