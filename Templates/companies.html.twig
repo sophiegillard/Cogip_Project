@@ -26,7 +26,7 @@
                     </div>
                     {% for elem in companies %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showContact">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
