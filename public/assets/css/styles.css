@@ -1,19 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 .header {
   background-color: #F9DE4E;
   padding-top: 5%;
-  margin: 0 auto;
   /*.idle {
     display: none;
    }*/
-}
-@media screen and (max-width: 768px) {
-  .header {
-    width: 100%;
-  }
 }
 .header__navBar {
   display: flex;
@@ -434,8 +427,7 @@ div {
 }
 .illustration__image__background {
   background-color: #F9DE4E;
-  -webkit-clip-path: polygon(10% 9%, 100% 54%, 100% 100%, 0% 100%);
-          clip-path: polygon(10% 9%, 100% 54%, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 9%, 100% 54%, 100% 100%, 0% 100%);
   width: 100%;
   height: 280px;
   position: absolute;
@@ -446,23 +438,6 @@ div {
   position: absolute;
   z-index: 1;
   right: 8rem;
-}
-
-.article__title {
-  background-image: linear-gradient(to bottom, transparent 50%, #F9DE4E 50%);
-  border-radius: 5px;
-  background-repeat: no-repeat;
-  background-size: 20% 1.2em;
-  background-position: 10% 96%;
-}
-
-.article__searchbar {
-  height: 53px;
-  width: 245px;
-  left: 1084px;
-  top: 403px;
-  border-radius: 10px;
-  font-size: 1rem;
 }
 
 .showCompanies__main {
@@ -592,3 +567,4 @@ div {
   }
 }
 
+/*# sourceMappingURL=styles.css.map */
