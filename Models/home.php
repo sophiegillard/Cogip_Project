@@ -19,7 +19,7 @@ class home
     function getCompanies(): bool|array
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('SELECT companies.id,companies.name,tva,companies.created_at,types.name AS types FROM `companies` INNER JOIN types ON companies.types_id = types.id ORDER BY created_at DESC LIMIT 5');
+        $query = $db->prepare('SELECT companies.id,companies.name,tva,country,companies.created_at,types.name AS types FROM `companies` INNER JOIN types ON companies.types_id = types.id ORDER BY created_at DESC LIMIT 5');
         $query->execute();
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);
