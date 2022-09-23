@@ -24,8 +24,14 @@
     &__profil {
       grid-area: profil;
       border-bottom: 1px solid #e0e0e0;
+      @media screen and (min-width: 1024px) {
+        margin-top: 50px;
+      }
       &__return {
         margin: 20px;
+        @media screen and (min-width: 1024px) {
+            display: none;
+          }
       }
       &__img {
         width: 105px;
@@ -75,16 +81,10 @@
           padding-right: 30px;
         }
       }
-      &__dashboard {
-        font-weight: 600;
-        border-right: 5px solid #9698d6;
-      }
-    //   &__invoices {
-    //   }
-    //   &__companies {
-    //   }
-    //   &__contact {
-    //   }
+    //   &__dashboard {}
+    //   &__invoices {}
+    //   &__companies {}
+    //   &__contact {}
     }
     &__logout {
       grid-area: logout;
@@ -200,4 +200,9 @@
       }
     }
   }
+}
+
+.actif {
+    font-weight: 600;
+    border-right: 5px solid #9698d6;
 }
