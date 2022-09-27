@@ -12,8 +12,8 @@ class dbConnection
     {
         $host = 'localhost';
         $dbname = 'cogip';
-        $username = 'sophro';
-        $password = '123';
+        $username = 'moustito';
+        $password = 'root';
 
         try {
             $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
