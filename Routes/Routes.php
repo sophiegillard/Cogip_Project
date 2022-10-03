@@ -12,6 +12,8 @@ use App\Controllers\ShowCompaniesController;
 use App\Controllers\ShowContactController;
 use App\Controllers\DashboardController;
 use App\Controllers\DashboardInvoicesController;
+use App\Controllers\DashboardCompaniesController;
+use App\Controllers\DashboardContactController;
 
 
 $router = new Router();
@@ -46,6 +48,14 @@ $router->get('/dashboard', function(){
 
 $router->get('/dashboardInvoices', function(){
     (new DashboardInvoicesController)->index();
+});
+
+$router->get('/dashboardCompanies', function(){
+    (new DashboardCompaniesController)->index();
+});
+
+$router->get('/dashboardContact', function(){
+    (new DashboardContactController)->index();
 });
 
 $router->run();

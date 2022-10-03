@@ -10,6 +10,6 @@ class Controller
     */
     public function view($view, $data = [])
     {
-       new render($view, $data);
+       new Render($view, $data);
     }
 }
