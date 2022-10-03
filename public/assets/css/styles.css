@@ -437,7 +437,8 @@ div {
 }
 .illustration__image__background {
   background-color: #F9DE4E;
-  clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+          clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
   width: 57%;
   height: 30%;
   overflow: hidden;
@@ -603,5 +604,3 @@ div {
   margin-left: auto;
   margin-bottom: 2rem;
 }
-
-/*# sourceMappingURL=styles.css.map */
