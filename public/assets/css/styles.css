@@ -451,7 +451,8 @@ div {
 }
 .illustration__image__background {
   background-color: #F9DE4E;
-  clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+          clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
   width: 57%;
   height: 30%;
   overflow: hidden;
@@ -771,14 +772,14 @@ div {
   color: #ffffff;
 }
 
-body {
+.dashboardBody {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "menunavbar dashheader" "menunavbar form";
 }
 @media screen and (max-width: 1024px) {
-  body {
+  .dashboardBody {
     display: block;
   }
 }
@@ -888,5 +889,3 @@ body {
   font-weight: 600;
   border-right: 5px solid #9698d6;
 }
-
-/*# sourceMappingURL=styles.css.map */
