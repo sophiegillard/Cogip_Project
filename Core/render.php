@@ -5,7 +5,7 @@ use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
 
-class Render
+class render
 {
     public function __construct($page, $data = [])
     {
