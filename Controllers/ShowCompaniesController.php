@@ -13,12 +13,19 @@ class ShowCompaniesController extends Controller
     public function index()
     {
         $companies = new companies();
-        $company = $companies->getCompany($_GET['id']);
-        $data = [
-            'title' => $company[0]->name,
-            'companies' => $company
-        ];
-        var_dump($data);
-        return $this->view('showCompanies', $data);
+        if (isset($_GET['id'])) {
+            $id = filter_var($_GET['id'],FILTER_SANITIZE_NUMBER_INT);
+            $company = $companies->getCompany($id);
+            $data = [
+                'title' => $company[0]->name,
+                'companies' => $company
+            ];
+            var_dump($data);
+            return $this->view('showCompanies', $data);
+        } else{
+            $data=0;
+            return $this->view('error',$data);
+        }
+
     }
 }
