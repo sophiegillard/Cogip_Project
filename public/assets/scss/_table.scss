@@ -30,7 +30,9 @@ div {
 .table__header{
   background: $table-header;
   font-weight: bolder;
+  align-items: center;
 }
+
 .flex__table {
   display: flex;
   flex-flow: row wrap;
@@ -55,6 +57,18 @@ div {
 .flex__row {
   width: calc(100% / 5);
   padding: 0.8em 1rem;
+}
+
+.arrow{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  .arrow__down{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
 }
 
 

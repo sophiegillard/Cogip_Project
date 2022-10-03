@@ -18,15 +18,21 @@
 
                 <div class="table__container" id="tableCompanies" role="table" aria-label="companies">
                     <div class="flex__table table__header">
-                        <div class="flex__row row__content" style="width: calc(20%);">Name</div>
+
+                        <div class="flex__row row__content arrow" style="width: calc(20%);">Name
+                            <img class="arrow__down" id="arrowNameInCompanies" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
                         <div class="flex__row row__content" style="width: calc(20%);">TVA</div>
                         <div class="flex__row row__content" style="width: calc(20%);">Country</div>
                         <div class="flex__row row__content" style="width: calc(20%);">Type</div>
-                        <div class="flex__row row__content" style="width: calc(20%);">Created at</div>
+                        <div class="flex__row row__content arrow" style="width: calc(20%);">Created at
+                            <img class="arrow__down" id="arrowCreatedAtInCompanies" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
                     </div>
+
                     {% for elem in companies %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
@@ -35,7 +41,7 @@
                     {% endfor %}
                 </div>
             </article>
-
+        </section>
     </main>
 
 {% endblock %}
