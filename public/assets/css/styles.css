@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@500;900&display=swap");
+=======
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Roboto:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Roboto:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Roboto:wght@500;900&display=swap");
+>>>>>>> dev
 .header {
   background-color: #F9DE4E;
   padding-top: 5%;
@@ -592,6 +598,7 @@ div {
   }
 }
 
+<<<<<<< HEAD
 .article__title {
   background-image: linear-gradient(to bottom, transparent 50%, #F9DE4E 50%);
   border-radius: 5px;
@@ -769,14 +776,19 @@ div {
   color: #ffffff;
 }
 
+=======
+>>>>>>> dev
 .dashboard {
   display: flex;
   background: #f5f5fb;
   border-left: 1px solid #e7e7e7;
 }
 .dashboard__menu {
+<<<<<<< HEAD
   position: fixed;
   height: 100%;
+=======
+>>>>>>> dev
   background-color: white;
   width: 285px;
   display: none;
@@ -871,10 +883,108 @@ div {
   background-color: aqua;
   color: #9698d6;
 }
+<<<<<<< HEAD
+=======
+.dashboard__header {
+  font-family: "Inter";
+  font-style: normal;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .dashboard__header {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+}
+.dashboard__header__title {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+.dashboard__header__title__menu {
+  padding-right: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .dashboard__header__title__menu {
+    display: none;
+  }
+}
+.dashboard__header__path {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  padding-left: 70px;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+.dashboard__header__banner {
+  background: #9698d6;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .dashboard__header__banner {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+}
+.dashboard__header__banner__name {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 42px;
+  color: #ffffff;
+}
+@media screen and (min-width: 1024px) {
+  .dashboard__header__banner__name {
+    max-width: 50%;
+  }
+}
+.dashboard__header__banner__text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+@media screen and (min-width: 1024px) {
+  .dashboard__header__banner__text {
+    max-width: 50%;
+  }
+}
+.dashboard__header__illustration {
+  width: 370px;
+}
+@media screen and (min-width: 768px) {
+  .dashboard__header__illustration {
+    position: absolute;
+    width: 280px;
+    right: 3px;
+    top: 3px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dashboard__header__illustration {
+    position: absolute;
+    width: 370px;
+    right: 50px;
+    top: 3px;
+  }
+}
+>>>>>>> dev
 
 .actif {
   font-weight: 600;
   border-right: 5px solid #9698d6;
+<<<<<<< HEAD
 }
 
 /*# sourceMappingURL=styles.css.map */
+=======
+}
+>>>>>>> dev
