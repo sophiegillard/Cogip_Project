@@ -10,6 +10,10 @@ use App\Controllers\HomeController;
 use http\Params;
 use App\Controllers\ShowCompaniesController;
 use App\Controllers\ShowContactController;
+use App\Controllers\DashboardController;
+use App\Controllers\DashboardInvoicesController;
+use App\Controllers\DashboardCompaniesController;
+use App\Controllers\DashboardContactController;
 
 
 $router = new Router();
@@ -30,12 +34,28 @@ $router->get('/invoices', function(){
     (new InvoicesController)->index();
 });
 
-$router->get('/showCompanies', function(){
+$router->get('/showCompany', function(){
     (new ShowCompaniesController)->index();
 });
 
 $router->get('/showContact', function(){
     (new ShowContactController)->index();
+});
+
+$router->get('/dashboard', function(){
+    (new DashboardController)->index();
+});
+
+$router->get('/dashboardInvoices', function(){
+    (new DashboardInvoicesController)->index();
+});
+
+$router->get('/dashboardCompanies', function(){
+    (new DashboardCompaniesController)->index();
+});
+
+$router->get('/dashboardContact', function(){
+    (new DashboardContactController)->index();
 });
 
 $router->run();

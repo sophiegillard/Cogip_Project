@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\companies;
 
 class ShowCompaniesController extends Controller
 {
@@ -10,12 +11,21 @@ class ShowCompaniesController extends Controller
     * return view
     */
     public function index()
-    {   
-        // $home = new home();
-        // $companies = $home->getCompanies();
-        // $data = [
-        //     'companies' => $companies
-        // ];
-        return $this->view('showCompanies',["name" => "Cogip"]);
+    {
+        $companies = new companies();
+        if (isset($_GET['id'])) {
+            $id = filter_var($_GET['id'],FILTER_SANITIZE_NUMBER_INT);
+            $company = $companies->getCompany($id);
+            $data = [
+                'title' => $company[0]->name,
+                'companies' => $company
+            ];
+            var_dump($data);
+            return $this->view('showCompanies', $data);
+        } else{
+            $data=0;
+            return $this->view('error',$data);
+        }
+
     }
 }
