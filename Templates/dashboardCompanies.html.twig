@@ -1,33 +1,30 @@
 {% extends 'baseDashboard.html.twig' %}
 
 {% block titlePage %}
-  Cogip - Dashboard Invoices
+  Cogip - Dashboard Companies
 {% endblock %}
 
 {% block body %}
   <section class="dashboardForm">
     <h1 class="dashboardForm__title">
-      New invoice
+      New companies
     </h1>
     <form class="dashboardForm__form" action="">
       <input class="dashboardForm__form__input"
         id=""
         type="text"
-        name="reference"
-        placeholder="Reference" />
+        name="name"
+        placeholder="Name" />
       <input class="dashboardForm__form__input"
         id=""
         type="text"
-        name="price"
-        placeholder="Price" />
-      <select class="dashboardForm__form__input" name="campaniesName" id="">
-        <option value="none" selected disabled hidden>
-          Select an Companies
-        </option>
-        <option value="phoqueOff">
-          Phoque Off
-        </option>
-      </select>
+        name="country"
+        placeholder="Country" />
+      <input class="dashboardForm__form__input"
+        id=""
+        type="text"
+        name="tva"
+        placeholder="TVA" />
       <input class="dashboardForm__form__button" type="submit" value="Save" />
     </form>
   </section>
