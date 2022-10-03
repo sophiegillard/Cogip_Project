@@ -312,7 +312,7 @@ div {
 }
 
 .tables {
-  padding: 0 15rem 0 15rem;
+  padding: 0 5rem 0 5rem;
 }
 
 .table__container {
@@ -451,8 +451,7 @@ div {
 }
 .illustration__image__background {
   background-color: #F9DE4E;
-  -webkit-clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
-          clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
   width: 57%;
   height: 30%;
   overflow: hidden;
@@ -889,3 +888,5 @@ body {
   font-weight: 600;
   border-right: 5px solid #9698d6;
 }
+
+/*# sourceMappingURL=styles.css.map */
