@@ -30,7 +30,7 @@ $router->get('/invoices', function(){
     (new InvoicesController)->index();
 });
 
-$router->get('/showCompanies', function(){
+$router->get('/showCompany', function(){
     (new ShowCompaniesController)->index();
 });
 
