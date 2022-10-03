@@ -16,4 +16,15 @@ class contacts
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
+
+    function getContact($id)
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('SELECT contacts.name, contacts.phone, contacts.email, companies.name AS company FROM `contacts` INNER JOIN companies ON company_id = companies.id WHERE contacts.id = :id');
+        $query->execute(array(
+            'id' => $id
+        ));
+        $db = null;
+        return $query->fetch(PDO::FETCH_OBJ);
+    }
 }
