@@ -620,6 +620,8 @@ div {
 }
 
 .dashboard__header {
+  grid-area: dashheader;
+  width: 100%;
   font-family: "Inter";
   font-style: normal;
 }
@@ -711,13 +713,13 @@ div {
 }
 
 .dashboardForm {
+  grid-area: form;
   display: flex;
   flex-direction: column;
   background: #ffffff;
   box-shadow: 0px 0px 37px -21px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  width: 900px;
-  margin: 20px;
+  margin: 10px;
   padding: 20px;
 }
 .dashboardForm__title {
@@ -747,7 +749,7 @@ div {
   color: #000000;
 }
 .dashboardForm__form__input:nth-child(3) {
-  width: 95%;
+  width: 90%;
   font-family: "Inter";
   font-style: normal;
   font-weight: 100;
@@ -770,19 +772,27 @@ div {
   color: #ffffff;
 }
 
-.dashboard {
-  display: flex;
-  background: #f5f5fb;
-  border-left: 1px solid #e7e7e7;
+body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "menunavbar dashheader" "menunavbar form";
 }
+@media screen and (max-width: 1024px) {
+  body {
+    display: block;
+  }
+}
+
 .dashboard__menu {
   position: fixed;
   height: 100%;
+  width: 22%;
   background-color: white;
-  width: 285px;
   display: none;
+  grid-area: menunavbar;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 0.2fr;
+  grid-template-rows: 0.4fr 1fr 0.2fr;
   grid-template-areas: "profil" "nav" "logout";
   position: absolute;
 }
@@ -832,6 +842,8 @@ div {
   grid-area: nav;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
