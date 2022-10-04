@@ -33,7 +33,7 @@ padding-top: 2rem;
 
 font-family: 'Inter';
 font-weight: 900;
-font-size: 84px;
+font-size: 50px;
 line-height: 82px;
 
 text-transform: uppercase;
@@ -44,6 +44,9 @@ text-transform: uppercase;
 
     &__image{
         justify-content: flex-end;
+        @media screen and (max-width: 768px) {
+            display: none;
+          }
 
 
         &__background{
