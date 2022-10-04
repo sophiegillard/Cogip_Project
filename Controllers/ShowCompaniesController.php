@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Models\companies;
+use App\Models\invoices;
 
 class ShowCompaniesController extends Controller
 {
@@ -13,12 +14,15 @@ class ShowCompaniesController extends Controller
     public function index()
     {
         $companies = new companies();
+        $invoices = new invoices();
         if (isset($_GET['id'])) {
             $id = filter_var($_GET['id'],FILTER_SANITIZE_NUMBER_INT);
             $company = $companies->getCompany($id);
+            $invoice = $invoices->getInvoicesByCompany($id);
             $data = [
                 'title' => $company[0]->name,
-                'companies' => $company
+                'companies' => $company,
+                'invoices'=> $invoice
             ];
             var_dump($data);
             return $this->view('showCompanies', $data);
