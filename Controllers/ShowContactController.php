@@ -18,9 +18,9 @@ class ShowContactController extends Controller
             $contact = $contacts->getContact($id);
             $data = [
                 'title' => 'Contact',
-                'companies' => $contact
+                'contacts' => $contact
             ];
-            var_dump($data);
+            var_dump($contact);
 
             return $this->view('showContact', $data);
         } else {
