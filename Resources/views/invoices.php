@@ -2,11 +2,17 @@
 
     <main>
 
-    <h1>Invoices</h1>
+    <section class='tables'>
+        <article class="article__container invoices">
+            
+            <h2 class="article__title"> All invoices </h2>
+        
+            <input class="article__searchbar" type="text" placeholder="Search company..">
 
-    <h2>table</h2>
+            <div class="table__container" id="tableInvoices" role="table" aria-label="invoices"></div>
 
-<div class="table-container" id="tableInvoice" role="table" aria-label="invoices"></div>
+        </article>
+
     </main>
 
 <?php require 'elements/footer.php' ?>

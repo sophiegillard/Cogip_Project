@@ -12,40 +12,50 @@ use App\Controllers\ShowCompaniesController;
 use App\Controllers\ShowContactController;
 use App\Controllers\DashboardController;
 use App\Controllers\DashboardInvoicesController;
+use App\Controllers\DashboardCompaniesController;
+use App\Controllers\DashboardContactController;
 
 
 $router = new Router();
 
-$router->get('/', function() {
+$router->get('/', function () {
     (new HomeController)->index();
 });
 
-$router->get('/contacts', function(){
+$router->get('/contacts', function () {
     (new ContactsController)->index();
 });
 
-$router->get('/companies', function(){
+$router->get('/companies', function () {
     (new CompaniesController)->index();
 });
 
-$router->get('/invoices', function(){
+$router->get('/invoices', function () {
     (new InvoicesController)->index();
 });
 
-$router->get('/showCompanies', function(){
+$router->get('/showCompany', function () {
     (new ShowCompaniesController)->index();
 });
 
-$router->get('/showContact', function(){
+$router->get('/showContact', function () {
     (new ShowContactController)->index();
 });
 
-$router->get('/dashboard', function(){
+$router->get('/dashboard', function () {
     (new DashboardController)->index();
 });
 
-$router->get('/dashboard-invoices', function(){
+$router->get('/dashboardInvoices', function () {
     (new DashboardInvoicesController)->index();
+});
+
+$router->get('/dashboardCompanies', function () {
+    (new DashboardCompaniesController)->index();
+});
+
+$router->get('/dashboardContact', function () {
+    (new DashboardContactController)->index();
 });
 
 $router->run();

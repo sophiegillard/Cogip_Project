@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\contacts;
 
 class ContactsController extends Controller
 {
@@ -11,6 +12,13 @@ class ContactsController extends Controller
     */
     public function index()
     {
-        return $this->view('contacts',["name" => "Cogip"]);
+        $contacts = new contacts();
+        $contact = $contacts->getAllContacts();
+        $data = [
+            'title' => "Contacts",
+            'contact' => $contact
+        ];
+
+        return $this->view('contacts', $data);
     }
 }

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %} Cogip - Contact {% endblock %}
+
+{% block body %}
+    <main>
+
+        <section class='tables'>
+            <article class="article__container contacts">
+
+                <h2 class="article__title"> All contacts </h2>
+
+                <input class="article__searchbar" type="text" placeholder="Search contact..">
+
+                <div class="table__container" id="tableContacts" role="table" aria-label="contacts">
+                    <div class="flex__table table__header">
+                        <div class="table__title flex__row row__content arrow" style="width: calc(17.5%);">Name
+                            <img class="arrow__down" id="0" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
+                        <div class="table__title flex__row row__content" style="width: calc(17.5%);">Phone</div>
+                        <div class="table__title flex__row row__content" style="width: calc(30%);">Mail</div>
+                        <div class="table__title flex__row row__content" style="width: calc(17.5%);">Company</div>
+                        <div  class="table__title flex__row row__content arrow" style="width: calc(17.5%);">Created at
+                            <img class="arrow__down" id="4" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
+                    </div>
+
+                    {% for elem in contact %}
+                        <div class="flex__table table__content">
+                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.phone }}</div>
+                            <div class="flex__row row__content" style="width: calc(30%);"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.created_at }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </article>
+        </section>
+    </main>
+
+{% endblock %}
