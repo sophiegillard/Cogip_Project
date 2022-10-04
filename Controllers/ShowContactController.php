@@ -20,7 +20,6 @@ class ShowContactController extends Controller
                 'title' => 'Contact',
                 'companies' => $contact
             ];
-            var_dump($data);
 
             return $this->view('showContact', $data);
         } else {

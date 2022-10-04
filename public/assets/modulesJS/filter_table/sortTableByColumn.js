@@ -6,7 +6,6 @@
 * @param {number} row The index of the column to sort
 * @param {boolean} asc Determine whether the sorting is in ascending order
 */
-
 export const sortTableByColumn = (table, row, column, asc = true) =>{
     const dirModifier = asc ? 1 : -1;
     const tBody= document.getElementById(table);
@@ -31,13 +30,6 @@ export const sortTableByColumn = (table, row, column, asc = true) =>{
     tBody.append(...sortData);
 
     //remember how the column is currently sorted
-    /*const fleches = document.getElementById('arrowCreatedAtInContact')
-
-    fleche.classList.remove("th-sort-asc", "th-sort-desc");
-    fleche.classList.toggle("th-sort-asc", asc);
-    fleche.classList.toggle("th-sort-desc", !asc);*/
-
-
     const fleches = document.getElementsByClassName('arrow__down')
 
     for (const fleche of fleches) {
