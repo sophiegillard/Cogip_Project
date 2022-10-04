@@ -606,7 +606,7 @@ div {
   margin: 3rem 0 2rem;
 }
 
-.article__searchbar {
+.searchbar {
   display: flex;
   align-content: end;
   height: 53px;
@@ -616,6 +616,10 @@ div {
   font-size: 1.3rem;
   margin-left: auto;
   margin-bottom: 2rem;
+}
+
+.hidecard {
+  display: none;
 }
 
 .dashboard__header {
