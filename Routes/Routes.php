@@ -58,4 +58,13 @@ $router->get('/dashboardContact', function () {
     (new DashboardContactController)->index();
 });
 
+$router->post('/dashboardInvoices', function () {
+    $ref = $_POST['reference'];
+    $price = $_POST['price'];
+    $company = $_POST['companyName'];
+    $dueDate = $_POST['date'];
+    (new DashboardInvoicesController)->addInvoices($ref, $company, $dueDate);
+    header('location:/dashboardInvoices');
+});
+
 $router->run();
