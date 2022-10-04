@@ -10,7 +10,7 @@ class companies
     function getAllCompanies(): bool|array
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('SELECT companies.id,companies.name,tva,country,companies.created_at,types.name AS types FROM `companies` INNER JOIN types ON companies.types_id = types.id ORDER BY companies.created_at DESC LIMIT 10');
+        $query = $db->prepare('SELECT companies.id,companies.name,tva,country,companies.created_at,types.name AS types FROM `companies` INNER JOIN types ON companies.types_id = types.id ORDER BY companies.created_at');
         $query->execute();
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);
