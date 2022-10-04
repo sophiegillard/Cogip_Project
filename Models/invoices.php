@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Database\dbConnection;
+use Cassandra\Date;
 use PDO;
 
 class invoices
@@ -21,9 +22,22 @@ class invoices
         $db = (new dbConnection())->connexion();
         $query = $db->prepare('SELECT invoices.ref, invoices.due_date, companies.name, invoices.created_at FROM `invoices` INNER JOIN companies ON companies.id = invoices.id_company  WHERE companies.id = :id ORDER BY invoices.created_at DESC LIMIT 5');
         $query->execute(array(
-            'id'=>$id
+            'id' => $id
         ));
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    function createInvoices($ref, $company, $dueDate): void
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('INSERT INTO `invoices`(`id_company`, `created_at`, `ref`, `updated_at`, `due_date`) VALUES (?, ?, ?, ?, ?)');
+        $query->execute(array(
+            $company,
+            date('Y-m-d'),
+            $ref,
+            date('Y-m-d'),
+            $dueDate
+        ));
     }
 }
