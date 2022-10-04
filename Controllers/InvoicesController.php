@@ -18,6 +18,7 @@ class InvoicesController extends Controller
             'title' => "Companies",
             'invoices' => $invoice
         ];
+
         return $this->view('invoices',$data);
     }
 }

@@ -20,7 +20,7 @@ class ShowCompaniesController extends Controller
                 'title' => $company[0]->name,
                 'companies' => $company
             ];
-            var_dump($data);
+
             return $this->view('showCompanies', $data);
         } else{
             $data=0;
