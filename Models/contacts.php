@@ -25,6 +25,10 @@ class contacts
             'id' => $id
         ));
         $db = null;
+<<<<<<< HEAD
         return $query->fetchAll(PDO::FETCH_OBJ);
+=======
+        return $query->fetch(PDO::FETCH_OBJ);
+>>>>>>> refactor
     }
 }

@@ -2,6 +2,9 @@
     <header class="header">
         <div class="header__navBar">
             <p class="header__navBar__logo">cogip</p>
+            <div class="header__navBar__menu">
+                <img class="header__navBar__menu__button" id="burger" src="assets/img/icons/menu.svg" alt="">
+            </div>
             <nav class="header__navBar__nav">
                 <a class="header__navBar__nav__link" href="/">Home</a>
                 <a class="header__navBar__nav__link" href="/invoices">Invoices</a>
@@ -11,13 +14,12 @@
             <div class="header__navBar__button">
                 <button class="header__navBar__button__signUp" id="signUp"><a href="/dashboard">Sign up</a></button>
                 <button class="header__navBar__button__login" id="login">Login</button>
-                <img class="header__navBar__button__menu" id="menu" src="assets/img/icons/menu.svg" alt="">
             </div>
         </div>
         {% block horizon %}
 
         {% endblock %}
-        <img src="assets/img/Rectangle 10.png" alt="" />
+        <img id="break" src="assets/img/Rectangle 10.png" alt="" />
 
     </header>
 {% endblock %}

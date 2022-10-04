@@ -7,12 +7,14 @@ use App\Models\companies;
 use App\Models\invoices;
 
 
+
 class DashboardInvoicesController extends Controller
 {
     /*
     * return view
     */
     public function index()
+
     {
         if (isset($_POST)) {
             var_dump($_POST);
