@@ -19,7 +19,7 @@ class invoices
     function getInvoicesByCompany($id): bool|array
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('SELECT invoices.ref, invoices.due_date, companies.name AS company, invoices.created_at FROM `invoices` INNER JOIN companies ON companies.id = invoices.id_company  WHERE companies.id = :id ORDER BY invoices.created_at DESC LIMIT 5');
+        $query = $db->prepare('SELECT invoices.ref, invoices.due_date, companies.name, invoices.created_at FROM `invoices` INNER JOIN companies ON companies.id = invoices.id_company  WHERE companies.id = :id ORDER BY invoices.created_at DESC LIMIT 5');
         $query->execute(array(
             'id'=>$id
         ));
