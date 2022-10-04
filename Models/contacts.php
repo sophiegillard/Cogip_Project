@@ -17,7 +17,7 @@ class contacts
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
-    function getContact($id): bool|array
+    function getContact($id)
     {
         $db = (new dbConnection())->connexion();
         $query = $db->prepare('SELECT contacts.name, contacts.phone, contacts.email, contacts.picture, companies.name AS company FROM `contacts` INNER JOIN companies ON company_id = companies.id WHERE contacts.id = :id');
