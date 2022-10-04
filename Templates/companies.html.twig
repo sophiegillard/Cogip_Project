@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %} Cogip - Companies {% endblock %}
+
+{% block body %}
+    <main>
+
+        <section class='tables'>
+            <article class="article__container companies">
+
+                <h2 class="article__title"> All companies </h2>
+
+                <input class="article__searchbar" type="text" placeholder="Search company..">
+
+                <div class="table__container" id="tableCompanies" role="table" aria-label="companies">
+                    <div class="flex__table table__header">
+
+                        <div class="flex__row row__content arrow" style="width: calc(20%);">Company
+                            <img class="arrow__down" id="0" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
+                        <div class="flex__row row__content" style="width: calc(20%);">TVA</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Country</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Type</div>
+                        <div class="flex__row row__content arrow" style="width: calc(20%);">Created at
+                            <img class="arrow__down" id="4" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
+                    </div>
+
+                    {% for elem in companies %}
+                        <div class="flex__table table__content">
+                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </article>
+        </section>
+    </main>
+
+{% endblock %}

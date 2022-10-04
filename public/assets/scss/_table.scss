@@ -7,6 +7,10 @@ div {
   box-sizing: border-box;
 }
 
+.tables{
+  padding: 0 5rem 0 5rem;
+}
+
 .table__container {
   display: block;
   width: 100%;
@@ -17,13 +21,18 @@ div {
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
+  font-size: 1.6rem;
+
+  min-width: 100%;
 
 }
 
 .table__header{
   background: $table-header;
   font-weight: bolder;
+  align-items: center;
 }
+
 .flex__table {
   display: flex;
   flex-flow: row wrap;
@@ -37,7 +46,7 @@ div {
 }
 
 .table__content{
-  font-weight:light;
+  font-weight:lighter;
   &:hover {
     cursor:pointer;
     transition: 500ms;
@@ -48,6 +57,18 @@ div {
 .flex__row {
   width: calc(100% / 5);
   padding: 0.8em 1rem;
+}
+
+.arrow{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  .arrow__down{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
 }
 
 

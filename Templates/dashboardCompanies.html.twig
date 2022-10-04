@@ -1,0 +1,31 @@
+{% extends 'baseDashboard.html.twig' %}
+
+{% block titlePage %}
+  Cogip - Dashboard Companies
+{% endblock %}
+
+{% block body %}
+  <section class="dashboardForm">
+    <h1 class="dashboardForm__title">
+      New companies
+    </h1>
+    <form class="dashboardForm__form" action="">
+      <input class="dashboardForm__form__input"
+        id=""
+        type="text"
+        name="companiesName"
+        placeholder="Companies Name" />
+      <input class="dashboardForm__form__input"
+        id=""
+        type="text"
+        name="country"
+        placeholder="Country" />
+      <input class="dashboardForm__form__input"
+        id=""
+        type="text"
+        name="tva"
+        placeholder="TVA" />
+      <input class="dashboardForm__form__button" type="submit" value="Save" />
+    </form>
+  </section>
+{% endblock %}

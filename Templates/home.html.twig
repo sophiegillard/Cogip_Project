@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %} Cogip - Home {% endblock %}
+
+ {% block header %}
+     {% include 'element_headerHorizon.html.twig' %}
+ {% endblock %}
+
+
+
+
+{% block body %}
+
+
+    <main class=home>
+
+        <section class='tables'>
+            <article class="article__container invoices">
+                <h2 class="article__title__home"> Last invoices </h2>
+                <div class="table__container" id="tableLastInvoices" role="table" aria-label="Last invoices">
+                    <div class="flex__table table__header">
+                        <div class="flex__row row__content" style="width: calc(25%);">Invoice Number</div>
+                        <div class="flex__row row__content" style="width: calc(25%);">Due Date</div>
+                        <div class="flex__row row__content" style="width: calc(25%);">Company</div>
+                        <div class="flex__row row__content" style="width: calc(25%);">Created at</div>
+                    </div>
+                    {% for elem in invoices %}
+                    <div class="flex__table table__content">
+                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.ref }}</div>
+                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.due_date }}</div>
+                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.company }}</a></div>
+                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.created_at }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </article>
+
+
+            <article class="article__container contacts">
+                <h2 class="article__title__home"> Last contacts </h2>
+                <div class="table__container" id="tableLastContacts" role="table" aria-label="Last contacts">
+                    <div class="flex__table table__header">
+                        <div class="flex__row row__content" style="width: calc(17.5%);">Name</div>
+                        <div class="flex__row row__content" style="width: calc(17.5%);">Phone</div>
+                        <div class="flex__row row__content" style="width: calc(30%);">Mail</div>
+                        <div class="flex__row row__content" style="width: calc(17.5%);">Company</div>
+                        <div class="flex__row row__content" style="width: calc(17.5%);">Created at</div>
+                    </div>
+
+                    {% for elem in contacts %}
+                        <div class="flex__table table__content">
+                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.phone }}</div>
+                            <div class="flex__row row__content" style="width: calc(30%);"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.company }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.created_at }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </article>
+
+            <article class="article__container companies">
+                <h2 class="article__title__home"> Last companies </h2>
+                <div class="table__container" id="tableLastCompanies" role="table" aria-label="Last companies">
+                    <div class="flex__table table__header">
+                        <div class="flex__row row__content" style="width: calc(20%);">Name</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">TVA</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Country</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Type</div>
+                        <div class="flex__row row__content" style="width: calc(20%);">Created at</div>
+                    </div>
+                    {% for elem in companies %}
+                        <div class="flex__table table__content">
+                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </article>
+        </section>
+    </main>
+
+        <section class='illustration'>
+            <p class="illustration__text"> work better in your company </p>
+            <div class="illustration__image">
+                <div class="illustration__image__background"></div>
+                <img class="illustration__image__source" src="assets/img/2_illustration_home_footer.png" alt="">
+            </div>
+        </section>
+
+
+
+{% endblock %}
