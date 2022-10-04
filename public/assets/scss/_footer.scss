@@ -1,78 +1,70 @@
 .footer {
-  @media screen and (max-width: 525px) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
   hr {
-    border: 2px $Yellow solid;
-    width: 60%;
-    margin-bottom: 90px;
+    background: gray;
+    width: 71%;
+  }
+  .yellowHr {
+    border: 2px solid $Yellow;
   }
   &__main {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    @media screen and (max-width: 525px) {
-      flex-direction: column;
-      align-items: center;
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      justify-content: space-around;
     }
     &__logo {
-      &__text {
-        text-align: center;
-        align-items: center;
+      display: flex;
+      justify-content: center;
 
-        text-transform: uppercase;
-        font-family: $typoText;
+      margin-top: 20px;
+      &__text {
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 900;
         font-size: 48px;
         line-height: 56px;
-
-        border: 5px $Yellow solid;
-        width: 165px;
+        text-transform: uppercase;
+        text-align: center;
 
         color: #434138;
-        @media screen and (max-width: 768px) {
-          font-size: 40px;
-          width: 140px;
-        }
+
+        border: 5px $Yellow solid;
+        width: 170px;
+        height: 60px;
       }
     }
     &__info {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas:
-        "address address"
-        "phone fax"
-        "media media";
-        @media screen and (max-width: 525px) {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-        }
+      text-align: center;
+      @media screen and (min-width: 1024px) {
+        text-align: left;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "address address"
+          "phone fax"
+          "media media";
+      }
       article {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        @media screen and (min-width: 1024px) {
+          justify-content: left;
+        }
         img {
-          margin: 20px;
+          width: 20px;
+          margin-right: 10px;
         }
         p {
-          font-family: $typoTitle;
+          font-family: "Inter";
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 17px;
 
-          align-self: center;
-
           color: #737373;
-          @media screen and (max-width: 768px) {
-            font-size: 10px;
-          }
         }
       }
       &__address {
@@ -80,79 +72,68 @@
       }
       &__phone {
         grid-area: phone;
-        margin-right: 100px;
       }
       &__fax {
         grid-area: fax;
-        @media screen and (max-width: 620px) {
-          width: 20px;
-          height: 20px;
+        @media screen and (min-width: 1024px) {
+          padding-left: 5px;
         }
       }
       &__media {
         grid-area: media;
-        display: flex;
-        @media screen and (max-width: 525px) {
-          flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        @media screen and (min-width: 1024px) {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          display: flex;
+          justify-content: space-between;
           align-items: center;
         }
-
         &__title {
-          font-family: $typoTitle;
+          font-family: "Inter";
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 17px;
 
-          align-self: center;
-          padding-bottom: 8px;
-
           color: #737373;
 
           mix-blend-mode: normal;
-          @media screen and (max-width: 768px) {
-            font-size: 10px;
-            padding-bottom: 20px;
-          }
         }
         &__img {
-          padding: 15px;
-          @media screen and (max-width: 768px) {
-            padding: 7px;
+          @media screen and (min-width: 1024px) {
+            padding: 5px;
           }
         }
       }
     }
   }
   &__foot {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 100px;
-    @media screen and (max-width: 768px) {
-      font-size: 8px;
-    }
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 1024px) {
       display: flex;
-      flex-direction: column;
-      text-align: center;
-      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 30px;
     }
     &__nav {
+      display: none;
+      @media screen and (min-width: 1024px) {
+        display: block;
+      }
       &__link {
-        text-decoration: none;
-        font-family: $typoTitle;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
+        @media screen and (min-width: 1024px) {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          text-decoration: none;
 
-        text-transform: uppercase;
+          text-transform: uppercase;
 
-        color: #737373;
+          color: #737373;
 
-        padding: 30px;
-        @media screen and (max-width: 1024px) {
-          padding: 1rem;
+          padding: 10px;
         }
       }
       &__link:hover {
@@ -161,7 +142,7 @@
     }
     &__copyright {
       &__text {
-        font-family: $typoTitle;
+        font-family: "Inter";
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -170,6 +151,8 @@
         color: #737373;
 
         mix-blend-mode: normal;
+
+        text-align: center;
       }
     }
   }

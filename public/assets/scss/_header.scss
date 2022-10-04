@@ -1,55 +1,58 @@
 .header {
   background-color: $Yellow;
   padding-top: 5%;
+  width: 572px;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
   &__navBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 12% 0 12%;
-    @media screen and (max-width: 1024px) {
-      padding: 0 0 0 5%;
-    }
     &__logo {
-      font-family: $typoText;
+      font-family: "Roboto";
       font-style: normal;
       font-weight: 900;
       font-size: 48px;
       line-height: 56px;
+
       text-transform: uppercase;
-      @media screen and (max-width: 768px) {
-        font-size: 40px;
+
+      color: #000000;
+    }
+    &__menu {
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+      &__button {
+        width: 50px;
       }
     }
     &__nav {
-      width: 60%;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1023px) {
         display: none;
       }
       &__link {
         text-decoration: none;
-        font-family: $typoText;
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
         line-height: 23px;
-        color: black;
 
-        padding: 15px;
-        @media screen and (max-width: 1024px) {
-          font-size: 1.5vw;
-        }
+        color: #000000;
+
+        margin: 5px;
+        padding: 10px;
       }
       &__link:hover {
         border: 1px solid #000000;
       }
     }
     &__button {
-      width: 18%;
-      @media screen and (max-width: 1024px) {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          padding-right: 5%;
+      @media screen and (max-width: 1023px) {
+        display: none;
       }
       button {
         border: 0;
@@ -59,36 +62,23 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 23px;
-        @media screen and (max-width: 768px) {
-          font-size: 12px;
-        }
       }
       #signUp {
         background: #ffffff;
         border: 1px white solid;
         border-radius: 10px;
         padding: 7px;
-        @media screen and (max-width: 768px) {
-          display: none;
-          padding: 0;
-        }
       }
-      #login {
-        @media screen and (max-width: 768px) {
-          display: none;
-        }
-      }
-      #menu {
-        @media screen and (min-width: 768px) {
-          display: none;
-        }
-      }
+      // #login {}
     }
   }
   &__horizon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 50px;
+    padding: 50px;
+    @media screen and (min-width: 1023px) {
+      display: flex;
+      align-items: center;
+    }
     &__title {
       font-family: "Inter";
       font-style: normal;
@@ -98,19 +88,32 @@
 
       color: #000000;
 
-      padding-left: 136px;
+      text-align: center;
+      @media screen and (min-width: 1023px) {
+        font-size: 55px;
+        text-align: left;
+      }
+      @media screen and (min-width: 1440px) {
+        font-size: 65px;
+        text-align: left;
+      }
     }
     &__image {
-      width: 780px;
+      display: block;
+      margin: 0 auto;
+      width: 92%;
+      @media screen and (min-width: 1023px) {
+        width: 500px;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 700px;
+        padding-right: 3%;
+      }
     }
   }
-  img {
+  #break {
     display: block;
     margin: 0 auto;
-    margin-top: 50px;
     width: 92%;
   }
-  /*.idle {
-    display: none;
-   }*/
 }
