@@ -1,76 +1,62 @@
-@import 'variables';
+@import "variables";
 
-.tables{
-    margin: 5rem;
+.tables {
+  margin: 5rem;
 }
-.article__title__home{
-    font-family: 'Inter';
+.article__title__home {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 73px;
+
+  margin: 5rem 0 2rem;
+}
+
+.illustration {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (min-width: 1440px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: right;
+    }
+  &__text {
+    font-family: "Inter";
     font-style: normal;
     font-weight: 900;
-    font-size: 60px;
-    line-height: 73px;
+    font-size: 68px;
+    line-height: 82px;
+    text-transform: uppercase;
 
-    margin: 5rem 0 2rem;
-}
+    color: #000000;
+    @media screen and (min-width: 1440px) {
+        width: 35%;
+        text-align: left;
+    }
+  }
 
-.illustration{
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    &__background {
+        background-color: $Yellow;
+        clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+        width: 700px;
+        height: 400px;
 
-    padding: 2rem 0 12rem 0;
-
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    grid-template-rows: 1fr;
-
-    width: 100vw;
-    height: 30vh;
-
-
-
-    &__text{
-padding-left: 9rem;
-padding-right: 10rem;
-padding-top: 2rem;
-
-font-family: 'Inter';
-font-weight: 900;
-font-size: 50px;
-line-height: 82px;
-
-text-transform: uppercase;
-
-
-
+        position: relative;
+        z-index: 1;
     }
 
-    &__image{
-        justify-content: flex-end;
-        @media screen and (max-width: 768px) {
-            display: none;
-          }
+    &__source {
+        width: 486px;
 
-
-
-        &__background{
-            background-color: $Yellow;
-            clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
-            width: 57%;
-            height: 30%;
-            overflow: hidden;
-
-
-            position: absolute;
-            z-index: 1;
-
-        }
-
-        &__source{
-            width: 20rem;
-
-            position: absolute;
-            z-index: 1;
-
-            right: 8rem;
-            
-        }
+        position: absolute;
+        z-index: 5;
     }
+  }
 }
