@@ -22,20 +22,27 @@
         {% endblock %}
 
         {% block javascript %}
-        <script
-            type="module"
-            src="assets/modulesJS/script.js"
-            defer>
-        </script>
+    <script 
+      type="module" 
+      src="assets/modulesJS/diplayMenuDashboard.js" 
+      defer>
+    </script>
 
         {% endblock %}
 
         <title>{% block titlePage %} Cogip {% endblock %}</title>
     </head>
+{#-----------------------------------------Menu------------------------------------------ #}
+    <body class="dashboardBody">
+    {% block menu %}
+        {% include 'element_dashboardMenu.html.twig' %}
+    {% endblock %}
+
+
 {#-----------------------------------------Header---------------------------------------- #}
-    <body>
+
     {% block header %}
-        {% include 'element_header.html.twig' %}
+        {% include 'element_dashboardHeader.html.twig' %}
     {% endblock %}
 
 
@@ -47,6 +54,6 @@
 
 
 {#-----------------------------------------Footer--------------------------------------- #}
-    {% include 'element_footer.html.twig' %}
+    {# {% include 'element_dashboardFooter.html.twig' %} #}
     </body>
 

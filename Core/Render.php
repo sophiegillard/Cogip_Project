@@ -5,7 +5,7 @@ use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
 
-class render
+class Render
 {
     public function __construct($page, $data = [])
     {
@@ -15,7 +15,7 @@ class render
 
      $twig = new Environment($loader);
 
-     echo $twig->render($templateFile, $data);
+     echo $twig->Render($templateFile, $data);
     }
 
 }
