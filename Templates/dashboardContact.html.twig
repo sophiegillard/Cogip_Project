@@ -9,7 +9,7 @@
     <h1 class="dashboardForm__title">
       New contact
     </h1>
-    <form class="dashboardForm__form" action="">
+    <form class="dashboardForm__form" action="/dashboardContact" method="post">
       <input class="dashboardForm__form__input"
         id=""
         type="text"
@@ -18,20 +18,22 @@
       <input class="dashboardForm__form__input"
         id=""
         type="text"
-        name="phone"
+        name="phoneNumber"
         placeholder="Phone" />
       <input class="dashboardForm__form__input"
         id=""
         type="text"
-        name="email"
+        name="contactEmail"
         placeholder="Email" />
-      <select class="dashboardForm__form__input" name="campaniesType" id="">
+      <select class="dashboardForm__form__input" name="company" id="">
         <option value="none" selected disabled hidden>
-          Select a type of Companies
+          Select a Company
         </option>
-        <option value="supplier">
-          Supplier
-        </option>
+        {% for elem in company %}
+          <option value="{{ elem.id }}">
+            {{ elem.name }}
+          </option>
+        {% endfor %}
       </select>
       <input class="dashboardForm__form__input"
         id=""

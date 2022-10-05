@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Database\dbConnection;
-use Cassandra\Date;
 use PDO;
 
 class invoices
@@ -39,5 +38,6 @@ class invoices
             date('Y-m-d'),
             $dueDate
         ));
+        $db = null;
     }
 }

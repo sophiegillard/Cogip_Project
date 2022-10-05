@@ -1,13 +1,30 @@
-let button = document.getElementsByClassName('dashboard__header__title__menu')[0];
-let back = document.getElementsByClassName('dashboard__menu__profil__return')[0];
-let menu = document.getElementsByClassName('dashboard__menu')[0];
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
 
-button.addEventListener("click", (event) => {
-    console.log("display");
-    menu.style.display = "grid"; 
-});
+export function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
 
-back.addEventListener("click", (event) => {
-    console.log("back");
-    menu.style.display = "none"; 
-});
+hamburger.addEventListener("click", toggleMenu);
+
+
+if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }

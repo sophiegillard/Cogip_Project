@@ -28,7 +28,7 @@
             <div class="showCompanies__main__contact__people__card">
 
                 {% for elem in companies %}
-                <img class="showCompanies__main__contact__people__card__img" src="assets/img/user/user1_bertram.png" alt="">
+                <img class="showCompanies__main__contact__people__card__img" src="assets/img/user/{{ elem.picture }}" alt="">
                 <p class="showCompanies__main__contact__people__card__name">{{ elem.contactName }}</p>
                 {% endfor %}
 
