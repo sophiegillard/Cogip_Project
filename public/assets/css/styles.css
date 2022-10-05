@@ -128,6 +128,80 @@
   width: 92%;
 }
 
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 3rem;
+  right: 5rem;
+  border: 0;
+  background: #F9DE4E;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #F9DE4E;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+.menuItem {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 55px;
+  color: #000000;
+}
+
+.menuLogin {
+  margin-top: 10px;
+  border: 0;
+  background: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 23px;
+  font-size: 35px;
+}
+
+.menuSignUp {
+  margin-top: 40px;
+  border: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 23px;
+  background: #ffffff;
+  border: 1px white solid;
+  border-radius: 10px;
+  padding: 7px;
+}
+.menuSignUp a {
+  text-decoration: none;
+}
+
 .footer hr {
   background: gray;
   width: 71%;
@@ -434,7 +508,8 @@ div {
 }
 .illustration__image__background {
   background-color: #F9DE4E;
-  clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+          clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
   width: 700px;
   height: 400px;
   position: relative;
@@ -964,5 +1039,3 @@ div {
   font-weight: 600;
   border-right: 5px solid #9698d6;
 }
-
-/*# sourceMappingURL=styles.css.map */
