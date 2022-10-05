@@ -137,6 +137,11 @@
   background: #F9DE4E;
   cursor: pointer;
 }
+@media screen and (min-width: 1023px) {
+  .hamburger {
+    display: none;
+  }
+}
 
 .closeIcon {
   display: none;
@@ -159,6 +164,11 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
+}
+@media screen and (min-width: 1023px) {
+  .menu {
+    display: none;
+  }
 }
 
 .showMenu {
@@ -806,6 +816,16 @@ div {
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+}
+.dashboardForm__form select {
+  width: 92.5%;
+  border: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 24px;
+  color: #747272;
 }
 .dashboardForm__form__input:nth-child(3) {
   width: 90%;
