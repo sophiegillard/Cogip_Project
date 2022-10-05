@@ -40,4 +40,37 @@ class invoices
         ));
         $db = null;
     }
+
+    function deleteInvoices($id): void
+    {
+        $db = (new dbConnection())->connexion();
+        try {
+            $query = $db->prepare('DELETE FROM `invoices` WHERE `id` = :id');
+            $db->beginTransaction();
+
+            $query->execute(array(
+                $id
+            ));
+
+            $db->commit();
+        } catch (Exception $e) {
+            if ($db->inTransaction()) {
+                $db->rollBack();
+            }
+            throw $e;
+        }
+        $db = null;
+    }
+
+    function updateInvoice($company_id, $ref, $dueDate): void
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('UPDATE `invoices` SET `id_company`=?,`ref`=?,`due_date`=?,`updated_at`=? WHERE id = :id');
+        $query->execute(array(
+            $company_id,
+            $ref,
+            $dueDate,
+            date('Y-m-d')
+        ));
+    }
 }

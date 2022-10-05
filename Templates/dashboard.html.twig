@@ -51,9 +51,9 @@
 
                 {% for elem in contacts %}
                 <div class="dashboard__home__table__row">
-                    <div class="dashboard__home__table__cell">{{ elem.name }}</div>
-                    <div class="dashboard__home__table__cell">{{ elem.phone }}</div>
-                    <div class="dashboard__home__table__cell">{{ elem.email }}</div>
+                    <div class="dashboard__home__table__cell" data-label="Name">{{ elem.name }}</div>
+                    <div class="dashboard__home__table__cell" data-label="Phone">{{ elem.phone }}</div>
+                    <div class="dashboard__home__table__cell" data-label="Email">{{ elem.email }}</div>
                 </div>
                 {% endfor %}
 
@@ -74,9 +74,9 @@
 
                 {% for elem in invoices %}
                     <div class="dashboard__home__table__row">
-                        <div class="dashboard__home__table__cell">{{ elem.ref }}</div>
-                        <div class="dashboard__home__table__cell">{{ elem.due_date }}</div>
-                        <div class="dashboard__home__table__cell">{{ elem.company }}</div>
+                        <div class="dashboard__home__table__cell" data-label="Invoice n°">{{ elem.ref }}</div>
+                        <div class="dashboard__home__table__cell" data-label="Dates">{{ elem.due_date }}</div>
+                        <div class="dashboard__home__table__cell" data-label="Company">{{ elem.company }}</div>
                     </div>
                 {% endfor %}
 
@@ -97,9 +97,9 @@
 
                 {% for elem in companies %}
                     <div class="dashboard__home__table__row">
-                        <div class="dashboard__home__table__cell">{{ elem.name }}</div>
-                        <div class="dashboard__home__table__cell">{{ elem.tva }}</div>
-                        <div class="dashboard__home__table__cell">{{ elem.country }}</div>
+                        <div class="dashboard__home__table__cell" data-label="Name">{{ elem.name }}</div>
+                        <div class="dashboard__home__table__cell" data-label="TVA">{{ elem.tva }}</div>
+                        <div class="dashboard__home__table__cell" data-label="Country">{{ elem.country }}</div>
                     </div>
                 {% endfor %}
 
