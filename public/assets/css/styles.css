@@ -864,7 +864,6 @@ div {
   grid-template-columns: 1fr;
   grid-template-rows: 0.4fr 1fr 0.2fr;
   grid-template-areas: "profil" "nav" "logout";
-  position: absolute;
 }
 @media screen and (min-width: 1024px) {
   .dashboard__menu {
