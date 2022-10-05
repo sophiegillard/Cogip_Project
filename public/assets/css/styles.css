@@ -1058,15 +1058,12 @@ div {
   padding-top: 4rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 1023px) {
   .phoneMenu {
     display: none;
   }
-}
-.phoneMenu__profil {
-  top: 0;
 }
 .phoneMenu__profil__img {
   width: 200px;
