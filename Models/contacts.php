@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Database\dbConnection;
+use Exception;
 use PDO;
 
 class contacts
@@ -42,5 +43,40 @@ class contacts
             date('Y-m-d')
         ));
         $db = null;
+    }
+
+    function deleteContact($id): void
+    {
+        $db = (new dbConnection())->connexion();
+        try {
+            $query = $db->prepare('DELETE FROM `contacts` WHERE `id` = :id');
+            $db->beginTransaction();
+
+            $query->execute(array(
+                $id
+            ));
+
+            $db->commit();
+        } catch (Exception $e) {
+            if ($db->inTransaction()) {
+                $db->rollBack();
+            }
+            throw $e;
+        }
+        $db = null;
+    }
+
+    function updateContact($name, $phone, $company_id, $email, $picture): void
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('UPDATE `companies` SET `name`=?,`phone`=?,`company_id`=?,`email`=?,`picture`=?,`updated_at`=? WHERE id = :id');
+        $query->execute(array(
+            $name,
+            $phone,
+            $company_id,
+            $email,
+            $picture,
+            date('Y-m-d')
+        ));
     }
 }

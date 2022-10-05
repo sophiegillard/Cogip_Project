@@ -7,7 +7,6 @@ use App\Models\companies;
 use App\Models\invoices;
 
 
-
 class DashboardInvoicesController extends Controller
 {
     /*
@@ -15,13 +14,15 @@ class DashboardInvoicesController extends Controller
     */
     public function index()
     {
-        $companies = new companies();
-        $company = $companies->getAllCompanies();
+        $companies = (new companies())->getAllCompanies();
+        $invoices = (new invoices())->getAllInvoices();
 
         $data = [
             'title' => "Contacts",
-            'company' => $company
+            'company' => $companies,
+            'invoices' => $invoices
         ];
+        var_dump($data);
         return $this->view('dashboardInvoices', $data);
 
     }
