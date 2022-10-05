@@ -67,4 +67,14 @@ $router->post('/dashboardInvoices', function () {
     header('location:/dashboardInvoices');
 });
 
+$router->post('/dashboardContact', function () {
+    $name = $_POST['contactName'];
+    $phone = $_POST['phoneNumber'];
+    $companyId = $_POST['company'];
+    $email = $_POST['contactEmail'];
+    $file = $_POST['file'];
+    (new DashboardContactController)->addContact($name, $phone, $companyId, $email);
+    header('location:/dashboardContact');
+});
+
 $router->run();
