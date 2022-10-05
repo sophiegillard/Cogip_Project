@@ -81,5 +81,18 @@ class companies
             throw $e;
         }
     }
+
+    function updateCompany($name, $country, $tva, $type): void
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('UPDATE `companies` SET `name`=?,`country`=?,`tva`=?,`types_id`=?,`updated_at`=? WHERE id = :id');
+        $query->execute(array(
+            $name,
+            $country,
+            $tva,
+            $type,
+            date('Y-m-d')
+        ));
+    }
 }
 
