@@ -27,4 +27,20 @@ class contacts
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
+
+    function createContact($name, $phone, $companyId, $email): void
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('INSERT INTO `contacts`(`name`, `phone`, `company_id`, `email`, `picture`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?,?)');
+        $query->execute(array(
+            $name,
+            $phone,
+            $companyId,
+            $email,
+            "",
+            date('Y-m-d'),
+            date('Y-m-d')
+        ));
+        $db = null;
+    }
 }

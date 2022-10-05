@@ -9,7 +9,7 @@
     <h1 class="dashboardForm__title">
       New invoice
     </h1>
-    <form class="dashboardForm__form" action="">
+    <form class="dashboardForm__form" action="/dashboardInvoices" method="post">
       <input class="dashboardForm__form__input"
         id=""
         type="text"
@@ -20,13 +20,15 @@
         type="text"
         name="price"
         placeholder="Price" />
-      <select class="dashboardForm__form__input" name="campaniesName" id="">
+      <select class="dashboardForm__form__input" name="companyName" id="">
         <option value="none" selected disabled hidden>
-          Select an Companies
+          Select a Company
         </option>
-        <option value="phoqueOff">
-          Phoque Off
-        </option>
+        {% for elem in company %}
+          <option value="{{ elem.id }}">
+            {{ elem.name }}
+          </option>
+        {% endfor %}
       </select>
       <input class="dashboardForm__form__input"
         id=""
