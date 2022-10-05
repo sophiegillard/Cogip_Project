@@ -818,18 +818,9 @@ div {
   line-height: 24px;
   color: #000000;
 }
-.dashboardForm__form select {
-  width: 92.5%;
-  border: 0;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 20px;
-  line-height: 24px;
-  color: #747272;
-}
-.dashboardForm__form__input:nth-child(3) {
-  width: 90%;
+.dashboardForm__form .select {
+  -webkit-appearance: none;
+  width: 93%;
   font-family: "Inter";
   font-style: normal;
   font-weight: 100;
@@ -873,7 +864,6 @@ div {
   grid-template-columns: 1fr;
   grid-template-rows: 0.4fr 1fr 0.2fr;
   grid-template-areas: "profil" "nav" "logout";
-  position: absolute;
 }
 @media screen and (min-width: 1024px) {
   .dashboard__menu {
