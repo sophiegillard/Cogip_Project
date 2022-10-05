@@ -38,5 +38,6 @@ class invoices
             date('Y-m-d'),
             $dueDate
         ));
+        $db = null;
     }
 }
