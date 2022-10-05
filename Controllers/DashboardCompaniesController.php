@@ -13,12 +13,14 @@ class DashboardCompaniesController extends Controller
     */
     public function index()
     {
-        $companies = new companies();
-        $types = $companies->getAllTypeOfCompany();
+        $companies = (new companies())->getAllCompanies();
+        $types = (new companies())->getAllTypeOfCompany();
         $data = [
             'title' => "Companies",
-            'types' => $types
+            'types' => $types,
+            'companies' => $companies
         ];
+        var_dump($data);
         return $this->view('dashboardCompanies', $data);
     }
 

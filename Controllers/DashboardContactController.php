@@ -13,13 +13,16 @@ class DashboardContactController extends Controller
     */
     public function index()
     {
-        $companies = new companies();
-        $company = $companies->getAllCompanies();
+        $companies = (new companies())->getAllCompanies();
+        $contacts = (new contacts())->getAllContacts();
+
 
         $data = [
             'title' => "Contacts",
-            'company' => $company
+            'company' => $companies,
+            'contacts' => $contacts
         ];
+        var_dump($data);
         return $this->view('dashboardContact', $data);
     }
 
