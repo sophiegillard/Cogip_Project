@@ -1,49 +1,37 @@
-{#{% extends 'baseDashboard.html.twig' %}
+{% extends 'baseDashboard.html.twig' %}
 
 {% block titlePage %} Cogip - Dashboard {% endblock %}
 
-{% block body %}#}
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% block body %}
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-            href="./assets/css/reset.css"s
-            rel="stylesheet"
-            type="text/css"
-    />
-
-    {% block style %}
-        <link
-                href="./assets/css/styles.css"
-                rel="stylesheet"
-                type="text/css"
-        />
-    {% endblock %}
-
-    {% block javascript %}
-    <script
-        type="module"
-        src="assets/modulesJS/diplayMenuDashboard.js"
-        defer>
-    </script>
-
-    {% endblock %}
-
-    <title>{% block titlePage %} Cogip {% endblock %}</title>
-</head>
-<body>
-
-    <section class="dashBoard__home">
+    <section class="dashboard__home">
 
         {#-----------------------------------------Table Statistics------------------------------------------ #}
         <article class="dashboard__home__statistics dashboard__home__table">
             <h2 class="dashboard__home__table__title">Statistics</h2>
-            <div class="dashboard__home__table__container table__statistics">
+            <div class="dashboard__home__container__statistics">
+
+                {% set elem = number.invoices %}
+                {% if elem %}
+                <div class="statistics statistics__invoices">
+                    <p class="statistics__total__number">{{elem}} </br>invoices</p>
+                </div>
+                {% endif %}
+
+                {% set elem = number.contacts %}
+                {% if elem %}
+                <div class="statistics statistics__contacts">
+                    <p class="statistics__total__number">{{elem}} </br> contacts</p>
+                </div>
+                {% endif %}
+
+                {% set elem = number.companies %}
+                {% if elem %}
+                <div class="statistics statistics__companies">
+                    <p class="statistics__total__number">{{elem}} </br> companies</p>
+                </div>
+                {% endif %}
 
             </div>
         </article>
@@ -55,35 +43,19 @@
             <h2 class="dashboard__home__table__title"> Last Contacts </h2>
             <div class="dashboard__home__table__container table__lastContacts">
 
-                <div class="dashboard__home__table__row">
+                <div class="dashboard__home__table__row table__heading">
                     <div class="dashboard__home__table__head">Name</div>
                     <div class="dashboard__home__table__head">Phone</div>
                     <div class="dashboard__home__table__head">Email</div>
                 </div>
 
+                {% for elem in contacts %}
                 <div class="dashboard__home__table__row">
-                    <div class="dashboard__home__table__cell">John</div>
-                    <div class="dashboard__home__table__cell"><a href="tel:0123456785">0123 456 785</a></div>
-                    <div class="dashboard__home__table__cell"><img src="images/check.gif" alt="checked" /></div>
+                    <div class="dashboard__home__table__cell">{{ elem.name }}</div>
+                    <div class="dashboard__home__table__cell">{{ elem.phone }}</div>
+                    <div class="dashboard__home__table__cell">{{ elem.email }}</div>
                 </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
+                {% endfor %}
 
             </div>
         </article>
@@ -94,35 +66,19 @@
             <h2 class="dashboard__home__table__title"> Last Invoices </h2>
             <div class="dashboard__home__table__container table__lastInvoices">
 
-                <div class="dashboard__home__table__row">
+                <div class="dashboard__home__table__row table__heading">
                     <div class="dashboard__home__table__head">Invoice Number</div>
                     <div class="dashboard__home__table__head">Dates</div>
                     <div class="dashboard__home__table__head">Company</div>
                 </div>
 
-                <div class="dashboard__home__table__row">
-                    <div class="dashboard__home__table__cell">John</div>
-                    <div class="dashboard__home__table__cell"><a href="tel:0123456785">0123 456 785</a></div>
-                    <div class="dashboard__home__table__cell"><img src="images/check.gif" alt="checked" /></div>
-                </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
+                {% for elem in invoices %}
+                    <div class="dashboard__home__table__row">
+                        <div class="dashboard__home__table__cell">{{ elem.ref }}</div>
+                        <div class="dashboard__home__table__cell">{{ elem.due_date }}</div>
+                        <div class="dashboard__home__table__cell">{{ elem.company }}</div>
+                    </div>
+                {% endfor %}
 
             </div>
         </article>
@@ -133,35 +89,19 @@
             <h2 class="dashboard__home__table__title"> Last Companies </h2>
             <div class="dashboard__home__table__container table__lastCompanies">
 
-                <div class="dashboard__home__table__row">
+                <div class="dashboard__home__table__row table__heading">
                     <div class="dashboard__home__table__head">Name</div>
                     <div class="dashboard__home__table__head">TVA</div>
                     <div class="dashboard__home__table__head">Country</div>
                 </div>
 
-                <div class="dashboard__home__table__row">
-                    <div class="dashboard__home__table__cell">John</div>
-                    <div class="dashboard__home__table__cell"><a href="tel:0123456785">0123 456 785</a></div>
-                    <div class="dashboard__home__table__cell"><img src="images/check.gif" alt="checked" /></div>
-                </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
-
-                <div class="dashboard__home__table__row">
-                    <div class="rTableCell">Cassie</div>
-                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
-                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
-                </div>
+                {% for elem in companies %}
+                    <div class="dashboard__home__table__row">
+                        <div class="dashboard__home__table__cell">{{ elem.name }}</div>
+                        <div class="dashboard__home__table__cell">{{ elem.tva }}</div>
+                        <div class="dashboard__home__table__cell">{{ elem.country }}</div>
+                    </div>
+                {% endfor %}
 
             </div>
         </article>
@@ -170,5 +110,5 @@
     </section>
 
 </body>
-{#
-{% endblock %}#}
+
+{% endblock %}

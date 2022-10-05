@@ -609,6 +609,7 @@ div {
   width: 100%;
   font-family: "Inter";
   font-style: normal;
+  background-color: #F5F5FB;
 }
 @media screen and (min-width: 1024px) {
   .dashboard__header {
@@ -760,7 +761,6 @@ div {
 .dashboardBody {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr;
   grid-template-areas: "menunavbar dashheader" "menunavbar form";
 }
 @media screen and (max-width: 1024px) {
@@ -966,21 +966,89 @@ div {
   border-right: 5px solid #9698d6;
 }
 
-.dashBoard__home {
+.dashboard__home {
   display: flex;
+  font-family: "Inter";
   /* flex-flow: column wrap; */
   flex-direction: column;
   flex-wrap: wrap;
   align-content: stretch;
-  background-color: #bbdefb;
-  height: 830px;
-  padding: 15px;
-  gap: 5px;
+  background-color: #F5F5FB;
+  height: 890px;
+  padding: 20px;
+  gap: 20px;
+  padding-top: 60px;
+}
+
+.dashboard__home__container__statistics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 0px 23px 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+}
+
+.statistics {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+.statistics__invoices {
+  background-color: #4D4CAC;
+}
+.statistics__contacts {
+  background-color: #9698D6;
+}
+.statistics__companies {
+  background-color: #FF808B;
 }
 
 .dashboard__home__table {
-  border: red solid 2px;
-  width: 40%;
+  padding: 30px;
+  width: 42%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 37px -21px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.dashboard__home__table__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 21px;
+}
+.dashboard__home__table__container {
+  display: table;
+}
+.dashboard__home__table__row {
+  display: table-row;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+}
+.dashboard__home__table__cell, .dashboard__home__table__head {
+  display: table-cell;
+  padding: 23px 20px 1px 0px;
+}
+
+.table__heading {
+  display: table-header-group;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 /*# sourceMappingURL=styles.css.map */
