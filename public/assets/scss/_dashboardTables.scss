@@ -1,0 +1,93 @@
+@import 'variables';
+
+$table-header: $darkPurple;
+$row-bg: $grey;
+
+div {
+  box-sizing: border-box;
+}
+
+.db__tables{
+  grid-area: table;
+  box-shadow: 0px 0px 37px -21px rgba(0, 0, 0, 0.25);
+
+  border-radius: 10px;
+
+  margin: 10px;
+  padding: 20px;
+}
+
+.db__table__container {
+  display: block;
+  width: 100%;
+  max-width: 1193px;
+
+  color: black;
+  font-family: Roboto;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-size: 1.6rem;
+
+  min-width: 100%;
+
+}
+
+.db__table__header{
+  background: $table-header;
+  font-weight: bolder;
+  align-items: center;
+}
+
+.db__flex__table {
+  display: flex;
+  flex-flow: row wrap;
+  transition: 0.5s;
+
+
+  &.db__table__content:nth-child(odd)  {
+    background: $row-bg;
+  }
+
+}
+
+.db__table__content{
+  font-weight:lighter;
+  &:hover {
+    cursor:pointer;
+    transition: 500ms;
+    font-weight: bolder;
+  }
+}
+
+.db__flex__row {
+  width: calc(100% / 5);
+  padding: 0.8em 1rem;
+}
+
+.arrow{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  .arrow__down{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+}
+
+.db__article__title{
+  background-image: linear-gradient(to bottom, transparent 50%, $darkPurple 50%);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: 20% 1.2em;
+  background-position: 10% 96%;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 73px;
+  margin: 3rem 0 2rem;
+}
