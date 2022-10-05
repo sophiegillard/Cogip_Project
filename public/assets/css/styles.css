@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Roboto:wght@500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Roboto:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Roboto:wght@500;900&display=swap");
 .header {
   background-color: #F9DE4E;
   padding-top: 5%;
@@ -963,6 +964,23 @@ div {
 .actif {
   font-weight: 600;
   border-right: 5px solid #9698d6;
+}
+
+.dashBoard__home {
+  display: flex;
+  /* flex-flow: column wrap; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+  background-color: #bbdefb;
+  height: 830px;
+  padding: 15px;
+  gap: 5px;
+}
+
+.dashboard__home__table {
+  border: red solid 2px;
+  width: 40%;
 }
 
 /*# sourceMappingURL=styles.css.map */

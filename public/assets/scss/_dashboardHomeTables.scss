@@ -1,0 +1,20 @@
+@import 'variables';
+
+.dashBoard__home{
+  display: flex;
+
+  /* flex-flow: column wrap; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+
+  background-color: #bbdefb;
+  height: 830px;
+  padding: 15px;
+  gap: 5px;
+}
+
+.dashboard__home__table{
+  border: red solid 2px;
+  width: 40%;
+}

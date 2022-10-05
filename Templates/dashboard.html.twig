@@ -1,7 +1,174 @@
-{% extends 'baseDashboard.html.twig' %}
+{#{% extends 'baseDashboard.html.twig' %}
 
 {% block titlePage %} Cogip - Dashboard {% endblock %}
 
-{% block body %}
+{% block body %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-{% endblock %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+            href="./assets/css/reset.css"s
+            rel="stylesheet"
+            type="text/css"
+    />
+
+    {% block style %}
+        <link
+                href="./assets/css/styles.css"
+                rel="stylesheet"
+                type="text/css"
+        />
+    {% endblock %}
+
+    {% block javascript %}
+    <script
+        type="module"
+        src="assets/modulesJS/diplayMenuDashboard.js"
+        defer>
+    </script>
+
+    {% endblock %}
+
+    <title>{% block titlePage %} Cogip {% endblock %}</title>
+</head>
+<body>
+
+    <section class="dashBoard__home">
+
+        {#-----------------------------------------Table Statistics------------------------------------------ #}
+        <article class="dashboard__home__statistics dashboard__home__table">
+            <h2 class="dashboard__home__table__title">Statistics</h2>
+            <div class="dashboard__home__table__container table__statistics">
+
+            </div>
+        </article>
+
+
+        {#-----------------------------------------Table Last Contacts------------------------------------------ #}
+
+        <article class="dashboard__home__lastContacts dashboard__home__table">
+            <h2 class="dashboard__home__table__title"> Last Contacts </h2>
+            <div class="dashboard__home__table__container table__lastContacts">
+
+                <div class="dashboard__home__table__row">
+                    <div class="dashboard__home__table__head">Name</div>
+                    <div class="dashboard__home__table__head">Phone</div>
+                    <div class="dashboard__home__table__head">Email</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="dashboard__home__table__cell">John</div>
+                    <div class="dashboard__home__table__cell"><a href="tel:0123456785">0123 456 785</a></div>
+                    <div class="dashboard__home__table__cell"><img src="images/check.gif" alt="checked" /></div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+            </div>
+        </article>
+
+        {#-----------------------------------------Table Last Invoices------------------------------------------ #}
+
+        <article class="dashboard__home__lastInvoices dashboard__home__table">
+            <h2 class="dashboard__home__table__title"> Last Invoices </h2>
+            <div class="dashboard__home__table__container table__lastInvoices">
+
+                <div class="dashboard__home__table__row">
+                    <div class="dashboard__home__table__head">Invoice Number</div>
+                    <div class="dashboard__home__table__head">Dates</div>
+                    <div class="dashboard__home__table__head">Company</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="dashboard__home__table__cell">John</div>
+                    <div class="dashboard__home__table__cell"><a href="tel:0123456785">0123 456 785</a></div>
+                    <div class="dashboard__home__table__cell"><img src="images/check.gif" alt="checked" /></div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+            </div>
+        </article>
+
+        {#-----------------------------------------Table Last Companies------------------------------------------ #}
+
+        <article class="dashboard__home__lastCompanies dashboard__home__table">
+            <h2 class="dashboard__home__table__title"> Last Companies </h2>
+            <div class="dashboard__home__table__container table__lastCompanies">
+
+                <div class="dashboard__home__table__row">
+                    <div class="dashboard__home__table__head">Name</div>
+                    <div class="dashboard__home__table__head">TVA</div>
+                    <div class="dashboard__home__table__head">Country</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="dashboard__home__table__cell">John</div>
+                    <div class="dashboard__home__table__cell"><a href="tel:0123456785">0123 456 785</a></div>
+                    <div class="dashboard__home__table__cell"><img src="images/check.gif" alt="checked" /></div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+                <div class="dashboard__home__table__row">
+                    <div class="rTableCell">Cassie</div>
+                    <div class="dashboard__home__table__cell">0456 65 55 44</div>
+                    <div class="dashboard__home__table__cell">prout@gmail.com</div>
+                </div>
+
+            </div>
+        </article>
+
+
+    </section>
+
+</body>
+{#
+{% endblock %}#}
