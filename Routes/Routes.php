@@ -77,4 +77,14 @@ $router->post('/dashboardContact', function () {
     header('location:/dashboardContact');
 });
 
+$router->post('/dashboardCompany', function () {
+
+    $name = $_POST['companyName'];
+    $country = $_POST['country'];
+    $tva = $_POST['tva'];
+    $type = $_POST['companyType'];
+    (new DashboardCompaniesController)->addCompany($name, $country, $tva, $type);
+    header('location:/dashboardCompanies');
+});
+
 $router->run();
