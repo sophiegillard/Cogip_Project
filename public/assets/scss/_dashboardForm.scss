@@ -39,20 +39,9 @@
 
       color: #000000;
     }
-    select {
-      width: 92.5%;
-      border: 0;
-
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 100;
-      font-size: 20px;
-      line-height: 24px;
-
-      color: #747272;
-    }
-    &__input:nth-child(3) {
-      width: 90%;
+    .select {
+      -webkit-appearance: none;
+      width: 93%;
 
       font-family: 'Inter';
       font-style: normal;
