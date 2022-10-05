@@ -20,11 +20,11 @@ class ShowCompaniesController extends Controller
             $company = $companies->getCompany($id);
             $invoice = $invoices->getInvoicesByCompany($id);
             $data = [
-                'title' => $company[0]->name,
+                'title' => 'ShowCompany',
                 'companies' => $company,
                 'invoices'=> $invoice
             ];
-
+            var_dump($data);
             return $this->view('showCompanies', $data);
         } else{
             $data=0;
