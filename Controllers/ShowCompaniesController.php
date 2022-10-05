@@ -24,7 +24,6 @@ class ShowCompaniesController extends Controller
                 'companies' => $company,
                 'invoices'=> $invoice
             ];
-            var_dump($data);
             return $this->view('showCompanies', $data);
         } else{
             $data=0;
