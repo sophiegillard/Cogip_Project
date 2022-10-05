@@ -34,7 +34,8 @@ class DashboardController extends Controller
             "contacts" => $contacts,
             "number" => $number
         ];
-        var_dump($data);
+
+
         return $this->view('dashboard', $data);
     }
 

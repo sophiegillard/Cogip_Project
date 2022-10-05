@@ -1,0 +1,103 @@
+@import 'variables';
+
+.dashboard__home{
+  display: flex;
+  font-family: 'Inter';
+
+  /* flex-flow: column wrap; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+
+  background-color: $lightPurple;
+  height: 890px;
+  padding: 20px;
+  gap: 20px;
+  padding-top: 60px;
+}
+
+.dashboard__home__container__statistics{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 0px 23px 0;
+
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: white;
+
+}
+.statistics{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  padding: 20px 0 20px 0;
+  text-align: center;
+
+
+    &__invoices{
+      background-color: $darkPurple;
+    }
+    &__contacts{
+      background-color: $purple;
+    }
+    &__companies{
+      background-color: $pink;
+    }
+
+}
+
+.dashboard__home__table{
+  padding : 30px;
+  width: 42%;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 37px -21px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+    &__title{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 22px;
+
+      border-bottom: 1px solid #E0E0E0;
+      padding-bottom: 21px;
+
+    }
+
+    &__container{
+      display: table;
+    }
+
+    &__row{
+      display: table-row;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 18px;
+
+    }
+
+    &__cell , &__head{
+      display: table-cell;
+      padding: 23px 20px 1px 0px;
+    }
+
+}
+
+.table__heading{
+  display: table-header-group;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+}
