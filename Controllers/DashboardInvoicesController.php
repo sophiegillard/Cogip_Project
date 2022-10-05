@@ -14,11 +14,7 @@ class DashboardInvoicesController extends Controller
     * return view
     */
     public function index()
-
     {
-        if (isset($_POST)) {
-            var_dump($_POST);
-        }
         $companies = new companies();
         $company = $companies->getAllCompanies();
 

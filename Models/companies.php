@@ -26,5 +26,29 @@ class companies
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
+
+    function getAllTypeOfCompany(): bool|array
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('SELECT id,name FROM `types`');
+        $query->execute();
+        $db = null;
+        return $query->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    function createCompany($name, $country, $tva, $type): void
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('INSERT INTO `companies`(`name`, `country`, `tva`, `types_id`, `created_at`, `updated_at`) VALUES (?,?,?,?,?,?)');
+        $query->execute(array(
+            $name,
+            $country,
+            $tva,
+            $type,
+            date('Y-m-d'),
+            date('Y-m-d')
+        ));
+        $db = null;
+    }
 }
 

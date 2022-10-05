@@ -9,12 +9,12 @@
     <h1 class="dashboardForm__title">
       New companies
     </h1>
-    <form class="dashboardForm__form" action="">
+    <form class="dashboardForm__form" action="/dashboardCompany" method="post">
       <input class="dashboardForm__form__input"
         id=""
         type="text"
-        name="companiesName"
-        placeholder="Companies Name" />
+        name="companyName"
+        placeholder="Company Name" />
       <input class="dashboardForm__form__input"
         id=""
         type="text"
@@ -25,13 +25,15 @@
         type="text"
         name="tva"
         placeholder="TVA" />
-      <select class="dashboardForm__form__input" name="campaniesType" id="">
+      <select class="dashboardForm__form__input" name="companyType" id="">
         <option value="none" selected disabled hidden>
           Select a type of Companies
         </option>
-        <option value="supplier">
-          Supplier
-        </option>
+        {% for elem in types %}
+          <option value="{{ elem.id }}">
+            {{ elem.name }}
+          </option>
+        {% endfor %}
       </select>
       <input class="dashboardForm__form__button" type="submit" value="Save" />
     </form>
