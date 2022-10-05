@@ -65,4 +65,18 @@ class contacts
         }
         $db = null;
     }
+
+    function updateContact($name, $phone, $company_id, $email, $picture): void
+    {
+        $db = (new dbConnection())->connexion();
+        $query = $db->prepare('UPDATE `companies` SET `name`=?,`phone`=?,`company_id`=?,`email`=?,`picture`=?,`updated_at`=? WHERE id = :id');
+        $query->execute(array(
+            $name,
+            $phone,
+            $company_id,
+            $email,
+            $picture,
+            date('Y-m-d')
+        ));
+    }
 }
