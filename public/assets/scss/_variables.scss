@@ -12,3 +12,17 @@ $grey : #F5F5F5;
   $purple : #9698D6;
   $darkPurple : #4D4CAC;
   $pink : #FF808B;
+
+//Media Querries
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+
+
+@mixin for-desktop {
+  @media (max-width: 1024px) { @content; }
+}
+
+@mixin for-big-desktop {
+  @media (min-width: 1800px) { @content; }
+}
