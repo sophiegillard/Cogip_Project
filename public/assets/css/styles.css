@@ -1032,16 +1032,13 @@ div {
   min-width: 100%;
 }
 
-.db__table__header {
-  background: #4D4CAC;
-  font-weight: bolder;
-  align-items: center;
-}
-
 .db__flex__table {
-  display: flex;
-  flex-flow: row wrap;
-  transition: 0.5s;
+  display: table-row;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
 }
 .db__flex__table.db__table__content:nth-child(odd) {
   background: #F5F5F5;
@@ -1057,8 +1054,17 @@ div {
 }
 
 .db__flex__row {
-  width: 20%;
-  padding: 0.8em 1rem;
+  display: table-cell;
+  padding: 23px 20px 23px 0px;
+}
+
+.db__table__header {
+  display: table-header-group;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .arrow {
@@ -1074,17 +1080,13 @@ div {
 }
 
 .db__article__title {
-  background-image: linear-gradient(to bottom, transparent 50%, #4D4CAC 50%);
-  border-radius: 5px;
-  background-repeat: no-repeat;
-  background-size: 20% 1.2em;
-  background-position: 10% 96%;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 73px;
-  margin: 3rem 0 2rem;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 21px;
 }
 
 .dashboardBody {
