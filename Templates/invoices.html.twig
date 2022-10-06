@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %} Cogip - Invoices {% endblock %}
+
+{% block body %}
+
+    <main>
+
+        <section class='tables'>
+
+            <article class="article__container invoices">
+
+                <h2 class="article__title"> All invoices </h2>
+
+                <div class="search__wrapper">
+                    <input class="searchbar" id="search" type="search" placeholder="Search invoice..">
+                </div>
+
+                <div class="table__container" id="tableInvoices" role="table" aria-label="invoices">
+                    <div class="flex__table table__header">
+
+                        <div class="flex__row " style="width: calc(20%);">Invoice Number</div>
+                        <div class="flex__row  arrow" style="width: calc(20%);">Due dates
+                            <img class="arrow__down" id="1" src="assets/img/icons/downward-arrow.png" alt=""/>
+                        </div>
+                        <div class="flex__row " style="width: calc(20%);">Company</div>
+                        <div class="flex__row " style="width: calc(20%);">Created at</div>
+
+                    </div>
+
+                    {% for elem in invoices %}
+                        <div class="flex__table table__content">
+
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.ref }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.due_date }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+{% endblock %}

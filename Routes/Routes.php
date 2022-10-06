@@ -12,40 +12,79 @@ use App\Controllers\ShowCompaniesController;
 use App\Controllers\ShowContactController;
 use App\Controllers\DashboardController;
 use App\Controllers\DashboardInvoicesController;
+use App\Controllers\DashboardCompaniesController;
+use App\Controllers\DashboardContactController;
 
 
 $router = new Router();
 
-$router->get('/', function() {
+$router->get('/', function () {
     (new HomeController)->index();
 });
 
-$router->get('/contacts', function(){
+$router->get('/contacts', function () {
     (new ContactsController)->index();
 });
 
-$router->get('/companies', function(){
+$router->get('/companies', function () {
     (new CompaniesController)->index();
 });
 
-$router->get('/invoices', function(){
+$router->get('/invoices', function () {
     (new InvoicesController)->index();
 });
 
-$router->get('/showCompanies', function(){
+$router->get('/showCompany', function () {
     (new ShowCompaniesController)->index();
 });
 
-$router->get('/showContact', function(){
+$router->get('/showContact', function () {
     (new ShowContactController)->index();
 });
 
-$router->get('/dashboard', function(){
+$router->get('/dashboard', function () {
     (new DashboardController)->index();
 });
 
-$router->get('/dashboard-invoices', function(){
+$router->get('/dashboardInvoices', function () {
     (new DashboardInvoicesController)->index();
+});
+
+$router->get('/dashboardCompanies', function () {
+    (new DashboardCompaniesController)->index();
+});
+
+$router->get('/dashboardContact', function () {
+    (new DashboardContactController)->index();
+});
+
+$router->post('/dashboardInvoices', function () {
+    $ref = $_POST['reference'];
+    $price = $_POST['price'];
+    $company = $_POST['companyName'];
+    $dueDate = $_POST['date'];
+    (new DashboardInvoicesController)->addInvoices($ref, $company, $dueDate);
+    header('location:/dashboardInvoices');
+});
+
+$router->post('/dashboardContact', function () {
+    $name = $_POST['contactName'];
+    $phone = $_POST['phoneNumber'];
+    $companyId = $_POST['company'];
+    $email = $_POST['contactEmail'];
+    $file = $_POST['file'];
+    (new DashboardContactController)->addContact($name, $phone, $companyId, $email);
+    header('location:/dashboardContact');
+});
+
+$router->post('/dashboardCompany', function () {
+
+    $name = $_POST['companyName'];
+    $country = $_POST['country'];
+    $tva = $_POST['tva'];
+    $type = $_POST['companyType'];
+    (new DashboardCompaniesController)->addCompany($name, $country, $tva, $type);
+    header('location:/dashboardCompanies');
 });
 
 $router->run();

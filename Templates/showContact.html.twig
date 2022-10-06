@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %} Cogip - Contact Details {% endblock %}
+
+{% block body %}
+
+
+
+    <main class="showContact__main">
+        {% for elem in contacts %}
+        <section class="showContact__main__info">
+            <h1 class="showContact__main__info__title">{{ elem.name }}</h1>
+            <p class="showContact__main__info__contact">Contact : {{ elem.name }}  </p>
+            <p class="showContact__main__info__phone">Phone : {{ elem.phone }} </p>
+            <p class="showContact__main__info__mail">Mail : {{ elem.email }}  </p>
+            <p class="showContact__main__info__company">Company : {{ elem.company }}  </p>
+        </section>
+        <img class="showContact__main__img" src="assets/img/user/{{ elem.picture }}" alt="">
+        {% endfor %}
+    </main>
+
+{% endblock %}

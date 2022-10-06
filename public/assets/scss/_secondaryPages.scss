@@ -1,0 +1,36 @@
+@import 'variables';
+
+.article__title{
+  background-image: linear-gradient(to bottom, transparent 50%, $Yellow 50%);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: 20% 1.2em;
+  background-position: 10% 96%;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 73px;
+  margin: 3rem 0 2rem;
+}
+
+
+.searchbar{
+        display: flex;
+        align-content: end;
+
+        height: 53px;
+        width: 20rem;
+        top: 403px;
+        border-radius: 10px;
+
+        font-size: 1.3rem;
+
+        margin-left: auto;
+        margin-bottom: 2rem;
+    }
+
+.hidecard{
+ display: none;
+}

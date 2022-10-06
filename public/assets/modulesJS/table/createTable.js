@@ -1,5 +1,31 @@
+
 import {createTableHeader4, createTableHeader5} from "./tableHeader.js";
 import {createTableContent} from "./tableContent.js";
+
+
+/*
+const fetchfunc = async () =>{
+    try{
+        const response = await fetch ('../../../../Models/home.php', {
+            method: 'POST',
+            body: form,
+        });
+        const result = await response.json()
+
+        alert('success') 
+    }
+    catch(e){
+        alert('not found')
+        console.log(e)
+    }
+}
+
+fetchfunc();
+*/
+
+
+
+
 
 
 const invoiceTableTitles = ['Invoice number', 'Due dates', 'Company', 'Created at'];
@@ -14,12 +40,18 @@ const contentTable = [
 ]
 
 const testContacts = [
-    ['Gregory', '555-4567', 'peter.gregory@raviga.com','Raviga', '25/09/2020'],
+    ['Sophie', '555-4567', 'peter.gregory@raviga.com','Raviga', '25/09/2020'],
     ['Gregory', '555-4567', 'peter.gregory@raviga.com','Raviga', '25/09/2020'],
     ['Gregory', '555-4567', 'peter.gregory@raviga.com','Raviga', '25/09/2020'],
     ['Gregory', '555-4567', 'peter.gregory@raviga.com','Raviga', '25/09/2020'],
     ['Gregory', '555-4567', 'peter.gregory@raviga.com','Raviga', '25/09/2020']
 ]
+
+//Create TABLE of INVOICE.PHP
+/*
+createTableHeader4('tableInvoices', invoiceTableTitles);
+createTableContent('tableInvoices', contentTable);
+
 
 //Create TABLES of HOME.PHP
 createTableHeader4('tableLastInvoices', invoiceTableTitles);
@@ -30,11 +62,4 @@ createTableContent('tableLastContacts', testContacts)
 
 createTableHeader5('tableLastCompanies', invoiceCompaniesTitles);
 createTableContent('tableLastCompanies', testContacts)
-
-
-//Create TABLE of INVOICE.PHP
-
-createTableHeader4('tableInvoice', invoiceTableTitles);
-
-createTableContent('tableInvoice', contentTable);
-
+*/

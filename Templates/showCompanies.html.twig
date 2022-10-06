@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block titlePage %} Cogip - Company Details {% endblock %}
+
+{% block body %}
+
+<main class="showCompanies__main">
+
+    {% set firstItem = companies|first %}
+    {% if firstItem %}
+
+    <section class="showCompanies__main__info">
+
+        <h1 class="showCompanies__main__info__title">{{ firstItem.name }}</h1>
+        <p class="showCompanies__main__info__name">Name : {{ firstItem.name }}</p>
+        <p class="showCompanies__main__info__tva">TVA: {{ firstItem.tva }}</p>
+        <p class="showCompanies__main__info__country">Country: {{ firstItem.country }}</p>
+        <p class="showCompanies__main__info__phone">Phone: {{ firstItem.phoneNumber }} </p>
+    </section>
+
+    {% endif %}
+
+
+    <hr class="showCompanies__main__hr">
+    <section class="showCompanies__main__contact">
+        <h2 class="showCompanies__main__contact__title">Contact persons</h2>
+        <div class="showCompanies__main__contact__people">
+            <div class="showCompanies__main__contact__people__card">
+
+                {% for elem in companies %}
+                <img class="showCompanies__main__contact__people__card__img" src="assets/img/user/{{ elem.picture }}" alt="">
+                <p class="showCompanies__main__contact__people__card__name">{{ elem.contactName }}</p>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+    <hr class="showCompanies__main__hr">
+
+    <article class="article__container invoices">
+
+        <h2 class="article__title"> Last invoices </h2>
+
+        <div class="table__container" id="tableInvoices" role="table" aria-label="invoices">
+            <div class="flex__table table__header">
+
+                <div class="flex__row row__content" style="width: calc(20%);">Invoice Number</div>
+                <div class="flex__row row__content arrow" style="width: calc(20%);">Due dates</div>
+                <div class="flex__row row__content" style="width: calc(20%);">Company</div>
+                <div class="flex__row row__content" style="width: calc(20%);">Created at</div>
+
+            </div>
+
+            {% for elem in invoices %}
+                <div class="flex__table table__content">
+
+                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.ref }}</a></div>
+                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.due_date }}</div>
+                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name }}</div>
+                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+
+                </div>
+            {% endfor %}
+        </div>
+
+    </article>
+
+</main>
+
+{% endblock %}

@@ -1,22 +1,32 @@
+@import "variables", "dashboardHeader", "dashboardForm";
+
+.dashboardBody {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  //grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "menunavbar dashheader"
+    "menunavbar form";
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
 .dashboard {
-  display: flex;
-
-  background: #f5f5fb;
-  border-left: 1px solid #e7e7e7;
-
   &__menu {
+    position: fixed;
+    height: 100%;
+    width: 22%;
     background-color: white;
-    width: 285px;
 
     display: none;
+    grid-area: menunavbar;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 0.2fr;
+    grid-template-rows: 0.4fr 1fr 0.2fr;
     grid-template-areas:
       "profil"
       "nav"
       "logout";
-
-    position: absolute;
     @media screen and (min-width: 1024px) {
       display: grid;
       position: inherit;
@@ -30,8 +40,8 @@
       &__return {
         margin: 20px;
         @media screen and (min-width: 1024px) {
-            display: none;
-          }
+          display: none;
+        }
       }
       &__img {
         width: 105px;
@@ -61,6 +71,9 @@
       display: flex;
       flex-direction: column;
 
+      align-items: flex-start;
+      align-content: flex-start;
+
       font-family: "Inter";
       font-style: normal;
       font-weight: 400;
@@ -81,10 +94,10 @@
           padding-right: 30px;
         }
       }
-    //   &__dashboard {}
-    //   &__invoices {}
-    //   &__companies {}
-    //   &__contact {}
+      //   &__dashboard {}
+      //   &__invoices {}
+      //   &__companies {}
+      //   &__contact {}
     }
     &__logout {
       grid-area: logout;
@@ -113,15 +126,16 @@
       }
     }
   }
+
   &__header {
     font-family: "Inter";
     font-style: normal;
 
     width: 100%;
     @media screen and (min-width: 1024px) {
-        padding-top: 50px;
-        padding-left: 50px;
-      }
+      padding-top: 50px;
+      padding-left: 50px;
+    }
     &__title {
       font-weight: 900;
       font-size: 30px;
@@ -130,13 +144,7 @@
       color: #000000;
 
       padding-top: 20px;
-      padding-left: 25px;
-      &__menu {
-        padding-right: 20px;
-        @media screen and (min-width: 1024px) {
-          display: none;
-        }
-      }
+      padding-left: 80px;
     }
     &__path {
       font-weight: 300;
@@ -145,7 +153,7 @@
 
       color: #000000;
 
-      padding-left: 70px;
+      padding-left: 90px;
 
       margin-top: 8px;
       margin-bottom: 30px;
@@ -170,8 +178,8 @@
 
         color: #ffffff;
         @media screen and (min-width: 1024px) {
-            max-width: 50%;
-          }
+          max-width: 50%;
+        }
       }
       &__text {
         font-weight: 300;
@@ -180,8 +188,8 @@
 
         color: #ffffff;
         @media screen and (min-width: 1024px) {
-            max-width: 50%;
-          }
+          max-width: 50%;
+        }
       }
     }
     &__illustration {
@@ -203,6 +211,86 @@
 }
 
 .actif {
+  font-weight: 600;
+  border-right: 5px solid #9698d6;
+}
+
+.phoneMenu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: white;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1023px) {
+    display: none;
+  }
+  &__profil {
+    &__img {
+      width: 200px;
+      border-radius: 50%;
+    }
+    &__name {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 29px;
+      text-align: center;
+
+      color: #000000;
+    }
+  }
+  &__item {
+    text-decoration: none;
+    font-family: "Roboto";
     font-weight: 600;
-    border-right: 5px solid #9698d6;
+    font-size: 55px;
+
+    color: #000000;
+    img {
+      width: 40px;
+      margin-right: 10px;
+    }
+  }
+  &__logout {
+    margin-top: 50px;
+    &__img {
+      width: 48px;
+      border-radius: 50%;
+    }
+    &__button {
+      text-decoration: none;
+    }
+  }
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+.hamburgerDashboard {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  border: 1px solid black;
+  background: #ffffff;
+  cursor: pointer;
+  @media screen and (min-width: 1023px) {
+    display: none;
+  }
+}
+.closeIcon {
+  display: none;
 }

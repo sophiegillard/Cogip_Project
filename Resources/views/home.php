@@ -1,4 +1,3 @@
-<?php require 'elements/header.php'; ?>
 
 <main class=home>
 
@@ -7,6 +6,7 @@
             <h2 class="article__title"> Last invoices </h2>
             <div class="table__container" id="tableLastInvoices" role="table" aria-label="Last invoices"></div>
         </article>
+
 
         <article class="article__container contacts">
             <h2 class="article__title"> Last contacts </h2>

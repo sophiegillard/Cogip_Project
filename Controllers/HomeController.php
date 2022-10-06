@@ -18,10 +18,11 @@ class HomeController extends Controller
         $contacts = $home->getContacts();
         $data = [
             "name" => "Cogip",
-            'invoices' => $invoices,
-            'companies' => $companies,
-            'contacts' => $contacts
+            "invoices" => $invoices,
+            "companies" => $companies,
+            "contacts" => $contacts
         ];
+
         return $this->view('home', $data);
     }
 

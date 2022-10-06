@@ -1,0 +1,45 @@
+{% extends 'baseDashboard.html.twig' %}
+
+{% block titlePage %}
+  Cogip - Dashboard Contact
+{% endblock %}
+
+{% block body %}
+  <section class="dashboardForm">
+    <h1 class="dashboardForm__title">
+      New contact
+    </h1>
+    <form class="dashboardForm__form" action="/dashboardContact" method="post">
+      <input class="dashboardForm__form__input"
+        id=""
+        type="text"
+        name="contactName"
+        placeholder="Name" />
+      <input class="dashboardForm__form__input"
+        id=""
+        type="text"
+        name="phoneNumber"
+        placeholder="Phone" />
+      <input class="dashboardForm__form__input"
+        id=""
+        type="text"
+        name="contactEmail"
+        placeholder="Email" />
+      <select class="dashboardForm__form__input select" name="company" id="">
+        <option value="none" selected disabled hidden>
+          Select a Company
+        </option>
+        {% for elem in company %}
+          <option value="{{ elem.id }}">
+            {{ elem.name }}
+          </option>
+        {% endfor %}
+      </select>
+      <input class="dashboardForm__form__input"
+        id=""
+        type="file"
+        name="file" />
+      <input class="dashboardForm__form__button" type="submit" value="Save" />
+    </form>
+  </section>
+{% endblock %}
