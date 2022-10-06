@@ -1,3 +1,7 @@
+import { changeActiveClass } from "./classActiveDashboard.js";
+
+changeActiveClass();
+
 const phoneMenu = document.querySelector(".phoneMenu");
 const menuItems = document.querySelectorAll(".phoneMenu__item");
 const hamburger= document.querySelector(".hamburgerDashboard");
