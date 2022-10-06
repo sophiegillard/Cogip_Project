@@ -78,7 +78,7 @@ class companies
             if ($db->inTransaction()) {
                 $db->rollBack();
             }
-            throw $e;
+            echo $e->getMessage();
         }
     }
 
