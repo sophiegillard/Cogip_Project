@@ -977,12 +977,6 @@ div {
   }
 }
 
-.modifier__icon {
-  height: 2rem;
-  width: 2rem;
-  cursor: pointer;
-}
-
 @media (max-width: 599px) {
   .dashboard__home__table__cell::before {
     content: attr(data-label);
@@ -1066,8 +1060,8 @@ div {
   align-items: center;
 }
 .arrow .arrow__down {
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   cursor: pointer;
 }
 
@@ -1076,7 +1070,7 @@ div {
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 73px;
   margin: 0rem 0 2rem;
 }
@@ -1093,6 +1087,17 @@ div {
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+}
+
+.modifier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modifier__icon {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
 }
 
 .dashboardBody {
