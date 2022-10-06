@@ -22,7 +22,7 @@ class DashboardContactController extends Controller
             'company' => $companies,
             'contacts' => $contacts
         ];
-        var_dump($data);
+
         return $this->view('dashboardContact', $data);
     }
 
