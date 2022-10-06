@@ -1,3 +1,7 @@
+import {sortColumnOnClick} from "./filter_table/sortTableByColumn.js";
+import {searchInputs} from "./searchBar/searchBar.js";
+
+
 const phoneMenu = document.querySelector(".phoneMenu");
 const menuItems = document.querySelectorAll(".phoneMenu__item");
 const hamburger= document.querySelector(".hamburgerDashboard");
@@ -17,3 +21,7 @@ export function toggleMenu() {
 }
 
 hamburger.addEventListener("click", toggleMenu);
+
+sortColumnOnClick();
+
+searchInputs('db__search');

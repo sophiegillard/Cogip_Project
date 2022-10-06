@@ -1,9 +1,9 @@
 /**
  *FUNCTION to search items with search bar
  */
-export const searchInputs = () => {
+export const searchInputs = (id) => {
     //Get the search bar
-    const searchBar = document.getElementById('search');
+    const searchBar = document.getElementById(id);
 
     //Get all the rows
     const rows = document.querySelectorAll('.table__content')
@@ -25,6 +25,7 @@ export const searchInputs = () => {
                 let isVisible = name.includes(input);
 
                 // Show or hide elements
+                isVisible ? el.classList.remove('hidecard') :  el.classList.add('hidecard');
                 isVisible ? el.classList.remove('hidecard') :  el.classList.add('hidecard');
             }
         )
