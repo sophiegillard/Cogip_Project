@@ -132,6 +132,25 @@
   }
 }
 
+.table__heading{
+  display: table-header-group;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  @include for-phone-only{
+    display:none;
+  }
+}
+
+.modifier__icon{
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
 //Setting TABLE style for the mobile version
 .dashboard__home__table__cell::before{
   @include for-phone-only {
@@ -150,18 +169,5 @@
     @include for-phone-only {
       background-color: $row-bg;
     }
-}
-
-.table__heading{
-  display: table-header-group;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
-
-  @include for-phone-only{
-    display:none;
-  }
 }
 
