@@ -31,4 +31,9 @@ class DashboardInvoicesController extends Controller
     {
         (new invoices)->createInvoices($ref, $company, $dueDate);
     }
+
+    public function deleteInvoices($id)
+    {
+        (new invoices)->deleteInvoices($id);
+    }
 }
