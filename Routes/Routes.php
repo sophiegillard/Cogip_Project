@@ -101,4 +101,11 @@ $router->get('/dashboardDeleteCompany', function (){
     header('location:/dashboardCompanies');
 });
 
+$router->get('/dashboardDeleteContact', function (){
+
+    $id = $_GET['id'];
+    (new DashboardContactController())->deleteContact($id);
+    header('location:/dashboardContact');
+});
+
 $router->run();
