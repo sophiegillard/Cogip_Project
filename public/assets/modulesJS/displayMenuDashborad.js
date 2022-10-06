@@ -1,6 +1,7 @@
 import {sortColumnOnClick} from "./filter_table/sortTableByColumn.js";
 import {searchInputs} from "./searchBar/searchBar.js";
 import { changeActiveClass } from "./classActiveDashboard.js";
+import { setInputEditInContact, setInputEditInCompanies, setInputEditInInvoices } from "./EditForm/setInputToEdit.js";
 
 changeActiveClass();
 
@@ -27,3 +28,10 @@ hamburger.addEventListener("click", toggleMenu);
 sortColumnOnClick();
 
 searchInputs('db__search');
+
+setInputEditInContact()
+
+setInputEditInCompanies()
+
+setInputEditInInvoices()
+console.log(document.title)

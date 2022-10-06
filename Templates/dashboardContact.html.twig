@@ -11,22 +11,22 @@
     </h1>
     <form class="dashboardForm__form" action="/dashboardContact" method="post">
       <input class="dashboardForm__form__input"
-        id=""
+        id="contactNameInput"
         type="text"
         name="contactName"
         placeholder="Name" />
       <input class="dashboardForm__form__input"
-        id=""
+        id="phoneNumberInput"
         type="text"
         name="phoneNumber"
         placeholder="Phone" />
       <input class="dashboardForm__form__input"
-        id=""
+        id="contactEmailInput"
         type="text"
         name="contactEmail"
         placeholder="Email" />
-      <select class="dashboardForm__form__input select" name="company" id="">
-        <option value="none" selected disabled hidden>
+      <select class="dashboardForm__form__input select" name="company" >
+        <option value="none" id="companyInput" selected disabled hidden>
           Select a Company
         </option>
         {% for elem in company %}
@@ -36,7 +36,7 @@
         {% endfor %}
       </select>
       <input class="dashboardForm__form__input"
-        id=""
+        id="fileInput"
         type="file"
         name="file" />
       <input class="dashboardForm__form__button" type="submit" value="Save" />
@@ -70,16 +70,16 @@
         </div>
 
         {% for elem in contacts %}
-          <div class="db__flex__table table__content">
+          <div class="db__flex__table table__content" id="{{ elem.id }}">
 
             <div class="db__flex__row row__content" style="width: calc(15%);">{{ elem.name }}</a></div>
             <div class="db__flex__row row__content" style="width: calc(15%);">{{ elem.phone }}</div>
             <div class="db__flex__row row__content" style="width: calc(26%);">{{ elem.email }}</div>
             <div class="db__flex__row row__content" style="width: calc(16%);">{{ elem.company }}</div>
             <div class="db__flex__row row__content" style="width: calc(17%);">{{ elem.created_at }}</div>
-            <div class="db__flex__row row__content modifier" style="width: calc(11%);">
-              <img class="modifier__icon" src="assets/img/icons/edit.png" alt="edit">
-              <img class="modifier__icon" src="assets/img/icons/x-button.png" alt="Delete">
+            <div class="db__flex__row row__content modifier" value="icons" style="width: calc(11%);">
+              <img class="modifier__icon icon__edit" id="edit__{{ elem.id }}" src="assets/img/icons/edit.png" alt="edit">
+              <img class="modifier__icon icon__delete" id="delete__{{ elem.id }}" src="assets/img/icons/x-button.png" alt="Delete">
             </div>
 
           </div>

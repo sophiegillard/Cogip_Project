@@ -11,22 +11,22 @@
     </h1>
     <form class="dashboardForm__form" action="/dashboardCompany" method="post">
       <input class="dashboardForm__form__input"
-        id=""
+        id="companyInput"
         type="text"
         name="companyName"
         placeholder="Company Name" />
       <input class="dashboardForm__form__input"
-        id=""
+        id="countryInput"
         type="text"
         name="country"
         placeholder="Country" />
       <input class="dashboardForm__form__input"
-        id=""
+        id="tvaInput"
         type="text"
         name="tva"
         placeholder="TVA" />
-      <select class="dashboardForm__form__input select" name="companyType" id="">
-        <option value="none" selected disabled hidden>
+      <select class="dashboardForm__form__input select" name="companyType" >
+        <option value="none" id="typeInput" selected disabled hidden>
           Select a type of Companies
         </option>
         {% for elem in types %}
@@ -74,8 +74,8 @@
             <div class="db__flex__row row__content" style="width: calc(15.8%);">{{ elem.types }}</div>
             <div class="db__flex__row row__content" style="width: calc(17.8%);">{{ elem.created_at }}</div>
             <div class="db__flex__row row__content modifier" style="width: calc(11%);">
-              <img class="modifier__icon" src="assets/img/icons/edit.png" alt="edit">
-              <img class="modifier__icon" src="assets/img/icons/x-button.png" alt="Delete">
+              <img class="modifier__icon icon__edit" src="assets/img/icons/edit.png" alt="edit">
+              <img class="modifier__icon icon__delete" src="assets/img/icons/x-button.png" alt="Delete">
             </div>
 
           </div>
