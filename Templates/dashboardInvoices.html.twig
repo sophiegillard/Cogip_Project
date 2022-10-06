@@ -1,86 +1,90 @@
 {% extends 'baseDashboard.html.twig' %}
 
 {% block titlePage %}
-  Cogip - Dashboard Invoices
+    Cogip - Dashboard Invoices
 {% endblock %}
 
 {% block body %}
-  <section class="dashboardForm">
-    <h1 class="dashboardForm__title">
-      New invoice
-    </h1>
-    <form class="dashboardForm__form" action="/dashboardInvoices" method="post">
-      <input class="dashboardForm__form__input"
-        id=""
-        type="text"
-        name="reference"
-        placeholder="Reference" />
-      <input class="dashboardForm__form__input"
-        id=""
-        type="text"
-        name="price"
-        placeholder="Price" />
-      <select class="dashboardForm__form__input select" name="companyName" id="">
-        <option value="none" selected disabled hidden>
-          Select a Company
-        </option>
-        {% for elem in company %}
-          <option value="{{ elem.id }}">
-            {{ elem.name }}
-          </option>
-        {% endfor %}
-      </select>
-      <input class="dashboardForm__form__input"
-        id=""
-        type="date"
-        name="date"
-        placeholder="date" />
-      <input class="dashboardForm__form__button" type="submit" value="Save" />
-    </form>
-  </section>
+    <section class="dashboardForm">
+        <h1 class="dashboardForm__title">
+            New invoice
+        </h1>
+        <form class="dashboardForm__form" action="/dashboardInvoices" method="post">
+            <input class="dashboardForm__form__input"
+                   id=""
+                   type="text"
+                   name="reference"
+                   placeholder="Reference"/>
+            <input class="dashboardForm__form__input"
+                   id=""
+                   type="text"
+                   name="price"
+                   placeholder="Price"/>
+            <select class="dashboardForm__form__input select" name="companyName" id="">
+                <option value="none" selected disabled hidden>
+                    Select a Company
+                </option>
+                {% for elem in company %}
+                    <option value="{{ elem.id }}">
+                        {{ elem.name }}
+                    </option>
+                {% endfor %}
+            </select>
+            <input class="dashboardForm__form__input"
+                   id=""
+                   type="date"
+                   name="date"
+                   placeholder="date"/>
+            <input class="dashboardForm__form__button" type="submit" value="Save"/>
+        </form>
+    </section>
 
-  <section class='db__tables'>
+    <section class='db__tables'>
 
-    <article class="db__article__container invoices">
+        <article class="db__article__container invoices">
 
-      <h2 class="db__article__title"> All invoices </h2>
+            <h2 class="db__article__title"> All invoices </h2>
 
-      <div class="db__search__wrapper">
-        <input class="db__searchbar" id="db__search" type="search" placeholder="Search invoice...">
-      </div>
+            <div class="db__search__wrapper">
+                <input class="db__searchbar" id="search" type="search" placeholder="Search invoice...">
 
-      <div class="db__table__container" id="tableInvoices" role="table" aria-label="invoices">
-        <div class="db__flex__table db__table__header">
-
-          <div class="db__flex__row " style="width: calc(22%);">Invoice Number</div>
-          <div class="db__flex__row  arrow" style="width: calc(22%);">Due dates
-            <img class="arrow__down" id="1" src="assets/img/icons/downward-arrow-white.png" alt=""/>
-          </div>
-          <div class="db__flex__row " style="width: calc(22%);">Company</div>
-          <div class="db__flex__row " style="width: calc(22%);">Created at</div>
-          <div class="db__flex__row " style="width: calc(11%);"></div>
-
-        </div>
-
-        {% for elem in invoices %}
-          <div class="db__flex__table table__content">
-
-            <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.ref }}</a></div>
-            <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.due_date }}</div>
-            <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.name }}</div>
-            <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.created_at }}</div>
-            <div class="db__flex__row row__content modifier" style="width: calc(11%);">
-              <img class="modifier__icon" src="assets/img/icons/edit.png" alt="edit">
-              <img class="modifier__icon" src="assets/img/icons/x-button.png" alt="Delete">
             </div>
 
-          </div>
-        {% endfor %}
-      </div>
+            <div class="db__table__container" id="tableInvoices" role="table" aria-label="invoices">
+                <div class="db__flex__table db__table__header">
 
-    </article>
+                    <div class="db__flex__row " style="width: calc(22%);">Invoice Number</div>
+                    <div class="db__flex__row  arrow" style="width: calc(22%);">Due dates
+                        <img class="arrow__down" id="1" src="assets/img/icons/downward-arrow-white.png" alt=""/>
+                    </div>
+                    <div class="db__flex__row " style="width: calc(22%);">Company</div>
+                    <div class="db__flex__row " style="width: calc(22%);">Created at</div>
+                    <div class="db__flex__row " style="width: calc(11%);"></div>
 
-  </section>
+                </div>
+
+                {% for elem in invoices %}
+                    <div class="db__flex__table table__content">
+
+                        <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.ref }}</a></div>
+                        <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.due_date }}</div>
+                        <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.name }}</div>
+                        <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.created_at }}</div>
+                        <div class="db__flex__row row__content modifier" style="width: calc(11%);">
+                            <img class="modifier__icon" src="assets/img/icons/edit.png" alt="edit">
+                            <a href="/dashboardDeleteInvoices?&id={{ elem.id }}">
+                                <img class="modifier__icon" src="assets/img/icons/x-button.png" alt="Delete">
+                            </a>
+
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+
+        </article>
+
+    </section>
 
 
 {% endblock %}
