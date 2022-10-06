@@ -20,7 +20,7 @@ class companies
     function getCompany($id): bool|array
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('SELECT companies.name,tva,country,companies.created_at, contacts.name AS contactName, contacts.phone AS phoneNumber, contacts.picture FROM `companies` LEFT JOIN contacts ON contacts.company_id = companies.id WHERE companies.id = :id;');
+        $query = $db->prepare('SELECT companies.id, companies.name,tva,country,companies.created_at, contacts.name AS contactName, contacts.phone AS phoneNumber, contacts.picture FROM `companies` LEFT JOIN contacts ON contacts.company_id = companies.id WHERE companies.id = :id;');
         $query->execute(array(
             'id' => $id
         ));
@@ -64,13 +64,13 @@ class companies
 
             $db->beginTransaction();
             $deleteCompany->execute(array(
-                $id
+                'id' => $id
             ));
             $deleteContacts->execute(array(
-                $id
+                'id' => $id
             ));
             $deleteInvoices->execute(array(
-                $id
+                'id' => $id
             ));
 
             $db->commit();
@@ -78,7 +78,7 @@ class companies
             if ($db->inTransaction()) {
                 $db->rollBack();
             }
-            throw $e;
+            echo $e->getMessage();
         }
     }
 

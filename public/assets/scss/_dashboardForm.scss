@@ -10,6 +10,16 @@
 
     margin: 10px;
     padding: 20px;
+    @media screen and (min-width: 1024px) {
+      margin-left: 310px;
+      width: 71%;
+      margin-top: 50px;
+    }
+    @media screen and (min-width: 1441px) {
+      justify-content: center;
+      width: 72%;
+      margin-top: 50px;
+    }
   &__title {
     font-family: 'Inter';
     font-style: normal;

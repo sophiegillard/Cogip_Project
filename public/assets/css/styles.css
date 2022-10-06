@@ -784,6 +784,20 @@ div {
   margin: 10px;
   padding: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .dashboardForm {
+    margin-left: 310px;
+    width: 71%;
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .dashboardForm {
+    justify-content: center;
+    width: 72%;
+    margin-top: 50px;
+  }
+}
 .dashboardForm__title {
   font-family: "Inter";
   font-style: normal;
@@ -861,6 +875,12 @@ div {
     width: 100%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .dashboard__home {
+    margin-left: 205px;
+    width: 83%;
+  }
+}
 
 .dashboard__home__container__statistics {
   display: flex;
@@ -908,6 +928,25 @@ div {
 @media (max-width: 330px) {
   .dashboard__home__table {
     width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dashboard__home__table {
+    width: 82%;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1351px) {
+  .dashboard__home__table {
+    width: 35%;
+    margin-left: 85px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .dashboard__home__table {
+    width: 36.5%;
+    margin-left: 6.5%;
   }
 }
 .dashboard__home__table__title {
@@ -1009,6 +1048,13 @@ div {
   margin: 10px;
   padding: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .db__tables {
+    margin-left: 310px;
+    width: 71%;
+    margin-top: 50px;
+  }
+}
 
 .db__table__container {
   display: block;
@@ -1102,31 +1148,25 @@ div {
 
 .dashboardBody {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 0.3fr 1fr;
-  grid-template-areas: "menunavbar dashheader" "menunavbar form" "menunavbar table";
-}
-@media screen and (max-width: 1024px) {
-  .dashboardBody {
-    display: block;
-  }
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "dashheader" "form" "table";
+  background-color: #F5F5FB;
 }
 
 .dashboard__menu {
   position: fixed;
+  width: 285px;
   height: 100%;
-  width: 22%;
-  background-color: white;
   display: none;
   grid-area: menunavbar;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.12fr 0.1fr 0.2fr;
-  grid-template-areas: "profil" "nav" "logout";
+  background-color: white;
 }
 @media screen and (min-width: 1024px) {
   .dashboard__menu {
-    display: grid;
-    position: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 .dashboard__menu__profil {
@@ -1136,14 +1176,6 @@ div {
 @media screen and (min-width: 1024px) {
   .dashboard__menu__profil {
     margin-top: 50px;
-  }
-}
-.dashboard__menu__profil__return {
-  margin: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .dashboard__menu__profil__return {
-    display: none;
   }
 }
 .dashboard__menu__profil__img {
@@ -1177,12 +1209,15 @@ div {
   font-size: 20px;
   line-height: 24px;
   padding-top: 56px;
-  padding-left: 39px;
+  width: 100%;
+  height: 60%;
 }
 .dashboard__menu__nav a {
+  width: 89%;
   text-decoration: none;
   color: #000000;
-  margin-bottom: 30px;
+  padding-left: 30px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
@@ -1193,23 +1228,23 @@ div {
   grid-area: logout;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  height: 10%;
+  padding: 17px;
   border-top: 1px solid #e0e0e0;
-  padding: 8px 17px 10px 18px;
 }
 .dashboard__menu__logout__img {
   width: 48px;
   border-radius: 50%;
 }
-.dashboard__menu__logout__img__button {
+.dashboard__menu__logout__link {
   text-decoration: none;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  background-color: aqua;
-  color: #9698d6;
+  color: #9698D6;
 }
 .dashboard__header {
   font-family: "Inter";
@@ -1220,6 +1255,8 @@ div {
   .dashboard__header {
     padding-top: 50px;
     padding-left: 50px;
+    margin-left: 205px;
+    width: 82%;
   }
 }
 .dashboard__header__title {
@@ -1229,15 +1266,7 @@ div {
   color: #000000;
   padding-top: 20px;
   padding-left: 80px;
-}
-.dashboard__header__path {
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 18px;
-  color: #000000;
-  padding-left: 90px;
-  margin-top: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .dashboard__header__banner {
   background: #9698d6;
@@ -1292,6 +1321,11 @@ div {
     width: 370px;
     right: 50px;
     top: 3px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .dashboard__header__illustration {
+    right: 20%;
   }
 }
 
