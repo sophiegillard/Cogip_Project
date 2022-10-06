@@ -1,0 +1,107 @@
+@import 'variables';
+
+$table-header: $darkPurple;
+$row-bg: $grey;
+
+div {
+  box-sizing: border-box;
+}
+
+.db__tables{
+  grid-area: table;
+  box-shadow: 0px 0px 37px -21px rgba(0, 0, 0, 0.25);
+
+  border-radius: 10px;
+
+  margin: 10px;
+  padding: 20px;
+}
+
+.db__table__container {
+  display: block;
+  width: 100%;
+  max-width: 1193px;
+  padding: 38px;
+
+  color: black;
+  font-family: Inter;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-size: 16px;
+
+
+  min-width: 100%;
+
+}
+
+.db__table__header{
+  background: $table-header;
+  align-items: center;
+  color: white;
+}
+
+.db__flex__table {
+  display: flex;
+  flex-flow: row wrap;
+  transition: 0.5s;
+
+
+  &.db__table__content:nth-child(odd)  {
+    background: $row-bg;
+  }
+
+}
+
+.db__table__content{
+  font-weight:lighter;
+  &:hover {
+    cursor:pointer;
+    transition: 500ms;
+    font-weight: bolder;
+  }
+}
+
+.db__flex__row {
+  width: calc(100% / 5);
+  padding: 0.8em 1rem;
+}
+
+.arrow{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  .arrow__down{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+}
+
+.db__article__title{
+  border-bottom: $purple 2px solid;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size:16px;
+  line-height: 73px;
+  margin: 0rem 0 2rem;
+}
+
+.db__searchbar{display: flex;
+  margin-left: 38px;
+  background: #f5f5f5;
+
+  padding: 18px;
+  border: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+
+
+}
