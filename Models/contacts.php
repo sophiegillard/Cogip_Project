@@ -53,7 +53,7 @@ class contacts
             $db->beginTransaction();
 
             $query->execute(array(
-                $id
+                'id'=>$id
             ));
 
             $db->commit();
@@ -61,7 +61,7 @@ class contacts
             if ($db->inTransaction()) {
                 $db->rollBack();
             }
-            throw $e;
+            echo $e->getMessage();
         }
         $db = null;
     }
