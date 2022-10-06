@@ -4,6 +4,6 @@ import { toggleMenu } from "./displayMenuPhone.js";
 
 toggleMenu();
 
-searchInputs();
+searchInputs('search');
 
 sortColumnOnClick();

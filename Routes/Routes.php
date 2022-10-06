@@ -87,4 +87,11 @@ $router->post('/dashboardCompany', function () {
     header('location:/dashboardCompanies');
 });
 
+$router->get('/dashboardDeleteInvoices', function () {
+
+    $id = $_GET['id'];
+    (new DashboardInvoicesController)->deleteInvoices($id);
+    header('location:/dashboardInvoices');
+});
+
 $router->run();

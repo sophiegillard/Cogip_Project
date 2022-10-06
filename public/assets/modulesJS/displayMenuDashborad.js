@@ -1,3 +1,5 @@
+import {sortColumnOnClick} from "./filter_table/sortTableByColumn.js";
+import {searchInputs} from "./searchBar/searchBar.js";
 import { changeActiveClass } from "./classActiveDashboard.js";
 
 changeActiveClass();
@@ -21,3 +23,7 @@ export function toggleMenu() {
 }
 
 hamburger.addEventListener("click", toggleMenu);
+
+sortColumnOnClick();
+
+searchInputs('db__search');

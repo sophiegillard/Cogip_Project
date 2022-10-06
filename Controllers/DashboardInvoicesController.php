@@ -22,7 +22,7 @@ class DashboardInvoicesController extends Controller
             'company' => $companies,
             'invoices' => $invoices
         ];
-        //var_dump($data);
+
         return $this->view('dashboardInvoices', $data);
 
     }
@@ -30,5 +30,10 @@ class DashboardInvoicesController extends Controller
     public function addInvoices($ref, $company, $dueDate)
     {
         (new invoices)->createInvoices($ref, $company, $dueDate);
+    }
+
+    public function deleteInvoices($id)
+    {
+        (new invoices)->deleteInvoices($id);
     }
 }

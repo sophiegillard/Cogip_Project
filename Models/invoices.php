@@ -49,7 +49,7 @@ class invoices
             $db->beginTransaction();
 
             $query->execute(array(
-                $id
+                'id' => $id
             ));
 
             $db->commit();
