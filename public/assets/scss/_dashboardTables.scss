@@ -21,13 +21,15 @@ div {
   display: block;
   width: 100%;
   max-width: 1193px;
+  padding: 38px;
 
   color: black;
-  font-family: Roboto;
+  font-family: Inter;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 16px;
+
 
   min-width: 100%;
 
@@ -35,8 +37,8 @@ div {
 
 .db__table__header{
   background: $table-header;
-  font-weight: bolder;
   align-items: center;
+  color: white;
 }
 
 .db__flex__table {
@@ -78,16 +80,28 @@ div {
 }
 
 .db__article__title{
-  background-image: linear-gradient(to bottom, transparent 50%, $darkPurple 50%);
-  border-radius: 5px;
-  background-repeat: no-repeat;
-  background-size: 20% 1.2em;
-  background-position: 10% 96%;
+  border-bottom: $purple 2px solid;
 
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  font-size: 60px;
+  font-size:16px;
   line-height: 73px;
-  margin: 3rem 0 2rem;
+  margin: 0rem 0 2rem;
+}
+
+.db__searchbar{display: flex;
+  margin-left: 38px;
+  background: #f5f5f5;
+
+  padding: 18px;
+  border: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+
+
 }

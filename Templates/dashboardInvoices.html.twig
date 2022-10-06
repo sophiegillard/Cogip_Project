@@ -45,8 +45,8 @@
 
       <h2 class="db__article__title"> All invoices </h2>
 
-      <div class="search__wrapper">
-        <input class="searchbar" id="search" type="search" placeholder="Search invoice..">
+      <div class="db__search__wrapper">
+        <input class="db__searchbar" id="search" type="search" placeholder="Search invoice...">
       </div>
 
       <div class="db__table__container" id="tableInvoices" role="table" aria-label="invoices">
@@ -54,10 +54,11 @@
 
           <div class="db__flex__row " style="width: calc(20%);">Invoice Number</div>
           <div class="db__flex__row  arrow" style="width: calc(20%);">Due dates
-            <img class="arrow__down" id="1" src="assets/img/icons/downward-arrow.png" alt=""/>
+            <img class="arrow__down" id="1" src="assets/img/icons/downward-arrow-white.png" alt=""/>
           </div>
           <div class="db__flex__row " style="width: calc(20%);">Company</div>
           <div class="db__flex__row " style="width: calc(20%);">Created at</div>
+          <div class="db__flex__row " style="width: calc(20%);"></div>
 
         </div>
 
@@ -68,6 +69,10 @@
             <div class="db__flex__row row__content" style="width: calc(20%);">{{ elem.due_date }}</div>
             <div class="db__flex__row row__content" style="width: calc(20%);">{{ elem.name }}</div>
             <div class="db__flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+            <div class="db__flex__row row__content" style="width: calc(20%);">
+              <img class="modifier__icon" src="assets/img/icons/pen.png" alt="edit">
+              <img class="modifier__icon" src="assets/img/icons/cancel.png" alt="Delete">
+            </div>
 
           </div>
         {% endfor %}
