@@ -20,6 +20,7 @@ class DashboardCompaniesController extends Controller
             'types' => $types,
             'companies' => $companies
         ];
+        var_dump($data);
 
         return $this->view('dashboardCompanies', $data);
     }
