@@ -1115,13 +1115,13 @@ div {
 
 .dashboard__menu {
   position: fixed;
+  width: 100%;
   height: 100%;
-  width: 22%;
   background-color: white;
   display: none;
   grid-area: menunavbar;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.12fr 0.1fr 0.2fr;
+  grid-template-rows: 0.12fr 0.25fr 0.1fr;
   grid-template-areas: "profil" "nav" "logout";
 }
 @media screen and (min-width: 1024px) {
@@ -1137,14 +1137,6 @@ div {
 @media screen and (min-width: 1024px) {
   .dashboard__menu__profil {
     margin-top: 50px;
-  }
-}
-.dashboard__menu__profil__return {
-  margin: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .dashboard__menu__profil__return {
-    display: none;
   }
 }
 .dashboard__menu__profil__img {
@@ -1178,12 +1170,14 @@ div {
   font-size: 20px;
   line-height: 24px;
   padding-top: 56px;
-  padding-left: 39px;
+  width: 100%;
 }
 .dashboard__menu__nav a {
+  width: 90%;
   text-decoration: none;
   color: #000000;
-  margin-bottom: 30px;
+  padding-left: 30px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
@@ -1194,23 +1188,23 @@ div {
   grid-area: logout;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  height: 50%;
+  padding: 17px;
   border-top: 1px solid #e0e0e0;
-  padding: 8px 17px 10px 18px;
 }
 .dashboard__menu__logout__img {
   width: 48px;
   border-radius: 50%;
 }
-.dashboard__menu__logout__img__button {
+.dashboard__menu__logout__link {
   text-decoration: none;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  background-color: aqua;
-  color: #9698d6;
+  color: #9698D6;
 }
 .dashboard__header {
   font-family: "Inter";
