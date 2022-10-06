@@ -1146,7 +1146,7 @@ div {
   .dashboard__menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 .dashboard__menu__profil {
@@ -1190,6 +1190,7 @@ div {
   line-height: 24px;
   padding-top: 56px;
   width: 100%;
+  height: 60%;
 }
 .dashboard__menu__nav a {
   width: 89%;
@@ -1208,7 +1209,7 @@ div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50%;
+  height: 10%;
   padding: 17px;
   border-top: 1px solid #e0e0e0;
 }
