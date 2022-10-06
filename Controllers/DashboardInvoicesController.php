@@ -22,7 +22,7 @@ class DashboardInvoicesController extends Controller
             'company' => $companies,
             'invoices' => $invoices
         ];
-        var_dump($data);
+        //var_dump($data);
         return $this->view('dashboardInvoices', $data);
 
     }

@@ -1231,22 +1231,14 @@ div {
   line-height: 36px;
   color: #000000;
   padding-top: 20px;
-  padding-left: 25px;
-}
-.dashboard__header__title__menu {
-  padding-right: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .dashboard__header__title__menu {
-    display: none;
-  }
+  padding-left: 80px;
 }
 .dashboard__header__path {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
   color: #000000;
-  padding-left: 70px;
+  padding-left: 90px;
   margin-top: 8px;
   margin-bottom: 30px;
 }
@@ -1309,6 +1301,86 @@ div {
 .actif {
   font-weight: 600;
   border-right: 5px solid #9698d6;
+}
+
+.phoneMenu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: white;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1023px) {
+  .phoneMenu {
+    display: none;
+  }
+}
+.phoneMenu__profil__img {
+  width: 200px;
+  border-radius: 50%;
+}
+.phoneMenu__profil__name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 29px;
+  text-align: center;
+  color: #000000;
+}
+.phoneMenu__item {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 55px;
+  color: #000000;
+}
+.phoneMenu__item img {
+  width: 40px;
+  margin-right: 10px;
+}
+.phoneMenu__logout {
+  margin-top: 50px;
+}
+.phoneMenu__logout__img {
+  width: 48px;
+  border-radius: 50%;
+}
+.phoneMenu__logout__button {
+  text-decoration: none;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+.hamburgerDashboard {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  border: 1px solid black;
+  background: #ffffff;
+  cursor: pointer;
+}
+@media screen and (min-width: 1023px) {
+  .hamburgerDashboard {
+    display: none;
+  }
+}
+
+.closeIcon {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
