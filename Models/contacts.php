@@ -21,7 +21,7 @@ class contacts
     function getContact($id): bool|array
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('SELECT contacts.name, contacts.phone, contacts.email, contacts.picture, companies.name AS company FROM `contacts` INNER JOIN companies ON company_id = companies.id WHERE contacts.id = :id');
+        $query = $db->prepare('SELECT contacts.id, contacts.name, contacts.phone, contacts.email, contacts.picture, companies.name AS company FROM `contacts` INNER JOIN companies ON company_id = companies.id WHERE contacts.id = :id');
         $query->execute(array(
             'id' => $id
         ));
@@ -53,7 +53,7 @@ class contacts
             $db->beginTransaction();
 
             $query->execute(array(
-                $id
+                'id'=>$id
             ));
 
             $db->commit();
@@ -61,7 +61,7 @@ class contacts
             if ($db->inTransaction()) {
                 $db->rollBack();
             }
-            throw $e;
+            echo $e->getMessage();
         }
         $db = null;
     }

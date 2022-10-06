@@ -94,4 +94,18 @@ $router->get('/dashboardDeleteInvoices', function () {
     header('location:/dashboardInvoices');
 });
 
+$router->get('/dashboardDeleteCompany', function (){
+
+    $id = $_GET['id'];
+    (new DashboardCompaniesController())->deleteCompany($id);
+    header('location:/dashboardCompanies');
+});
+
+$router->get('/dashboardDeleteContact', function (){
+
+    $id = $_GET['id'];
+    (new DashboardContactController())->deleteContact($id);
+    header('location:/dashboardContact');
+});
+
 $router->run();
