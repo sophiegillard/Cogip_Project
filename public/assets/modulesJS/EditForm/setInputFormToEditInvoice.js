@@ -28,27 +28,28 @@ export const setInputFormToEditInvoice = (input0, input1, input2, input3) =>{
             input3.placeholder = "";
 
 
-//--------------------------------
+//------------------------------
 //try to get the index selected
-            //let selId = document.getElementById("selectId");
-            /*let items = selId.options;//Javascript get select all option
+            /*let selId = document.getElementById("selectId");
+            let items = selId.options;//Javascript get select all option
 
             for (var i = 1; i < items.length; i++) {
-                //console.log(thirdChild)
-                //console.log(items[i].index)
-                //console.log(items[i].innerHTML)
+                console.log(thirdChild)
+                console.log(items[i].index)
+                console.log(items[i].innerHTML)
 
                 const indexSelect= items[i].index;
-
+                const valueSelect = items[i].innerText;
+                console.log(valueSelect);
 
                 if(thirdChild === valueSelect){
                     document.getElementById('companyInput').value= items[i].index;
+                    console.log('index')
                     console.log(items[i].index)
                     console.log(items[i])
                 }
-
             }*/
-//--------------------------------
+//------------------------------
 
 
             //Set the datas of the selected row in the form to edit them
