@@ -111,10 +111,13 @@ $router->get('/dashboardDeleteContact', function () {
 
 //Update
 
-$router->get('/dashboardUpdateInvoices', function () {
-
+$router->post('/dashboardUpdateInvoices', function () {
+    $ref = $_POST['reference'];
+    $price = $_POST['price'];
+    //$company = $_POST['companyName'];
+    $dueDate = $_POST['date'];
     $id = $_GET['id'];
-    (new DashboardInvoicesController())->updateInvoices($id);
+    (new DashboardInvoicesController())->updateInvoices(1, $ref, $dueDate, $id);
     header('location:/dashboardInvoices');
 });
 
