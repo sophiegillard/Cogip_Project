@@ -6,7 +6,7 @@
     <main>
 
         <section class='tables'>
-            <article class="article__container invoices">
+            <article class="article__container companies">
 
                 <h2 class="article__title"> All companies </h2>
 
@@ -15,26 +15,26 @@
                 </div>
 
                 <div class="table__container" id="tableCompanies" role="table" aria-label="companies">
-                    <div class="flex__table table__header">
+                    <div class=" table__header">
 
-                        <div class="flex__row row__header arrow" style="width: calc(20%);">Company
+                        <div class="flex__row  arrow" style="width: calc(20%);">Company
                             <img class="arrow__down" id="0" src="assets/img/icons/downward-arrow.png" alt=""/>
                         </div>
                         <div class="flex__row row__header" style="width: calc(20%);">TVA</div>
                         <div class="flex__row row__header" style="width: calc(20%);">Country</div>
                         <div class="flex__row row__header" style="width: calc(20%);">Type</div>
-                        <div class="flex__row row__header arrow" style="width: calc(20%);">Created at
+                        <div class="flex__row row__header arrow" style="width: calc(100%);">Created at
                             <img class="arrow__down" id="4" src="assets/img/icons/downward-arrow.png" alt=""/>
                         </div>
                     </div>
 
                     {% for elem in companies %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Company"><a href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="TVA">{{ elem.tva }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Country">{{ elem.country }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Type">{{ elem.types}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Created at">{{ elem.created_at }}</div>
                         </div>
                     {% endfor %}
                 </div>
