@@ -121,14 +121,17 @@ $router->post('/dashboardUpdateInvoices', function () {
     header('location:/dashboardInvoices');
 });
 
-$router->get('/dashboardUpdateCompany', function () {
+$router->post('/dashboardUpdateCompany', function () {
+    $name = $_POST['companyName'];
+    $country = $_POST['country'];
+    $tva = $_POST['tva'];
 
     $id = $_GET['id'];
-    (new DashboardCompaniesController())->updateCompany($id);
+    (new DashboardCompaniesController())->updateCompany($name, $country, $tva, 1, $id);
     header('location:/dashboardCompanies');
 });
 
-$router->get('/dashboardUpdateContact', function () {
+$router->post('/dashboardUpdateContact', function () {
 
     $id = $_GET['id'];
     (new DashboardContactController())->updateContact($id);

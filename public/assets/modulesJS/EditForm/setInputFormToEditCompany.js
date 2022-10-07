@@ -36,7 +36,7 @@ export const setInputFormToEditCompany = (input0, input1, input2, input3) =>{
             const idDiv= parent.id
 
             const form= document.getElementById('company__form');
-            form.action = '/dashboardUpdateCompany' + idDiv;
+            form.action = '/dashboardUpdateCompany?id=' + idDiv;
         })
     })
 }
