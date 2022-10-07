@@ -22,6 +22,9 @@ div {
     width: 71%;
     margin-top: 50px;
   }
+  @include after-desktop{
+
+  }
 }
 
 .db__table__container {

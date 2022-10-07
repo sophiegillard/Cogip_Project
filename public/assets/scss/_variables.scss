@@ -28,6 +28,10 @@ $grey : #F5F5F5;
   @media (min-width: 599px) { @content; }
 }
 
+@mixin max-big-tablet {
+  @media (max-width: 820px) { @content; }
+}
+
 @mixin for-desktop {
   @media (min-width: 1024px) { @content; }
 }

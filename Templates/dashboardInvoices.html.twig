@@ -66,10 +66,10 @@
                 {% for elem in invoices %}
                     <div class="db__flex__table table__content" id={{ elem.id }}>
 
-                        <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.ref }}</a></div>
-                        <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.due_date }}</div>
-                        <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.name }}</div>
-                        <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.created_at }}</div>
+                        <div class="db__flex__row row__content" style="width: calc(22%);" data-label="Invoice n°">{{ elem.ref }}</a></div>
+                        <div class="db__flex__row row__content" style="width: calc(22%);" data-label="Due dates">{{ elem.due_date }}</div>
+                        <div class="db__flex__row row__content" style="width: calc(22%);" data-label="Company">{{ elem.name }}</div>
+                        <div class="db__flex__row row__content" style="width: calc(22%);" data-label="Created at">{{ elem.created_at }}</div>
                         <div class="db__flex__row row__content modifier" style="width: calc(11%);">
                             <img class="modifier__icon icon__edit" src="assets/img/icons/edit.png" alt="edit">
                             <a href="/dashboardDeleteInvoices?&id={{ elem.id }}">
