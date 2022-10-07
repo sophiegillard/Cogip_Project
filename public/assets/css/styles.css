@@ -598,8 +598,7 @@ div {
 }
 .illustration__image__background {
   background-color: #F9DE4E;
-  -webkit-clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
-          clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 32%, 100% 100%, 0% 100%);
   width: 700px;
   height: 400px;
   position: relative;
@@ -1613,3 +1612,5 @@ div {
   background: white;
   color: black;
 }
+
+/*# sourceMappingURL=styles.css.map */
