@@ -125,16 +125,20 @@ $router->post('/dashboardUpdateCompany', function () {
     $name = $_POST['companyName'];
     $country = $_POST['country'];
     $tva = $_POST['tva'];
-
+    $type = $_POST['companyType'];
     $id = $_GET['id'];
     (new DashboardCompaniesController())->updateCompany($name, $country, $tva, 1, $id);
     header('location:/dashboardCompanies');
 });
 
 $router->post('/dashboardUpdateContact', function () {
+    $name = $_POST['contactName'];
+    $phone = $_POST['phoneNumber'];
+    //$companyId = $_POST['company'];
+    $email = $_POST['contactEmail'];
 
     $id = $_GET['id'];
-    (new DashboardContactController())->updateContact($id);
+    (new DashboardContactController())->updateContact($name, $phone, 1, $email, $id);
     header('location:/dashboardContact');
 });
 
