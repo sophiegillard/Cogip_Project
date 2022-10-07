@@ -10,7 +10,7 @@ class invoices
     function getAllInvoices(): bool|array
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('SELECT invoices.id,ref,due_date,invoices.created_at,companies.name FROM invoices INNER JOIN companies ON invoices.id_company = companies.id LIMIT 10');
+        $query = $db->prepare('SELECT invoices.id,ref,due_date,invoices.created_at,companies.name FROM invoices INNER JOIN companies ON invoices.id_company = companies.id LIMIT 50');
         $query->execute();
         $db = null;
         return $query->fetchAll(PDO::FETCH_OBJ);
@@ -65,12 +65,12 @@ class invoices
     function updateInvoice($company_id, $ref, $dueDate, $id): void
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('UPDATE `invoices` SET `id_company`=?,`ref`=?,`due_date`=?,`updated_at`=? WHERE id = :id');
+        $query = $db->prepare('UPDATE `invoices` SET `id_company`=:company,`ref`=:ref,`due_date`=:dueDate,`updated_at`=:updatedDate WHERE id = :id');
         $query->execute(array(
-            $company_id,
-            $ref,
-            $dueDate,
-            date('Y-m-d'),
+            'company'=>$company_id,
+            'ref'=>$ref,
+            'dueDate'=>$dueDate,
+            'updatedDate'=>date('Y-m-d'),
             'id'=>$id
         ));
     }

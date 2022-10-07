@@ -29,10 +29,10 @@
 
                     {% for elem in contact %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Name" ><a href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Name" ><a class="TableLinks" href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Phone" >{{ elem.phone }}</div>
-                            <div class="flex__row row__content" style="width: calc(30%);" data-label="Email" ><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Company" ><a href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(30%);" data-label="Email" ><a class="TableLinks" href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(18%);" data-label="Company" ><a class="TableLinks" href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Created at" >{{ elem.created_at }}</div>
                         </div>
                     {% endfor %}

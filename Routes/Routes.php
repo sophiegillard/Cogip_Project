@@ -111,24 +111,34 @@ $router->get('/dashboardDeleteContact', function () {
 
 //Update
 
-$router->get('/dashboardUpdateInvoices', function () {
-
+$router->post('/dashboardUpdateInvoices', function () {
+    $ref = $_POST['reference'];
+    $price = $_POST['price'];
+    //$company = $_POST['companyName'];
+    $dueDate = $_POST['date'];
     $id = $_GET['id'];
-    (new DashboardInvoicesController())->updateInvoices($id);
+    (new DashboardInvoicesController())->updateInvoices(1, $ref, $dueDate, $id);
     header('location:/dashboardInvoices');
 });
 
-$router->get('/dashboardUpdateCompany', function () {
-
+$router->post('/dashboardUpdateCompany', function () {
+    $name = $_POST['companyName'];
+    $country = $_POST['country'];
+    $tva = $_POST['tva'];
+    $type = $_POST['companyType'];
     $id = $_GET['id'];
-    (new DashboardCompaniesController())->updateCompany($id);
+    (new DashboardCompaniesController())->updateCompany($name, $country, $tva, 1, $id);
     header('location:/dashboardCompanies');
 });
 
-$router->get('/dashboardUpdateContact', function () {
+$router->post('/dashboardUpdateContact', function () {
+    $name = $_POST['contactName'];
+    $phone = $_POST['phoneNumber'];
+    //$companyId = $_POST['company'];
+    $email = $_POST['contactEmail'];
 
     $id = $_GET['id'];
-    (new DashboardContactController())->updateContact($id);
+    (new DashboardContactController())->updateContact($name, $phone, 1, $email, $id);
     header('location:/dashboardContact');
 });
 

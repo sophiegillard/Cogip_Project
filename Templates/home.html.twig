@@ -28,7 +28,7 @@
                     <div class="flex__table table__content">
                         <div class="flex__row row__content" data-label="Invoice n°" style="width: calc(25%);">{{ elem.ref }}</div>
                         <div class="flex__row row__content" data-label="Due dates" style="width: calc(25%);">{{ elem.due_date }}</div>
-                        <div class="flex__row row__content" data-label="Company" style="width: calc(25%);"><a href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
+                        <div class="flex__row row__content" data-label="Company" style="width: calc(25%);"><a class="TableLinks" href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
                         <div class="flex__row row__content" data-label="Created at" style="width: calc(25%);">{{ elem.created_at }}</div>
                     </div>
                     {% endfor %}
@@ -49,10 +49,10 @@
 
                     {% for elem in contacts %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Name"><a href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Name"><a class="TableLinks" href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Phone">{{ elem.phone }}</div>
-                            <div class="flex__row row__content" style="width: calc(30%);" data-label="Mail"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Company"><a href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(30%);" data-label="Mail"><a class="TableLinks" href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Company"><a class="TableLinks" href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
                             <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Created at">{{ elem.created_at }}</div>
                         </div>
                     {% endfor %}
@@ -71,7 +71,7 @@
                     </div>
                     {% for elem in companies %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Name"><a href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Name"><a class="TableLinks" href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(20%);" data-label="TVA">{{ elem.tva }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);" data-label="Country">{{ elem.country }}</div>
                             <div class="flex__row row__content" style="width: calc(20%);" data-label="Type">{{ elem.types}}</div>
