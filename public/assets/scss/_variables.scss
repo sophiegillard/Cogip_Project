@@ -24,8 +24,12 @@ $grey : #F5F5F5;
   @media (max-width: 599px) { @content; }
 }
 
+@mixin after-desktop {
+  @media (min-width: 599px) { @content; }
+}
+
 @mixin for-desktop {
-  @media (max-width: 1024px) { @content; }
+  @media (min-width: 1024px) { @content; }
 }
 
 @mixin for-medium-desktop {

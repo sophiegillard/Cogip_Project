@@ -8,11 +8,26 @@ div {
 }
 
 .tables{
-  padding: 0 5rem 0 5rem;
-}
+  margin: 5rem;
+  @include for-phone-only{
+    padding: 0;
+    margin: 1rem;
+  }
+  @include for-desktop{
+    margin: 5rem;
+  }
+
+  @include for-big-desktop{
+    margin: 0 16rem ;
+  }
+
+  @media (max-width:700px) and (min-width:00px) {
+    margin: 1rem;
+    }
+  }
 
 .table__container {
-  display: block;
+  display: table;
   width: 100%;
   max-width: 1193px;
 
@@ -25,18 +40,36 @@ div {
 
   min-width: 100%;
 
+  @include for-phone-only{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+
+    font-size: 1.1rem;
+  }
+  @include after-desktop{
+    font-size: 1.2rem;
+  }
+
 }
 
 .table__header{
+  display: table-header-group;
   background: $table-header;
   font-weight: bolder;
   align-items: center;
+  @include for-phone-only{
+    display:none;
+  }
 }
 
 .flex__table {
-  display: flex;
+  display: table-row;
   flex-flow: row wrap;
   transition: 0.5s;
+  @include for-phone-only{
+    background: $row-bg;
+  }
   
 
   &.table__content:nth-child(odd)  {
@@ -48,15 +81,48 @@ div {
 .table__content{
   font-weight:lighter;
   &:hover {
-    cursor:pointer;
-    transition: 500ms;
-    font-weight: bolder;
+    @include for-desktop{
+      cursor:pointer;
+      transition: 500ms;
+      font-weight: bolder;
+    }
   }
 }
 
 .flex__row {
+  display: table-cell;
   width: calc(100% / 5);
   padding: 0.8em 1rem;
+  @include for-medium-desktop{
+    width: 20rem;
+  }
+  @include for-phone-only{
+    display:block;
+    width: 100%;
+  }
+}
+
+.flex__row:first-child{
+  @include for-phone-only{
+    background-color: $Yellow;
+  }
+}
+
+.row__content{
+  @include for-phone-only{
+    width: calc(100%) !important;
+    text-align: right;
+  }
+}
+
+.row__content::before{
+  @include for-phone-only {
+    content: attr(data-label);
+    position: absolute;
+    left: 3rem;
+    text-align: left;
+    font-weight: 600;
+  }
 }
 
 .arrow{

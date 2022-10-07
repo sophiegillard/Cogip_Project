@@ -18,7 +18,7 @@
             <article class="article__container invoices">
                 <h2 class="article__title__home"> Last invoices </h2>
                 <div class="table__container" id="tableLastInvoices" role="table" aria-label="Last invoices">
-                    <div class="flex__table table__header">
+                    <div class="table__header">
                         <div class="flex__row row__content" style="width: calc(25%);">Invoice Number</div>
                         <div class="flex__row row__content" style="width: calc(25%);">Due Date</div>
                         <div class="flex__row row__content" style="width: calc(25%);">Company</div>
@@ -26,10 +26,10 @@
                     </div>
                     {% for elem in invoices %}
                     <div class="flex__table table__content">
-                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.ref }}</div>
-                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.due_date }}</div>
-                        <div class="flex__row row__content" style="width: calc(25%);"><a href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
-                        <div class="flex__row row__content" style="width: calc(25%);">{{ elem.created_at }}</div>
+                        <div class="flex__row row__content" data-label="Invoice n°" style="width: calc(25%);">{{ elem.ref }}</div>
+                        <div class="flex__row row__content" data-label="Due dates" style="width: calc(25%);">{{ elem.due_date }}</div>
+                        <div class="flex__row row__content" data-label="Company" style="width: calc(25%);"><a href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
+                        <div class="flex__row row__content" data-label="Created at" style="width: calc(25%);">{{ elem.created_at }}</div>
                     </div>
                     {% endfor %}
                 </div>
@@ -39,7 +39,7 @@
             <article class="article__container contacts">
                 <h2 class="article__title__home"> Last contacts </h2>
                 <div class="table__container" id="tableLastContacts" role="table" aria-label="Last contacts">
-                    <div class="flex__table table__header">
+                    <div class="table__header">
                         <div class="flex__row row__content" style="width: calc(17.5%);">Name</div>
                         <div class="flex__row row__content" style="width: calc(17.5%);">Phone</div>
                         <div class="flex__row row__content" style="width: calc(30%);">Mail</div>
@@ -49,11 +49,11 @@
 
                     {% for elem in contacts %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.phone }}</div>
-                            <div class="flex__row row__content" style="width: calc(30%);"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(17.5%);"><a href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(17.5%);">{{ elem.created_at }}</div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Name"><a href="/showContact?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Phone">{{ elem.phone }}</div>
+                            <div class="flex__row row__content" style="width: calc(30%);" data-label="Mail"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Company"><a href="/showCompany?id={{ elem.companyId }}">{{ elem.company }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(17.5%);" data-label="Created at">{{ elem.created_at }}</div>
                         </div>
                     {% endfor %}
                 </div>
@@ -62,7 +62,7 @@
             <article class="article__container companies">
                 <h2 class="article__title__home"> Last companies </h2>
                 <div class="table__container" id="tableLastCompanies" role="table" aria-label="Last companies">
-                    <div class="flex__table table__header">
+                    <div class="table__header">
                         <div class="flex__row row__content" style="width: calc(20%);">Name</div>
                         <div class="flex__row row__content" style="width: calc(20%);">TVA</div>
                         <div class="flex__row row__content" style="width: calc(20%);">Country</div>
@@ -71,11 +71,11 @@
                     </div>
                     {% for elem in companies %}
                         <div class="flex__table table__content">
-                            <div class="flex__row row__content" style="width: calc(20%);"><a href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.tva }}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.country }}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.types}}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Name"><a href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="TVA">{{ elem.tva }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Country">{{ elem.country }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Type">{{ elem.types}}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Created at">{{ elem.created_at }}</div>
                         </div>
                     {% endfor %}
                 </div>

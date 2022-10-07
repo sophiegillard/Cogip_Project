@@ -32,6 +32,8 @@ const setInputFormToEdit = (input0, input1, input2, input3) =>{
             input1.value = secondChild;
             input2.value = thirdChild;
             input3.innerHTML = fourthChild;
+
+
         })
     })
 }
@@ -70,6 +72,9 @@ const setInputFormToEditInvoice = (input0, input1, input2, input3) =>{
             //input1.value = "";
             input2.innerHTML = thirdChild;
             input3.value = secondChild;
+
+            const form= document.getElementById('invoice__form');
+            form.action = '/dashboardUpdateInvoices';
         })
     })
 }

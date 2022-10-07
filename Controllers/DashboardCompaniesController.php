@@ -30,8 +30,13 @@ class DashboardCompaniesController extends Controller
         (new companies)->createCompany($name, $country, $tva, $type);
     }
 
-    public function deleteCompany(mixed $id)
+    public function deleteCompany($id)
     {
         (new companies)->deleteCompany($id);
+    }
+
+    public function updateCompany($id)
+    {
+        (new companies())->updateCompany($id);
     }
 }
