@@ -69,21 +69,25 @@
         border-radius: 10px;
         padding: 7px;
       }
+      #signUp:hover {
+        cursor: pointer;
+        background: black;
+        color: white;
+        border: 1px black solid;
+        border-radius: 10px;
+        padding: 7px;
+    }
+      #login {
+        padding: 8px;
+      }
       #login:hover {
           cursor: pointer;
-          border-top:2px solid #ffffff;
-          border-bottom:2px solid #ffffff;
+          background: black;
           color: white;
-          border-radius: 20px;
+          border: 1px black solid;
+          border-radius: 10px;
+          padding: 7px;
       }
-      #login:focus{
-        cursor: pointer;
-        border-top:2px solid #ffffff;
-        border-bottom:2px solid #ffffff;
-        color: white;
-        border-radius: 10px;
-    }
-      
     }
   }
   &__horizon {

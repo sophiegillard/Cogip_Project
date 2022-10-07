@@ -3,10 +3,13 @@ import {searchInputs} from "./searchBar/searchBar.js";
 import { toggleMenu } from "./displayMenuPhone.js";
 import { displayLogin } from "./displayLogin.js";
 import { CloseLoginBackground } from "./displayLogin.js";
-
-CloseLoginBackground();
+import { displaySignUp } from "./displaySignUp.js";
+import { CloseSignUpBackground } from "./displaySignUp.js";
 
 displayLogin();
+displaySignUp();
+CloseSignUpBackground();
+CloseLoginBackground();
 
 toggleMenu();
 

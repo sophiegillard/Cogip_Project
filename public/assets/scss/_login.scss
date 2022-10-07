@@ -6,7 +6,7 @@
   width: 300px;
   height: auto;
 
-  top: 17%;
+  top: 20%;
   right: 12%;
   background-color: white;
 
@@ -67,6 +67,12 @@
 
       display: flex;
       justify-content: center;
+    }
+    &__link:hover {
+      background: white;
+      color: black;
+      border: 1px solid black;
+      padding: 9px;
     }
   }
 }
