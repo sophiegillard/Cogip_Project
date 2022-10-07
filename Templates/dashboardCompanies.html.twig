@@ -9,7 +9,7 @@
     <h1 class="dashboardForm__title">
       New companies
     </h1>
-    <form class="dashboardForm__form" action="/dashboardCompany" method="post">
+    <form class="dashboardForm__form" id="company__form" action="/dashboardCompany" method="post">
       <input class="dashboardForm__form__input"
         id="companyInput"
         type="text"
@@ -66,7 +66,7 @@
         </div>
 
         {% for elem in companies %}
-          <div class="db__flex__table table__content">
+          <div class="db__flex__table table__content" id={{ elem.id }}>
 
             <div class="db__flex__row row__content" style="width: calc(19.8%);">{{ elem.name }}</a></div>
             <div class="db__flex__row row__content" style="width: calc(19.8%);">{{ elem.tva }}</div>
