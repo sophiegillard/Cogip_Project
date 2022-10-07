@@ -87,11 +87,49 @@ $router->post('/dashboardCompany', function () {
     header('location:/dashboardCompanies');
 });
 
+//Delete
 $router->get('/dashboardDeleteInvoices', function () {
 
     $id = $_GET['id'];
     (new DashboardInvoicesController)->deleteInvoices($id);
     header('location:/dashboardInvoices');
+});
+
+$router->get('/dashboardDeleteCompany', function () {
+
+    $id = $_GET['id'];
+    (new DashboardCompaniesController())->deleteCompany($id);
+    header('location:/dashboardCompanies');
+});
+
+$router->get('/dashboardDeleteContact', function () {
+
+    $id = $_GET['id'];
+    (new DashboardContactController())->deleteContact($id);
+    header('location:/dashboardContact');
+});
+
+//Update
+
+$router->get('/dashboardUpdateInvoices', function () {
+
+    $id = $_GET['id'];
+    (new DashboardInvoicesController())->updateInvoices($id);
+    header('location:/dashboardInvoices');
+});
+
+$router->get('/dashboardUpdateCompany', function () {
+
+    $id = $_GET['id'];
+    (new DashboardCompaniesController())->updateCompany($id);
+    header('location:/dashboardCompanies');
+});
+
+$router->get('/dashboardUpdateContact', function () {
+
+    $id = $_GET['id'];
+    (new DashboardContactController())->updateContact($id);
+    header('location:/dashboardContact');
 });
 
 $router->run();

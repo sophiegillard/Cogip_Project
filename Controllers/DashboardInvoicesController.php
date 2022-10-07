@@ -36,4 +36,9 @@ class DashboardInvoicesController extends Controller
     {
         (new invoices)->deleteInvoices($id);
     }
+
+    public function updateInvoices($id)
+    {
+        (new invoices())->updateInvoice($id);
+    }
 }

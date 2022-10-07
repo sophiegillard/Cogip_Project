@@ -77,9 +77,10 @@
             <div class="db__flex__row row__content" style="width: calc(26%);">{{ elem.email }}</div>
             <div class="db__flex__row row__content" style="width: calc(16%);">{{ elem.company }}</div>
             <div class="db__flex__row row__content" style="width: calc(17%);">{{ elem.created_at }}</div>
+
             <div class="db__flex__row row__content modifier" value="icons" style="width: calc(11%);">
-              <img class="modifier__icon icon__edit" id="edit__{{ elem.id }}" src="assets/img/icons/edit.png" alt="edit">
-              <img class="modifier__icon icon__delete" id="delete__{{ elem.id }}" src="assets/img/icons/x-button.png" alt="Delete">
+              <img class="modifier__icon icon__edit" src="assets/img/icons/edit.png" alt="edit">
+              <a href="/dashboardDeleteContact?&id={{ elem.id }}"><img class="modifier__icon icon__delete" src="assets/img/icons/x-button.png" alt="Delete"></a>
             </div>
 
           </div>

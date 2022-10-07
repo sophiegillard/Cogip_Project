@@ -27,11 +27,11 @@ hamburger.addEventListener("click", toggleMenu);
 
 sortColumnOnClick();
 
-searchInputs('db__search');
+//searchInputs('db__search');
 
 setInputEditInContact()
 
 setInputEditInCompanies()
 
 setInputEditInInvoices()
-console.log(document.title)
+

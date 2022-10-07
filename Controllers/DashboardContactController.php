@@ -30,4 +30,14 @@ class DashboardContactController extends Controller
     {
         (new contacts)->createContact($name, $phone, $companyId, $email);
     }
+
+    public function deleteContact($id)
+    {
+        (new contacts())->deleteContact($id);
+    }
+
+    public function updateContact($id)
+    {
+        (new contacts())->updateContact($id);
+    }
 }

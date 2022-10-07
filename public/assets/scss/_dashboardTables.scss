@@ -15,6 +15,12 @@ div {
 
   margin: 10px;
   padding: 20px;
+
+  @media screen and (min-width: 1024px) {
+    margin-left: 310px;
+    width: 71%;
+    margin-top: 50px;
+  }
 }
 
 .db__table__container {
