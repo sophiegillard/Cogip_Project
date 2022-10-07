@@ -53,7 +53,7 @@ class contacts
             $db->beginTransaction();
 
             $query->execute(array(
-                'id'=>$id
+                'id' => $id
             ));
 
             $db->commit();
@@ -66,17 +66,17 @@ class contacts
         $db = null;
     }
 
-    function updateContact($name, $phone, $company_id, $email, $picture): void
+    function updateContact($name, $phone, $company_id, $email, $id): void
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('UPDATE `companies` SET `name`=?,`phone`=?,`company_id`=?,`email`=?,`picture`=?,`updated_at`=? WHERE id = :id');
+        $query = $db->prepare('UPDATE `contacts` SET `name`=:name,`phone`=:phone,`company_id`=:companyId,`email`=:email,`updated_at`=:updatedDate WHERE id = :id');
         $query->execute(array(
-            $name,
-            $phone,
-            $company_id,
-            $email,
-            $picture,
-            date('Y-m-d')
+            'name' => $name,
+            'phone' => $phone,
+            'companyId' => $company_id,
+            'email' => $email,
+            'updatedDate' => date('Y-m-d'),
+            'id' => $id
         ));
     }
 }

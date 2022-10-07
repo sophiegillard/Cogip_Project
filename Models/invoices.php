@@ -65,13 +65,13 @@ class invoices
     function updateInvoice($company_id, $ref, $dueDate, $id): void
     {
         $db = (new dbConnection())->connexion();
-        $query = $db->prepare('UPDATE `invoices` SET `id_company`=?,`ref`=?,`due_date`=?,`updated_at`=? WHERE id = ?');
+        $query = $db->prepare('UPDATE `invoices` SET `id_company`=:company,`ref`=:ref,`due_date`=:dueDate,`updated_at`=:updatedDate WHERE id = :id');
         $query->execute(array(
-            $company_id,
-            $ref,
-            $dueDate,
-            date('Y-m-d'),
-            $id
+            'company'=>$company_id,
+            'ref'=>$ref,
+            'dueDate'=>$dueDate,
+            'updatedDate'=>date('Y-m-d'),
+            'id'=>$id
         ));
     }
 }
