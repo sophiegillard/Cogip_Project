@@ -24,19 +24,46 @@ export const setInputFormToEditInvoice = (input0, input1, input2, input3) =>{
             //Set placeholder of each form input to NULL
             input0.placeholder = "";
             //input1.placeholder = "";
-            input2.placeholder = "";
+            //input2.placeholder = "";
             input3.placeholder = "";
+
+
+
+//try to get the index selected
+            /*let selId = document.getElementById("selectId");
+            let items = selId.options;//Javascript get select all option
+
+            for (var i = 1; i < items.length; i++) {
+                //console.log(thirdChild)
+                //console.log(items[i].index)
+                //console.log(items[i].innerHTML)
+
+                const indexSelect= items[i].index;
+                const valueSelect = items[i].innerHTML;
+
+                if(thirdChild == valueSelect){
+                    document.getElementById('companyInput').value= indexSelect;
+                    console.log(items[i].innerHTML)
+                    console.log(items[i])
+                }
+
+            }*/
+
+
 
             //Set the datas of the selected row in the form to edit them
             input0.value = firstChild;
             //input1.value = "";
             input2.innerHTML = thirdChild;
+            input2.selected = true;
             input3.value = secondChild;
+
 
             const idDiv= parent.id
 
             const form= document.getElementById('invoice__form');
             form.action = '/dashboardUpdateInvoices?id=' + idDiv;
+
         })
     })
 }
