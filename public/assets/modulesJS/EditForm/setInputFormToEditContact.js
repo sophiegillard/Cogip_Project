@@ -33,8 +33,10 @@ export const setInputFormToEditContact = (input0, input1, input2, input3) =>{
             input2.value = thirdChild;
             input3.innerHTML = fourthChild;
 
+            const idDiv= parent.id
+
             const form= document.getElementById('contact__form');
-            form.action = '/dashboardUpdateContact';
+            form.action = '/dashboardUpdateContact' + idDiv;
         })
     })
 }
