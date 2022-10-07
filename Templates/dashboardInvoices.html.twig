@@ -64,7 +64,7 @@
                 </div>
 
                 {% for elem in invoices %}
-                    <div class="db__flex__table table__content">
+                    <div class="db__flex__table table__content" id={{ elem.id }}>
 
                         <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.ref }}</a></div>
                         <div class="db__flex__row row__content" style="width: calc(22%);">{{ elem.due_date }}</div>
