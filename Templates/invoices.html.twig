@@ -33,7 +33,7 @@
 
                             <div class="flex__row row__content" style="width: calc(20%);" data-label="Invoice n°" >{{ elem.ref }}</a></div>
                             <div class="flex__row row__content" style="width: calc(20%);" data-label="Due Dates" >{{ elem.due_date }}</div>
-                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Name" >{{ elem.name }}</div>
+                            <div class="flex__row row__content" style="width: calc(20%);" data-label="Name" ><a class="TableLinks" href="/showCompany?id={{ elem.id }}">{{ elem.name }}</a></div>
                             <div class="flex__row row__content" style="width: calc(20%);" data-label="Created at" >{{ elem.created_at }}</div>
 
                         </div>
