@@ -25,14 +25,14 @@
     <section class="showCompanies__main__contact">
         <h2 class="showCompanies__main__contact__title">Contact persons</h2>
         <div class="showCompanies__main__contact__people">
-            <div class="showCompanies__main__contact__people__card">
 
                 {% for elem in companies %}
-                <img class="showCompanies__main__contact__people__card__img" src="assets/img/user/{{ elem.picture }}" alt="">
-                <p class="showCompanies__main__contact__people__card__name">{{ elem.contactName }}</p>
+                <div class="showCompanies__main__contact__people__card">
+                    <img class="showCompanies__main__contact__people__card__img" src="assets/img/user/{{ elem.picture }}" alt="">
+                    <p class="showCompanies__main__contact__people__card__name">{{ elem.contactName }}</p>
+                </div>
                 {% endfor %}
 
-            </div>
         </div>
     </section>
     <hr class="showCompanies__main__hr">
