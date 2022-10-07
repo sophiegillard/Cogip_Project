@@ -77,6 +77,12 @@
   border-radius: 10px;
   padding: 7px;
 }
+.header__navBar__button #login:hover {
+  cursor: pointer;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  color: white;
+}
 .header__horizon {
   margin-top: 50px;
   padding: 50px;
@@ -1592,24 +1598,22 @@ div {
   border: 0;
   border-bottom: 1px solid black;
 }
-.login__form__button {
-  width: 96%;
+.login__form__link {
+  width: 90%;
   margin: 5px;
   padding: 10px;
   background: black;
   border: 0;
-  text-align: center;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
-  border-radius: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.login__form__button:hover {
-  background: white;
-  color: black;
+  display: flex;
+  justify-content: center;
 }
