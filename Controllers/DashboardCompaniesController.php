@@ -20,7 +20,7 @@ class DashboardCompaniesController extends Controller
             'types' => $types,
             'companies' => $companies
         ];
-        
+
 
         return $this->view('dashboardCompanies', $data);
     }
@@ -35,8 +35,8 @@ class DashboardCompaniesController extends Controller
         (new companies)->deleteCompany($id);
     }
 
-    public function updateCompany($id)
+    public function updateCompany($name, $country, $tva, $type, $id)
     {
-        (new companies())->updateCompany($id);
+        (new companies())->updateCompany($name, $country, $tva, $type, $id);
     }
 }
