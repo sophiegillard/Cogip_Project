@@ -36,7 +36,7 @@ export const setInputFormToEditContact = (input0, input1, input2, input3) =>{
             const idDiv= parent.id
 
             const form= document.getElementById('contact__form');
-            form.action = '/dashboardUpdateContact' + idDiv;
+            form.action = '/dashboardUpdateContact?id=' + idDiv;
         })
     })
 }
