@@ -42,7 +42,7 @@
         <h2 class="article__title"> Last invoices </h2>
 
         <div class="table__container" id="tableInvoices" role="table" aria-label="invoices">
-            <div class="flex__table table__header">
+            <div class="table__header">
 
                 <div class="flex__row row__content" style="width: calc(20%);">Invoice Number</div>
                 <div class="flex__row row__content arrow" style="width: calc(20%);">Due dates</div>
@@ -54,10 +54,10 @@
             {% for elem in invoices %}
                 <div class="flex__table table__content">
 
-                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.ref }}</a></div>
-                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.due_date }}</div>
-                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.name }}</div>
-                    <div class="flex__row row__content" style="width: calc(20%);">{{ elem.created_at }}</div>
+                    <div class="flex__row row__content" style="width: calc(20%);" data-label="Invoice n°">{{ elem.ref }}</a></div>
+                    <div class="flex__row row__content" style="width: calc(20%);" data-label="Due dates">{{ elem.due_date }}</div>
+                    <div class="flex__row row__content" style="width: calc(20%);" data-label="Company">{{ elem.name }}</div>
+                    <div class="flex__row row__content" style="width: calc(20%);" data-label="Created at">{{ elem.created_at }}</div>
 
                 </div>
             {% endfor %}

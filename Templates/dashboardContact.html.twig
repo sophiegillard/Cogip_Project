@@ -60,7 +60,7 @@
             <img class="arrow__down" id="1" src="assets/img/icons/downward-arrow-white.png" alt=""/>
           </div>
           <div class="db__flex__row " style="width: calc(15%);">Phone</div>
-          <div class="db__flex__row " style="width: calc(26%);">Mail</div>
+          <div class="db__flex__row " style="width: calc(26%);">Email</div>
           <div class="db__flex__row " style="width: calc(16%);">Company</div>
           <div class="db__flex__row arrow" style="width: calc(17%);">Created at
             <img class="arrow__down" id="1" src="assets/img/icons/downward-arrow-white.png" alt=""/>
@@ -72,11 +72,11 @@
         {% for elem in contacts %}
           <div class="db__flex__table table__content" id="{{ elem.id }}">
 
-            <div class="db__flex__row row__content" style="width: calc(15%);">{{ elem.name }}</a></div>
-            <div class="db__flex__row row__content" style="width: calc(15%);">{{ elem.phone }}</div>
-            <div class="db__flex__row row__content" style="width: calc(26%);">{{ elem.email }}</div>
-            <div class="db__flex__row row__content" style="width: calc(16%);">{{ elem.company }}</div>
-            <div class="db__flex__row row__content" style="width: calc(17%);">{{ elem.created_at }}</div>
+            <div class="db__flex__row row__content" style="width: calc(15%);" data-label="Name">{{ elem.name }}</a></div>
+            <div class="db__flex__row row__content" style="width: calc(15%);" data-label="Phone">{{ elem.phone }}</div>
+            <div class="db__flex__row row__content" style="width: calc(26%);" data-label="Email">{{ elem.email }}</div>
+            <div class="db__flex__row row__content" style="width: calc(16%);" data-label="Company">{{ elem.company }}</div>
+            <div class="db__flex__row row__content" style="width: calc(17%);" data-label="Created at">{{ elem.created_at }}</div>
 
             <div class="db__flex__row row__content modifier" value="icons" style="width: calc(11%);">
               <img class="modifier__icon icon__edit" src="assets/img/icons/edit.png" alt="edit">

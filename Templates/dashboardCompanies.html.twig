@@ -68,11 +68,11 @@
         {% for elem in companies %}
           <div class="db__flex__table table__content" id={{ elem.id }}>
 
-            <div class="db__flex__row row__content" style="width: calc(19.8%);">{{ elem.name }}</a></div>
-            <div class="db__flex__row row__content" style="width: calc(19.8%);">{{ elem.tva }}</div>
-            <div class="db__flex__row row__content" style="width: calc(15.8%);">{{ elem.country }}</div>
-            <div class="db__flex__row row__content" style="width: calc(15.8%);">{{ elem.types }}</div>
-            <div class="db__flex__row row__content" style="width: calc(17.8%);">{{ elem.created_at }}</div>
+            <div class="db__flex__row row__content" style="width: calc(19.8%);" data-label="Company">{{ elem.name }}</a></div>
+            <div class="db__flex__row row__content" style="width: calc(19.8%);" data-label="TVA">{{ elem.tva }}</div>
+            <div class="db__flex__row row__content" style="width: calc(15.8%);" data-label="Country">{{ elem.country }}</div>
+            <div class="db__flex__row row__content" style="width: calc(15.8%);" data-label="Type">{{ elem.types }}</div>
+            <div class="db__flex__row row__content" style="width: calc(17.8%);" data-label="Created at">{{ elem.created_at }}</div>
             <div class="db__flex__row row__content modifier" style="width: calc(11%);">
               <img class="modifier__icon icon__edit" src="assets/img/icons/edit.png" alt="edit">
               <a href="/dashboardDeleteCompany?&id={{ elem.id }}"><img class="modifier__icon icon__delete" src="assets/img/icons/x-button.png" alt="Delete"></a>
