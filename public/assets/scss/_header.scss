@@ -74,7 +74,15 @@
           border-top:2px solid #ffffff;
           border-bottom:2px solid #ffffff;
           color: white;
+          border-radius: 20px;
       }
+      #login:focus{
+        cursor: pointer;
+        border-top:2px solid #ffffff;
+        border-bottom:2px solid #ffffff;
+        color: white;
+        border-radius: 10px;
+    }
       
     }
   }

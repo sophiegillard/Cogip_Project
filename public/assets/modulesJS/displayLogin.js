@@ -7,31 +7,30 @@ export function displayLogin() {
         if (loginModal.style.display == "block") {
         
             loginModal.style.display = "none";
+            LoginBackground.style.display = "none";
 
             for (let input of loginInput) {
                 input.value="";
             }
-            
-            loginBtn.style.color = "#000000";
-            loginBtn.style.borderBottom = "0";
-            loginBtn.style.borderTop = "0";
-
-
-
         } else {
             console.log("click");
             loginModal.style.display = "block";
-            
-            loginBtn.style.color = "#FFFFFF";
-            loginBtn.style.borderBottom = "2px solid #ffffff";
-            loginBtn.style.borderTop = "2px solid #ffffff";
+            LoginBackground.style.display = "block";
         }
     })
 }
 
-export function hoverActived() {
-    if (loginModal.style.display == "block") {
-        loginBtn.style.color = "white";
-        console.log("hello");
-    }
+let LoginBackground = document.getElementsByClassName('loginbackground')[0];
+
+export function CloseLoginBackground() {
+    LoginBackground.addEventListener("click", (event)=>{
+        console.log("back");
+        if (loginModal.style.display == "block") {
+            loginModal.style.display = "none";
+            LoginBackground.style.display = "none";
+            for (let input of loginInput) {
+                input.value="";
+            }
+        }
+    })
 }
