@@ -54,3 +54,9 @@ La deuxième interface est celle du dashboard. Lorsqu’un utilisateur se connec
 Lien : [Consignes Becode](https://github.com/becodeorg/CRL-Wilson-1/tree/master/1.TRAIL/3.The-Mountain/COGIP)
 
 Lien vers l'application : [COGIP](https://bc-cogip-project.000webhostapp.com)
+
+### Travail Personnel: 
+- réalisation des fonctions JavaScript pour l'implémentation de la barre de recherche et du filtre dans les tableaux.
+- Réalisation du design des tableaux
+- Implémentation des données via Twig
+- Réalisation de certaines pages utilisation Twig
